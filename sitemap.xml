@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Marcelo Siqueira CFP — sitemap. Submeter no Google Search Console.
+     Adicionar cada novo artigo aqui ao publicar (atualizar lastmod). -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/insights</loc>
+    <lastmod>2026-06-02</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Artigo 1 — publicar na Semana 2 -->
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda</loc>
+    <lastmod>2026-06-09</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos 2–6: descomentar/atualizar lastmod ao publicar cada um -->
+  <!--
+  <url><loc>https://marcelosiqueiracfp.com.br/insights/tema-1226-stj-stock-options-executivo</loc><lastmod>2026-06-16</lastmod><priority>0.8</priority></url>
+  <url><loc>https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez</loc><lastmod>2026-06-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior</loc><lastmod>2026-06-30</lastmod><priority>0.8</priority></url>
+  <url><loc>https://marcelosiqueiracfp.com.br/insights/collar-lombard-hedge-equity-concentrado</loc><lastmod>2026-07-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo</loc><lastmod>2026-07-14</lastmod><priority>0.8</priority></url>
+  -->
+
+</urlset>

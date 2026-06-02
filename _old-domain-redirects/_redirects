@@ -1,0 +1,26 @@
+# ════════════════════════════════════════════════════════════════
+# 301 — Migração de domínio  vectis.com.br → marcelosiqueiracfp.com.br
+# Este arquivo deve ser publicado na RAIZ do site ANTIGO (vectis.com.br).
+# Netlify lê a primeira regra que casa (ordem importa: específicas primeiro).
+# O "!" força o 301 mesmo que exista arquivo naquele caminho.
+# ════════════════════════════════════════════════════════════════
+
+# ── Overrides onde o slug MUDOU semanticamente ──────────────────
+# "Publicações"/"Blog" do site antigo → nova seção "Insights"
+/publicacoes/*    https://marcelosiqueiracfp.com.br/insights/:splat    301!
+/publicacoes      https://marcelosiqueiracfp.com.br/insights          301!
+/publications/*   https://marcelosiqueiracfp.com.br/insights/:splat    301!
+/publications     https://marcelosiqueiracfp.com.br/insights          301!
+/blog/*           https://marcelosiqueiracfp.com.br/insights/:splat    301!
+/blog             https://marcelosiqueiracfp.com.br/insights          301!
+
+# Páginas institucionais (PT do site antigo) — mapeadas explicitamente
+# (mantém o destino mesmo que o slug seja idêntico; documenta a intenção)
+/servicos         https://marcelosiqueiracfp.com.br/servicos          301!
+/abordagem        https://marcelosiqueiracfp.com.br/abordagem         301!
+/sobre            https://marcelosiqueiracfp.com.br/sobre             301!
+/contato          https://marcelosiqueiracfp.com.br/contato           301!
+
+# ── Catch-all: preserva o caminho para QUALQUER outra URL indexada ─
+# (cobre raiz, landings ITCMD, lead-magnet, etc. com o mesmo slug)
+/*                https://marcelosiqueiracfp.com.br/:splat            301!

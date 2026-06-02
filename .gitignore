@@ -1,0 +1,11 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Dependencies (caso entre build no futuro)
+node_modules/
+.netlify/
+
+# Nunca versionar dados de cliente / nada fora do site público
+# (este repo é só o site marcelosiqueiracfp.com.br)

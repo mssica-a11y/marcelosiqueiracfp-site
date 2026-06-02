@@ -1,0 +1,160 @@
+/* ============================================================
+   Marcelo Siqueira CFP — Insights (blog) stylesheet
+   Derived from Executive Wealth Advisory Design System v1.0
+   Token names kept as --vectis-* (internal; do not churn).
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap');
+
+:root {
+  --vectis-navy:        #0A1E3D;
+  --vectis-dark-slate:  #1C2A3A;
+  --vectis-white:       #FFFFFF;
+  --vectis-graphite:    #3D4F5F;
+  --vectis-cool-gray:   #8C9BAA;
+  --vectis-brass:       #C4A44A;
+  --vectis-warm-white:  #F7F6F3;
+  --vectis-linen:       #EDECE8;
+  --vectis-stone:       #E2E0DA;
+  --vectis-success:     #2E7D4F;
+  --vectis-danger:      #A33030;
+
+  --fd: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --fs: 'DM Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fm: 'DM Mono', 'Courier New', monospace;
+
+  --max-content: 1120px;
+  --max-prose:   720px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--fs);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--vectis-graphite);
+  background: var(--vectis-warm-white);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: var(--vectis-navy); text-decoration: none; }
+a:hover { text-decoration: underline; text-decoration-color: var(--vectis-brass); }
+img { max-width: 100%; height: auto; }
+
+/* ─── NAV ─────────────────────────────────────────────── */
+.site-nav {
+  position: sticky; top: 0; z-index: 100;
+  height: 64px; display: flex; align-items: center;
+  padding: 0 32px;
+  background: rgba(247,246,243,0.96);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--vectis-stone);
+}
+.site-nav .wordmark {
+  display: inline-flex; align-items: baseline; gap: 8px;
+  font-family: var(--fd); font-size: 22px; color: var(--vectis-navy);
+  margin-right: 48px; white-space: nowrap;
+}
+.site-nav .wordmark .chev { width: 18px; height: 22px; flex: none; }
+.site-nav .wordmark .cred {
+  font-family: var(--fs); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--vectis-brass); align-self: center;
+}
+.site-nav .links { display: flex; gap: 26px; flex: 1; }
+.site-nav .links a { font-size: 14px; color: var(--vectis-cool-gray); padding-bottom: 2px; border-bottom: 1px solid transparent; }
+.site-nav .links a:hover, .site-nav .links a[aria-current="page"] { color: var(--vectis-navy); border-bottom-color: var(--vectis-brass); text-decoration: none; }
+.site-nav .cta {
+  background: var(--vectis-navy); color: #fff; font-size: 13px; font-weight: 500;
+  padding: 9px 22px; border-radius: 6px; transition: background 150ms;
+}
+.site-nav .cta:hover { background: #0d2650; text-decoration: none; }
+
+/* ─── LAYOUT ──────────────────────────────────────────── */
+.wrap { max-width: var(--max-content); margin: 0 auto; padding: 0 32px; }
+.prose { max-width: var(--max-prose); margin: 0 auto; padding: 0 32px; }
+
+/* ─── ARTICLE HEADER ──────────────────────────────────── */
+.article-head { padding: 72px 0 40px; }
+.eyebrow {
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--vectis-brass); font-weight: 500; margin-bottom: 20px;
+}
+h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.12; color: var(--vectis-navy); letter-spacing: -0.01em; }
+.article-meta { margin-top: 24px; font-size: 14px; color: var(--vectis-cool-gray); display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.article-meta .byline { color: var(--vectis-graphite); font-weight: 500; }
+.dek { font-size: 21px; line-height: 1.55; color: var(--vectis-graphite); margin-top: 24px; }
+
+/* ─── ARTICLE BODY ────────────────────────────────────── */
+.article-body { padding: 8px 0 56px; }
+.article-body h2 { font-family: var(--fd); font-weight: 400; font-size: 32px; line-height: 1.2; color: var(--vectis-navy); margin: 48px 0 16px; }
+.article-body h3 { font-family: var(--fs); font-weight: 500; font-size: 21px; color: var(--vectis-navy); margin: 36px 0 12px; }
+.article-body p { margin: 0 0 22px; }
+.article-body ul, .article-body ol { margin: 0 0 22px; padding-left: 24px; }
+.article-body li { margin-bottom: 10px; }
+.article-body strong { color: var(--vectis-navy); font-weight: 500; }
+.article-body blockquote {
+  border-left: 3px solid var(--vectis-brass); margin: 32px 0; padding: 4px 0 4px 24px;
+  font-family: var(--fd); font-size: 24px; line-height: 1.4; color: var(--vectis-navy);
+}
+.callout {
+  background: var(--vectis-linen); border: 1px solid var(--vectis-stone);
+  border-radius: 8px; padding: 24px 28px; margin: 32px 0;
+}
+.callout .label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-cool-gray); font-weight: 500; margin-bottom: 8px; display: block; }
+.data { font-family: var(--fm); }
+
+/* ─── FAQ ─────────────────────────────────────────────── */
+.faq { border-top: 1px solid var(--vectis-stone); padding: 48px 0 8px; }
+.faq h2 { font-family: var(--fd); font-weight: 400; font-size: 32px; color: var(--vectis-navy); margin-bottom: 24px; }
+.faq details { border-bottom: 1px solid var(--vectis-stone); padding: 18px 0; }
+.faq summary { font-weight: 500; font-size: 18px; color: var(--vectis-navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; color: var(--vectis-brass); font-size: 22px; line-height: 1; }
+.faq details[open] summary::after { content: '–'; }
+.faq details p { margin: 14px 0 4px; }
+
+/* ─── CTA BLOCK ───────────────────────────────────────── */
+.cta-block { background: var(--vectis-navy); color: var(--vectis-warm-white); border-radius: 10px; padding: 48px; margin: 56px 0; }
+.cta-block h2 { font-family: var(--fd); font-weight: 400; font-size: 30px; color: var(--vectis-warm-white); margin-bottom: 12px; }
+.cta-block p { color: var(--vectis-cool-gray); margin-bottom: 28px; max-width: 520px; }
+.cta-block .btn { background: #fff; color: var(--vectis-navy); font-weight: 500; padding: 13px 30px; border-radius: 6px; display: inline-block; }
+.cta-block .btn:hover { background: var(--vectis-linen); text-decoration: none; }
+
+/* ─── INSIGHTS HUB (listing) ──────────────────────────── */
+.hub-head { background: var(--vectis-navy); color: var(--vectis-warm-white); padding: 96px 0 72px; }
+.hub-head .eyebrow { color: var(--vectis-brass); }
+.hub-head h1 { color: var(--vectis-warm-white); font-size: 52px; max-width: 720px; }
+.hub-head p { color: var(--vectis-cool-gray); font-size: 19px; margin-top: 20px; max-width: 600px; }
+.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; padding: 64px 0; }
+.card {
+  background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px;
+  padding: 32px; transition: border-color 150ms, transform 150ms;
+  display: flex; flex-direction: column;
+}
+.card:hover { border-color: var(--vectis-brass); transform: translateY(-2px); text-decoration: none; }
+.card .tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-brass); font-weight: 500; margin-bottom: 14px; }
+.card h3 { font-family: var(--fd); font-weight: 400; font-size: 24px; line-height: 1.25; color: var(--vectis-navy); margin-bottom: 12px; }
+.card p { font-size: 15px; color: var(--vectis-graphite); flex: 1; }
+.card .read { font-size: 13px; color: var(--vectis-cool-gray); margin-top: 20px; }
+
+/* ─── FOOTER ──────────────────────────────────────────── */
+.site-foot { background: var(--vectis-dark-slate); color: var(--vectis-cool-gray); padding: 56px 0; margin-top: 64px; font-size: 14px; }
+.site-foot .wrap { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+.site-foot a { color: var(--vectis-cool-gray); }
+.site-foot a:hover { color: var(--vectis-warm-white); }
+.site-foot .brand { font-family: var(--fd); font-size: 20px; color: var(--vectis-warm-white); }
+
+/* ─── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 720px) {
+  body { font-size: 17px; }
+  h1 { font-size: 34px; }
+  .hub-head h1 { font-size: 36px; }
+  .dek { font-size: 18px; }
+  .article-body h2, .faq h2 { font-size: 26px; }
+  .cta-block { padding: 32px 24px; }
+  .site-nav .links { display: none; }
+  .site-nav { padding: 0 20px; }
+  .wrap, .prose { padding: 0 20px; }
+}

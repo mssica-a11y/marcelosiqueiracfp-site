@@ -1,0 +1,29 @@
+# Marcelo Siqueira CFP — robots.txt
+# Objetivo: liberar explicitamente os crawlers de IA (alavanca do roadmap de visibilidade).
+
+User-agent: *
+Allow: /
+
+# Crawlers de IA — citação em LLMs é o objetivo, então liberados:
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://marcelosiqueiracfp.com.br/sitemap.xml

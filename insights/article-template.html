@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     ARTICLE TEMPLATE — Marcelo Siqueira CFP / Insights
+     Copy this file per article. Swap every {{...}} marker.
+     Keep the visible FAQ (bottom) and the FAQPage JSON-LD IDENTICAL.
+     All URLs absolute on https://marcelosiqueiracfp.com.br
+     ════════════════════════════════════════════════════════════ -->
+
+<!-- META: tune to SEARCH INTENT, not brand -->
+<title>O que acontece com suas ações (RSU) quando você sai da empresa — e o IR que poucos calculam</title>
+<meta name="description" content="Pedir demissão ou ser desligado com RSU em vesting tem custo de IR que a maioria dos executivos não calcula. Veja o que muda no imposto e como estruturar a saída.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="O que acontece com suas ações (RSU) quando você sai da empresa">
+<meta property="og:description" content="O custo de IR sobre RSU em vesting que a maioria dos executivos não calcula antes de sair — e como estruturar a saída.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png">
+<meta property="article:published_time" content="2026-06-09">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O que acontece com suas ações (RSU) quando você sai da empresa">
+<meta name="twitter:description" content="O custo de IR sobre RSU em vesting que a maioria dos executivos não calcula antes de sair.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (the named-entity lever) → Organization
+     → Article → FAQPage. Crawlers that don't run JS read this directly.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda#article",
+      "headline": "O que acontece com suas ações quando você sai da empresa — e o que poucos executivos sabem sobre o IR",
+      "description": "Pedir demissão ou ser desligado com RSU em vesting tem custo de IR que a maioria dos executivos não calcula. O que muda no imposto e como estruturar a saída.",
+      "datePublished": "2026-06-09",
+      "dateModified": "2026-06-09",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Perco minhas RSU se eu sair da empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As RSU já vestidas são suas e não se perdem. As não vestidas (ainda em cliff ou em cronograma de vesting) são, na regra geral dos planos, canceladas no desligamento — salvo cláusulas de aceleração por aposentadoria, mudança de controle ou desligamento sem justa causa. O plano específico manda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando incide o imposto de renda sobre RSU no Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Há dois momentos. No vesting (entrega das ações), a Receita tende a tratar o valor de mercado como remuneração, sujeita à tabela progressiva (até 27,5%) — ponto ainda em disputa e ligado ao Tema 1.226 do STJ. Na venda posterior, o ganho de capital sobre a valorização é tributado de 15% a 22,5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vale a pena vender as ações antes de sair da empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de concentração, blackout period (CVM 44) e do seu fluxo de IR no ano. Vender tudo de uma vez pode empilhar ganho de capital e remuneração no mesmo exercício. O desenho ótimo escalona vendas entre exercícios e respeita janelas de negociação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma holding reduz o imposto sobre minhas ações de executivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode ajudar no diferimento e na sucessão, mas não elimina o IR sobre a remuneração no vesting, que é pessoal. O ganho potencial está sobretudo na gestão do ganho de capital e na transição patrimonial — e exige análise caso a caso antes da liquidez, não depois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que é o Tema 1.226 do STJ e por que importa para quem tem RSU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É o tema repetitivo em que o STJ discute a natureza jurídica das stock options — remuneratória (tributada no exercício, alíquotas maiores) ou mercantil (tributada só na venda, como ganho de capital). O desfecho muda diretamente quanto e quando você paga de IR sobre seu equity."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/servicos">Serviços</a>
+    <a href="/abordagem">Abordagem</a>
+    <a href="/insights" aria-current="page">Insights</a>
+    <a href="/sobre">Sobre</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Tributação · Equity executivo</div>
+    <h1>O que acontece com suas ações quando você sai da empresa — e o que poucos executivos sabem sobre o IR</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-09">9 de junho de 2026</time>
+      <span>·</span>
+      <span>8 min de leitura</span>
+    </div>
+    <p class="dek">Pedir demissão ou ser desligado com RSU em vesting tem um custo de imposto que a maioria dos executivos só descobre depois. Veja o que realmente muda — e como estruturar a saída antes de assinar.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY (skeleton — substituir pelo texto final) ─ -->
+<article class="article-body">
+  <div class="prose">
+
+    <p><!-- HOOK: caso real anonimizado, adaptar do post de LinkedIn que funcionou -->
+    Um executivo me ligou na semana em que recebeu a proposta da concorrente. Aumento de pacote, cargo melhor, decisão tomada. A pergunta que ele não tinha feito: o que acontece com as ações que ainda não vestiram?</p>
+
+    <h2>RSU, stock option e phantom stock: as diferenças que importam</h2>
+    <p><!-- Contexto técnico: definir cada instrumento e o gatilho tributário de cada um. --></p>
+
+    <h2>O que a maioria não calcula antes de pedir demissão</h2>
+    <p><!-- O problema: vesting não vestido, blackout, empilhamento de IR no exercício. --></p>
+    <blockquote>A decisão de sair não é só de carreira. É um evento tributável que você ainda pode desenhar — enquanto não assinou.</blockquote>
+
+    <h2>Como estruturar a saída para minimizar o IR</h2>
+    <p><!-- A solução: escalonamento entre exercícios, janelas CVM 44, sequência de venda. --></p>
+
+    <div class="callout">
+      <span class="label">Em uma frase</span>
+      <p>O imposto sobre equity de executivo se decide <strong>antes</strong> do evento de liquidez. Depois de assinar, você só administra o que sobrou.</p>
+    </div>
+
+    <!-- ─── CTA (preview do artefato da S4) ─── -->
+    <div class="cta-block">
+      <h2>Calcule o IR sobre suas RSU antes de decidir</h2>
+      <p>Estou montando uma calculadora que estima o imposto sobre suas ações em diferentes cenários de saída. Entre na lista e receba assim que sair.</p>
+      <a class="btn" href="/contato?origem=insights-rsu">Quero a calculadora</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — deve bater 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Perco minhas RSU se eu sair da empresa?</summary>
+      <p>As RSU já vestidas são suas e não se perdem. As não vestidas (ainda em cliff ou em cronograma de vesting) são, na regra geral dos planos, canceladas no desligamento — salvo cláusulas de aceleração por aposentadoria, mudança de controle ou desligamento sem justa causa. O plano específico manda.</p>
+    </details>
+
+    <details>
+      <summary>Quando incide o imposto de renda sobre RSU no Brasil?</summary>
+      <p>Há dois momentos. No vesting (entrega das ações), a Receita tende a tratar o valor de mercado como remuneração, sujeita à tabela progressiva (até 27,5%) — ponto ainda em disputa e ligado ao Tema 1.226 do STJ. Na venda posterior, o ganho de capital sobre a valorização é tributado de 15% a 22,5%.</p>
+    </details>
+
+    <details>
+      <summary>Vale a pena vender as ações antes de sair da empresa?</summary>
+      <p>Depende de concentração, blackout period (CVM 44) e do seu fluxo de IR no ano. Vender tudo de uma vez pode empilhar ganho de capital e remuneração no mesmo exercício. O desenho ótimo escalona vendas entre exercícios e respeita janelas de negociação.</p>
+    </details>
+
+    <details>
+      <summary>Uma holding reduz o imposto sobre minhas ações de executivo?</summary>
+      <p>Pode ajudar no diferimento e na sucessão, mas não elimina o IR sobre a remuneração no vesting, que é pessoal. O ganho potencial está sobretudo na gestão do ganho de capital e na transição patrimonial — e exige análise caso a caso antes da liquidez, não depois.</p>
+    </details>
+
+    <details>
+      <summary>O que é o Tema 1.226 do STJ e por que importa para quem tem RSU?</summary>
+      <p>É o tema repetitivo em que o STJ discute a natureza jurídica das stock options — remuneratória (tributada no exercício, alíquotas maiores) ou mercantil (tributada só na venda, como ganho de capital). O desfecho muda diretamente quanto e quando você paga de IR sobre seu equity.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────────────────── -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/servicos">Serviços</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
