@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     Marcelo Siqueira CFP / Insights — Artigo 1
+     Slug: /insights/rsu-saida-empresa-imposto-de-renda
+     Conteúdo verificado contra Tema 1.226 STJ (jul. 11/09/2024) em 2026-06-03.
+     FAQ visível DEVE bater 1:1 com o FAQPage JSON-LD.
+     ════════════════════════════════════════════════════════════ -->
+
+<title>O que acontece com suas ações (RSU) quando você sai da empresa — e o IR que poucos calculam</title>
+<meta name="description" content="Sair da empresa com RSU em vesting tem um custo de IR que a maioria dos executivos não calcula. O que muda no imposto, por que o Tema 1.226 do STJ não salva quem tem RSU, e como estruturar a saída antes de assinar.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="O que acontece com suas ações (RSU) quando você sai da empresa">
+<meta property="og:description" content="O custo de IR sobre RSU em vesting que a maioria dos executivos não calcula antes de sair — e por que a vitória do STJ no Tema 1.226 não é sua.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png">
+<meta property="article:published_time" content="2026-06-03">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="O que acontece com suas ações (RSU) quando você sai da empresa">
+<meta name="twitter:description" content="O custo de IR sobre RSU em vesting que a maioria dos executivos não calcula antes de sair.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (alavanca de entidade nomeada) →
+     Organization → Article → FAQPage. Crawlers que não rodam JS leem aqui.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda#article",
+      "headline": "O que acontece com suas ações quando você sai da empresa — e o que poucos executivos sabem sobre o IR",
+      "description": "Sair da empresa com RSU em vesting tem custo de IR que a maioria dos executivos não calcula. O que muda no imposto, por que o Tema 1.226 do STJ não alcança RSU, e como estruturar a saída.",
+      "datePublished": "2026-06-03",
+      "dateModified": "2026-06-03",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/rsu-saida-empresa.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda",
+      "about": [
+        { "@type": "Thing", "name": "Restricted Stock Units (RSU)" },
+        { "@type": "Thing", "name": "Stock options" },
+        { "@type": "Thing", "name": "Imposto de renda sobre remuneração em equity" },
+        { "@type": "Thing", "name": "Tema 1.226 do STJ" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/rsu-saida-empresa-imposto-de-renda#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Perco minhas RSU se eu sair da empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As RSU já vestidas são suas e não se perdem. As não vestidas (ainda em cliff ou em cronograma de vesting) são, na regra geral dos planos, canceladas no desligamento — salvo cláusulas de aceleração por aposentadoria, mudança de controle ou desligamento sem justa causa. O plano específico manda, e é a primeira coisa a ler antes de assinar a saída."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quando incide o imposto de renda sobre RSU no Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Há dois momentos. No vesting (entrega das ações, sem custo de exercício), a Receita trata o valor de mercado das ações como remuneração do trabalho, sujeita à tabela progressiva do IRPF até 27,5% — e há forte tendência de incidência também de contribuição previdenciária. Esse imposto vence mesmo que você não venda nenhuma ação. Na venda posterior, o ganho de capital sobre a valorização acima do valor do vesting é tributado de 15% a 22,5%."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O Tema 1.226 do STJ reduziu o imposto sobre as minhas ações de executivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do tipo de equity. Em setembro de 2024 o STJ, no Tema 1.226 (REsp 2.069.644), fixou que stock options onerosas — em que você paga um preço de exercício — têm natureza mercantil: não incide IRPF no exercício, só na venda das ações, como ganho de capital. Mas RSU é concedida de graça, sem preço de exercício, e ficou de fora dessa tese. RSU continua tratada como remuneração no vesting, na tabela progressiva. Mesmo apelido popular de 'ações da empresa', regimes tributários opostos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vale a pena vender as ações antes de sair da empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para RSU, o imposto de remuneração já incidiu no vesting, vendendo você ou não — o que a venda decide é o timing do ganho de capital. A decisão depende de concentração, do blackout period da CVM 44 e do seu fluxo de IR no ano. Vender tudo de uma vez pode empilhar ganho de capital e remuneração no mesmo exercício e jogar você na alíquota máxima. O desenho ótimo escalona vendas entre exercícios, usa as isenções mensais quando cabem e respeita as janelas de negociação."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Uma holding reduz o imposto sobre minhas ações de executivo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pode ajudar no diferimento e na sucessão, mas não elimina o IR sobre a remuneração no vesting da RSU, que é pessoal e incide na pessoa física. O ganho relevante de estrutura está sobretudo na gestão do ganho de capital e na transição patrimonial — e exige análise caso a caso antes da liquidez, não depois. Montar holding com as ações já na mão costuma chegar tarde."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights" aria-current="page">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Tributação · Equity executivo</div>
+    <h1>O que acontece com suas ações quando você sai da empresa — e o que poucos executivos sabem sobre o IR</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-03">3 de junho de 2026</time>
+      <span>·</span>
+      <span>8 min de leitura</span>
+    </div>
+    <p class="dek">Sair da empresa com RSU em vesting tem um custo de imposto que a maioria dos executivos só descobre quando a retenção aparece. Veja o que realmente muda — por que a vitória do STJ no Tema 1.226 não é sua se o seu equity é RSU, e como estruturar a saída antes de assinar.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY ─────────────────────────────────────── -->
+<article class="article-body">
+  <div class="prose">
+
+    <p>Um executivo me ligou na semana em que recebeu a proposta da concorrente. Pacote maior, cargo melhor, decisão praticamente tomada. A pergunta que ele não tinha feito ainda: o que acontece com as ações que ainda não vestiram — e com o imposto sobre as que já vestiram?</p>
+
+    <p>A resposta que a maioria carrega na cabeça costuma errar nos dois pontos. E, num pacote de executivo, o custo desse erro chega com facilidade à casa das centenas de milhares de reais — não em perda de mercado, em imposto que dava para ter desenhado.</p>
+
+    <p>A saída de um cargo sênior é o evento financeiro que mais gente trata como se fosse só de carreira. É também um evento tributável. E, ao contrário de quase tudo na vida do executivo, ele ainda pode ser desenhado — enquanto você não assinou.</p>
+
+    <h2>Vestido é seu. Não vestido, na maioria dos planos, evapora.</h2>
+
+    <p>Comece pela parte simples. As ações que já vestiram são suas: você sai com elas. As que ainda não vestiram — em <em>cliff</em>, ou no meio do cronograma — são, na regra geral dos planos, canceladas no desligamento.</p>
+
+    <p>"Regra geral" é a parte que custa caro. O que decide é o documento do seu plano, não o senso comum. Cláusulas de aceleração por mudança de controle, por desligamento sem justa causa ou por aposentadoria podem mudar tudo. Há planos em que pedir demissão zera o não vestido, mas ser desligado acelera parte dele. A diferença entre as duas portas, num pacote relevante, é de seis dígitos. Ler esse documento é a primeira tarefa — antes de avisar qualquer pessoa de que você vai sair.</p>
+
+    <h2>RSU, stock option e phantom stock: por que o imposto de cada um é diferente</h2>
+
+    <p>O mercado fala de "ações da empresa" como se fosse uma coisa só. Para o imposto, são três coisas com regimes que hoje chegam a ser opostos. Saber qual é o seu não é detalhe — é o que define quanto você paga e quando.</p>
+
+    <p><strong>RSU (restricted stock units).</strong> Você não paga nada para receber. No vesting, a ação cai na sua conta e a Receita lê o valor de mercado naquele dia como <strong>remuneração do trabalho</strong>. Vai para a tabela progressiva do IRPF, alíquota de até 27,5%, com forte tendência de incidência também de contribuição previdenciária. Esse imposto vence no vesting — você tendo vendido ou não uma única ação.</p>
+
+    <p><strong>Stock option (onerosa).</strong> Aqui você paga um preço de exercício para comprar as ações. E aqui mora a notícia que muita gente ainda não processou: em setembro de 2024, no <strong>Tema 1.226</strong> (REsp 2.069.644), o STJ fixou que esse tipo de plano tem <strong>natureza mercantil</strong>, não remuneratória. Consequência direta: <strong>não incide IRPF no exercício</strong>. O imposto só aparece quando você vende as ações, como ganho de capital — 15% a 22,5%. Para quem tem opção genuinamente onerosa, foi uma vitória grande e concreta.</p>
+
+    <p><strong>Phantom stock.</strong> Não há ação nenhuma. É um bônus em dinheiro indexado ao preço da ação. Tributa como remuneração pura, tabela progressiva, no pagamento. Simples e caro.</p>
+
+    <div class="callout">
+      <span class="label">O detalhe que inverte a conta</span>
+      <p>A vitória do Tema 1.226 é das <strong>stock options onerosas</strong>. RSU é gratuita — ficou de fora. Se o seu equity é RSU, a decisão do STJ não reduz o seu imposto no vesting. Tratar uma como a outra é o erro mais comum que vejo nessa mesa.</p>
+    </div>
+
+    <p>Vale ser honesto sobre o que ainda está em aberto: o tema seguiu para o STF (Tema 1.440) e há um novo repetitivo no STJ sobre contribuição previdenciária (Tema 1.379). A tese do IRPF para stock options está consolidada, mas a fiscalização ainda testa as bordas — sobretudo em planos que se chamam "opção" e na prática funcionam como entrega gratuita. A forma do plano importa mais do que o nome dele.</p>
+
+    <h2>O que a maioria não calcula antes de pedir demissão</h2>
+
+    <p>Três contas costumam ficar de fora da decisão de sair. Cada uma morde sozinha. Juntas, definem o ano fiscal mais caro da sua carreira.</p>
+
+    <p><strong>O empilhamento.</strong> Se a sua saída aciona aceleração de vesting de RSU, todo o valor acelerado é remuneração reconhecida de uma vez, no mesmo exercício. Some isso ao salário do ano, ao bônus, à eventual indenização — e você entra inteiro na alíquota máxima, com retenção na fonte. O ano em que você sai já tende a ser o de maior renda. A aceleração transforma "maior" em "topo da tabela".</p>
+
+    <p><strong>O descasamento de caixa.</strong> O IR do vesting de RSU vence quando a ação entra, não quando você vende. Se você está em <em>blackout</em> da CVM 44 — janela fechada de negociação por ser ou ter sido insider —, pode estar impedido de vender exatamente quando precisa de caixa para pagar o imposto sobre ações que ainda nem virou dinheiro. Imposto real sobre liquidez que você não tem.</p>
+
+    <p><strong>A sequência.</strong> Vender toda a posição de uma vez para "limpar a mesa" empilha o ganho de capital no mesmo ano da remuneração do vesting. São duas bases tributáveis grandes no mesmo exercício, quando poderiam estar em exercícios diferentes.</p>
+
+    <blockquote>A decisão de sair não é só de carreira. É um evento tributável que você ainda pode desenhar — enquanto não assinou.</blockquote>
+
+    <h2>Como estruturar a saída para minimizar o IR</h2>
+
+    <p>Nenhuma dessas alavancas é exótica. Todas dependem de uma coisa: serem acionadas <em>antes</em> do evento, não depois. Depois de assinar, você administra o que sobrou.</p>
+
+    <p><strong>Leia o cronograma de vesting contra a data de saída.</strong> Às vezes adiar a saída em poucas semanas leva você para depois de um vesting que de outro modo evaporaria; às vezes sair antes evita uma aceleração que jogaria tudo num ano já pesado. A data da assinatura é uma variável fiscal, não só de RH.</p>
+
+    <p><strong>Escalone as vendas entre exercícios.</strong> Para RSU, o imposto de remuneração já está dado no vesting; o que você controla é o ganho de capital sobre a valorização posterior. Distribuir vendas ao longo de mais de um ano evita concentrar ganho num único exercício e abre espaço para usar as isenções mensais — R$ 20 mil em vendas de ações no Brasil, R$ 35 mil em ativos no exterior — onde elas couberem.</p>
+
+    <p><strong>Separe as bases.</strong> Sempre que possível, não deixe o ganho de capital e a remuneração do vesting caírem no mesmo ano. Sequenciar os dois eventos é, com frequência, a alavanca mais simples e mais subestimada.</p>
+
+    <p><strong>Provisione o caixa do imposto antes do blackout.</strong> Se há janela fechada à vista, o caixa para o IR do vesting precisa estar reservado antes, não depois. É a diferença entre pagar o imposto e ter que vender no pior momento para pagá-lo.</p>
+
+    <p><strong>Se o seu equity é opção, aproveite o regime certo.</strong> Pós-Tema 1.226, a opção onerosa tende a ser melhor tributada segurando as ações e realizando como ganho de capital na venda — não correndo para tratar nada como remuneração. Mas isso exige que o plano de fato tenha onerosidade e risco. Plano que se chama opção e funciona como brinde não compra a tese.</p>
+
+    <p>Nada disso substitui a leitura do seu plano específico e a validação com um tributarista — esta é uma área em movimento, e o desenho ótimo é o seu, não o genérico. O ponto é anterior: a hora de fazer essa conta é antes de você dizer que vai sair.</p>
+
+    <!-- ─── CTA (preview do artefato da S4) ─── -->
+    <div class="cta-block">
+      <h2>Calcule o IR sobre suas RSU antes de decidir</h2>
+      <p>Estou montando uma calculadora que estima o imposto sobre suas ações em diferentes cenários de saída — vesting acelerado, escalonamento de venda, opção versus RSU. Entre na lista e receba assim que sair.</p>
+      <a class="btn" href="/contato?origem=insights-rsu">Quero a calculadora</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — bate 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Perco minhas RSU se eu sair da empresa?</summary>
+      <p>As RSU já vestidas são suas e não se perdem. As não vestidas (ainda em cliff ou em cronograma de vesting) são, na regra geral dos planos, canceladas no desligamento — salvo cláusulas de aceleração por aposentadoria, mudança de controle ou desligamento sem justa causa. O plano específico manda, e é a primeira coisa a ler antes de assinar a saída.</p>
+    </details>
+
+    <details>
+      <summary>Quando incide o imposto de renda sobre RSU no Brasil?</summary>
+      <p>Há dois momentos. No vesting (entrega das ações, sem custo de exercício), a Receita trata o valor de mercado das ações como remuneração do trabalho, sujeita à tabela progressiva do IRPF até 27,5% — e há forte tendência de incidência também de contribuição previdenciária. Esse imposto vence mesmo que você não venda nenhuma ação. Na venda posterior, o ganho de capital sobre a valorização acima do valor do vesting é tributado de 15% a 22,5%.</p>
+    </details>
+
+    <details>
+      <summary>O Tema 1.226 do STJ reduziu o imposto sobre as minhas ações de executivo?</summary>
+      <p>Depende do tipo de equity. Em setembro de 2024 o STJ, no Tema 1.226 (REsp 2.069.644), fixou que stock options onerosas — em que você paga um preço de exercício — têm natureza mercantil: não incide IRPF no exercício, só na venda das ações, como ganho de capital. Mas RSU é concedida de graça, sem preço de exercício, e ficou de fora dessa tese. RSU continua tratada como remuneração no vesting, na tabela progressiva. Mesmo apelido popular de "ações da empresa", regimes tributários opostos.</p>
+    </details>
+
+    <details>
+      <summary>Vale a pena vender as ações antes de sair da empresa?</summary>
+      <p>Para RSU, o imposto de remuneração já incidiu no vesting, vendendo você ou não — o que a venda decide é o timing do ganho de capital. A decisão depende de concentração, do blackout period da CVM 44 e do seu fluxo de IR no ano. Vender tudo de uma vez pode empilhar ganho de capital e remuneração no mesmo exercício e jogar você na alíquota máxima. O desenho ótimo escalona vendas entre exercícios, usa as isenções mensais quando cabem e respeita as janelas de negociação.</p>
+    </details>
+
+    <details>
+      <summary>Uma holding reduz o imposto sobre minhas ações de executivo?</summary>
+      <p>Pode ajudar no diferimento e na sucessão, mas não elimina o IR sobre a remuneração no vesting da RSU, que é pessoal e incide na pessoa física. O ganho relevante de estrutura está sobretudo na gestão do ganho de capital e na transição patrimonial — e exige análise caso a caso antes da liquidez, não depois. Montar holding com as ações já na mão costuma chegar tarde.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ─── FOOTER ───────────────────────────────────────────── -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

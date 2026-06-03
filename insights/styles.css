@@ -138,6 +138,27 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .card h3 { font-family: var(--fd); font-weight: 400; font-size: 24px; line-height: 1.25; color: var(--vectis-navy); margin-bottom: 12px; }
 .card p { font-size: 15px; color: var(--vectis-graphite); flex: 1; }
 .card .read { font-size: 13px; color: var(--vectis-cool-gray); margin-top: 20px; }
+/* Cards "Em breve" (artigos ainda não publicados): sem link, sem hover-lift, atenuados */
+.card--soon { opacity: 0.62; cursor: default; }
+.card--soon:hover { border-color: var(--vectis-stone); transform: none; }
+.card--soon .read { color: var(--vectis-brass); font-weight: 500; }
+
+/* ─── HOME ────────────────────────────────────────────── */
+.home-section { padding: 72px 0; }
+.home-section--alt { background: var(--vectis-warm-white); border-top: 1px solid var(--vectis-stone); border-bottom: 1px solid var(--vectis-stone); }
+.home-section .prose h2 { font-family: var(--fd); font-weight: 400; font-size: 34px; line-height: 1.18; color: var(--vectis-navy); margin-bottom: 20px; }
+.home-section .prose p { margin: 0 0 20px; }
+.home-section .prose strong { color: var(--vectis-navy); font-weight: 500; }
+.home-section .eyebrow { margin-bottom: 28px; }
+.card--index { background: var(--vectis-navy); border-color: var(--vectis-navy); }
+.card--index .tag { color: var(--vectis-brass); }
+.card--index h3, .card--index p, .card--index .read { color: var(--vectis-warm-white); }
+.card--index p { color: var(--vectis-cool-gray); }
+.card--index:hover { border-color: var(--vectis-brass); }
+/* ─── FORM (contato) ──────────────────────────────────── */
+.form-card { background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px; padding: 40px; margin: 8px 0 40px; }
+.form-card .hs-form fieldset { max-width: 100%; }
+.form-card input, .form-card textarea, .form-card select { font-family: var(--fs); font-size: 16px; }
 
 /* ─── FOOTER ──────────────────────────────────────────── */
 .site-foot { background: var(--vectis-dark-slate); color: var(--vectis-cool-gray); padding: 56px 0; margin-top: 64px; font-size: 14px; }

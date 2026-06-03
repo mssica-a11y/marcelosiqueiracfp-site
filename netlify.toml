@@ -1,0 +1,20 @@
+# Netlify — site estático (sem build). Publish na raiz do repo.
+# URLs limpas (/insights, /contato) servidas automaticamente dos .html.
+
+[build]
+  publish = "."
+  command = ""
+
+# Canonicalização: www → apex (mantém um único host canônico).
+# O apex deve ser definido como domínio primário nas Domain settings do Netlify.
+[[redirects]]
+  from = "https://www.marcelosiqueiracfp.com.br/*"
+  to = "https://marcelosiqueiracfp.com.br/:splat"
+  status = 301
+  force = true
+
+# Cache longo para o CSS (arquivo versionável; trocar o nome ao mudar muito).
+[[headers]]
+  for = "/insights/styles.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
