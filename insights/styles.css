@@ -105,6 +105,24 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .callout .label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-cool-gray); font-weight: 500; margin-bottom: 8px; display: block; }
 .data { font-family: var(--fm); }
 
+/* ─── DECISION TABLE ──────────────────────────────────── */
+.table-wrap { margin: 32px 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.decision-table {
+  width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5;
+  min-width: 640px; background: #fff; border: 1px solid var(--vectis-stone); border-radius: 8px;
+}
+.decision-table th, .decision-table td {
+  text-align: left; padding: 14px 16px; vertical-align: top;
+  border-bottom: 1px solid var(--vectis-stone);
+}
+.decision-table thead th {
+  background: var(--vectis-navy); color: var(--vectis-warm-white);
+  font-weight: 500; font-size: 13px; letter-spacing: 0.02em;
+}
+.decision-table tbody tr:last-child td { border-bottom: none; }
+.decision-table tbody td:first-child { color: var(--vectis-navy); white-space: nowrap; }
+.decision-table strong { color: var(--vectis-navy); font-weight: 500; }
+
 /* ─── FAQ ─────────────────────────────────────────────── */
 .faq { border-top: 1px solid var(--vectis-stone); padding: 48px 0 8px; }
 .faq h2 { font-family: var(--fd); font-weight: 400; font-size: 32px; color: var(--vectis-navy); margin-bottom: 24px; }

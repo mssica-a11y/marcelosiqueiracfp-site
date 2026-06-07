@@ -29,11 +29,17 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Artigos 3–6: descomentar/atualizar lastmod ao publicar cada um -->
+  <!-- Artigo 3 — publicado 2026-06-07 (fecha o cluster equity) -->
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender</loc>
+    <lastmod>2026-06-07</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Artigos 4–6: descomentar/atualizar lastmod ao publicar cada um -->
   <!--
   <url><loc>https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez</loc><lastmod>2026-06-23</lastmod><priority>0.8</priority></url>
   <url><loc>https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior</loc><lastmod>2026-06-30</lastmod><priority>0.8</priority></url>
-  <url><loc>https://marcelosiqueiracfp.com.br/insights/collar-lombard-hedge-equity-concentrado</loc><lastmod>2026-07-07</lastmod><priority>0.8</priority></url>
   <url><loc>https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo</loc><lastmod>2026-07-14</lastmod><priority>0.8</priority></url>
   -->
 

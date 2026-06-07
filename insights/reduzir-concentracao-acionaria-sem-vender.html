@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     Marcelo Siqueira CFP / Insights — Artigo 3
+     Slug: /insights/reduzir-concentracao-acionaria-sem-vender
+     Fecha o cluster "equity do executivo" (Art1 RSU saída, Art2 Tema 1.226).
+     Fatos verificados em fonte primária 2026-06-07:
+       · Princípio da realização — IR só na alienação (art. 43 CTN).
+       · NÃO há regra de "constructive sale" análoga à Section 1259 (EUA),
+         nem exchange funds; estruturas agressivas sujeitas a norma antielisiva.
+       · Opções/termo LISTADOS (B3) = renda variável: 15% comum / 20% day trade,
+         apuração mensal (DARF 6015), SEM a isenção de R$20 mil (essa é só ações à vista).
+       · Lombard/crédito com garantia: dívida não é fato gerador; LTV em ação
+         volátil tipicamente <70%; taxa p/ colateral robusto poucos p.p. acima do CDI;
+         juros não dedutíveis p/ PF; risco de margin call.
+       · Derivativos de BALCÃO (swap, NDF) = regime próprio, definido na estruturação;
+         tratamento menos uniforme — apresentado com hedge, sem overclaim.
+     FAQ visível bate 1:1 com FAQPage. Person @id idêntico aos Art1/Art2.
+     ════════════════════════════════════════════════════════════ -->
+
+<title>Posição concentrada numa ação: como reduzir o risco sem vender</title>
+<meta name="description" content="Quando a maior parte do seu patrimônio está numa única ação, vender resolve a concentração mas realiza o imposto sobre todo o ganho. Três ferramentas — collar, crédito com garantia e hedge — reduzem o risco sem disparar a venda. Quando cada uma cabe, e o portão que vem antes de todas.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Posição concentrada numa ação: como reduzir o risco sem vender">
+<meta property="og:description" content="Vender resolve a concentração mas realiza o imposto. Três ferramentas reduzem o risco sem disparar a venda — e o portão que vem antes de todas elas.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/concentracao-acionaria.png">
+<meta property="article:published_time" content="2026-06-07">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Posição concentrada numa ação: como reduzir o risco sem vender">
+<meta name="twitter:description" content="Vender resolve a concentração mas realiza o imposto. Três ferramentas reduzem o risco sem disparar a venda — e o portão que vem antes de todas elas.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/concentracao-acionaria.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (alavanca de entidade nomeada) →
+     Organization → Article → FAQPage. Crawlers que não rodam JS leem aqui.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender#article",
+      "headline": "Posição concentrada numa ação: como reduzir o risco sem vender",
+      "description": "Quando a maior parte do seu patrimônio está numa única ação, vender resolve a concentração mas realiza o imposto sobre todo o ganho. Três ferramentas — collar, crédito com garantia e hedge — reduzem o risco sem disparar a venda. Quando cada uma cabe, e o portão que vem antes de todas.",
+      "datePublished": "2026-06-07",
+      "dateModified": "2026-06-07",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/concentracao-acionaria.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender",
+      "about": [
+        { "@type": "Thing", "name": "Concentração acionária" },
+        { "@type": "Thing", "name": "Collar de opções" },
+        { "@type": "Thing", "name": "Crédito com garantia de investimentos" },
+        { "@type": "Thing", "name": "Hedge com derivativos" },
+        { "@type": "Thing", "name": "Princípio da realização" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/reduzir-concentracao-acionaria-sem-vender#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Dá para reduzir o risco de uma ação concentrada sem vender e sem pagar imposto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dá para reduzir o risco sem vender — e, com isso, sem realizar de imediato o imposto sobre o ganho embutido na ação. No Brasil o IR sobre a ação só incide na alienação (art. 43 do CTN), e não existe regra de 'constructive sale' como a Section 1259 dos Estados Unidos, que trata certos hedges como venda antecipada. Mas atenção: o imposto não some, fica adiado — o ganho continua latente e será cobrado quando você vender. E cada ferramenta de proteção tem custo e tributação próprios. Reduzir risco sem vender é diferir o imposto, não eliminá-lo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso fazer collar ou dar minhas ações em garantia se elas são da empresa onde trabalho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende — e é a primeira coisa a checar. Muitos planos de ações, políticas internas de negociação e a regulação de mercado (CVM 44) proíbem expressamente que o executivo faça hedge ou dê em garantia as ações da própria companhia, sobretudo quem é administrador ou tem acesso a informação relevante. Há ainda períodos de vedação (blackout) em que você simplesmente não pode operar. Antes de discutir collar, crédito com garantia ou qualquer hedge, leia o seu plano e a política de negociação da empresa. Esse portão decide se as ferramentas estão disponíveis para você."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como é tributado o collar (comprar put e vender call) sobre ações que já tenho?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Montar o collar não realiza o imposto da ação que continua na sua carteira — o IR da ação só aparece quando você efetivamente vende. O que é tributado é o resultado das opções: opções listadas na B3 entram no regime de renda variável, 15% nas operações comuns e 20% no day trade, apuração mensal (DARF 6015). E a isenção de R$ 20 mil por mês não vale aqui: ela é só para vendas de ações no mercado à vista, não para opções."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tomar empréstimo com as ações em garantia (lombard) paga imposto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Receber um empréstimo não é renda — você assume uma dívida de valor equivalente, então não há acréscimo patrimonial e não há fato gerador de IR. Dar as ações em garantia também não realiza o ganho: você continua titular dos papéis. Só haveria imposto se as ações fossem efetivamente vendidas no futuro, inclusive numa execução da garantia. Na prática: para ação volátil o crédito costuma ficar abaixo de 70% do valor dado em garantia, a taxa para colateral robusto fica poucos pontos acima do CDI, os juros não são dedutíveis para pessoa física, e há risco de chamada de garantia (margin call) se a ação cair."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual a diferença de imposto entre um hedge listado na bolsa e um de balcão (OTC)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "É uma diferença que muda a conta. Derivativos listados na B3 — opções e mercado a termo — seguem o regime de renda variável (15%/20%, apuração mensal pelo próprio investidor). Já estruturas de balcão fechadas com um banco — swaps, NDF, termos com liquidação financeira — seguem um regime próprio, definido caso a caso na estruturação, normalmente com retenção na fonte e tratamento que não acompanha a regra das ações à vista. É um terreno menos uniforme, e há até discussão técnica sobre a incidência quando o derivativo é hedge puro. Antes de fechar, peça ao estruturador a memória de cálculo tributária do contrato específico."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights" aria-current="page">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Equity concentrado · Estrutura</div>
+    <h1>Posição concentrada numa ação: como reduzir o risco sem vender</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-07">7 de junho de 2026</time>
+      <span>·</span>
+      <span>9 min de leitura</span>
+    </div>
+    <p class="dek">A maior parte do seu patrimônio está numa ação só — provavelmente a da empresa onde você trabalha. Vender resolve a concentração e detona, de uma vez, o imposto sobre todo o ganho. Há três ferramentas que cortam o risco sem disparar a venda. E um portão que vem antes de todas elas.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY ─────────────────────────────────────── -->
+<article class="article-body">
+  <div class="prose">
+
+    <p>É a situação mais comum na mesa do executivo, e a menos discutida com franqueza. Anos de RSU que venceram, opções que você exerceu, ações que acumulou — e, de repente, metade ou mais do seu patrimônio líquido está num único papel. Quase sempre o da empresa onde você passa o dia. O risco é óbvio para você: a mesma decisão de carreira e a mesma tese de mercado movem o seu salário <em>e</em> o seu patrimônio na mesma direção, ao mesmo tempo.</p>
+
+    <p>A resposta de manual é "diversifique". Mas vender uma posição muito valorizada não é de graça: você realiza o ganho de capital de toda a posição de uma vez e entrega o imposto correspondente. Para quem carregou a ação por anos, a conta da diversificação pode ser a maior fatura de IR da carreira — e é exatamente por isso que tanta gente trava e não faz nada.</p>
+
+    <p>Há um caminho do meio que a maioria não conhece: <strong>reduzir o risco da posição sem vendê-la</strong>. Este artigo é o mapa de decisão das três ferramentas que fazem isso — collar, crédito com garantia e hedge — e do portão que decide se você pode usá-las.</p>
+
+    <p>Ele fecha um cluster de três peças. A <a href="/insights/rsu-saida-empresa-imposto-de-renda">primeira</a> trata do que acontece com suas ações quando você sai da empresa; a <a href="/insights/tema-1226-stj-stock-options-executivo">segunda</a>, de como o Tema 1.226 do STJ separa opção de RSU em dois impostos opostos. Aqui o tema é o que fazer com a posição depois que ela já está concentrada na sua mão.</p>
+
+    <h2>Portão zero: o seu plano e a política da empresa decidem antes de tudo</h2>
+
+    <p>Antes de qualquer estrutura, uma pergunta que tem prioridade sobre todas as outras: <strong>você tem permissão para fazer hedge ou dar em garantia as ações da sua própria empresa?</strong></p>
+
+    <p>Para uma fatia grande de executivos, a resposta é não. Planos de ações, políticas internas de negociação e a regulação de mercado costumam <strong>proibir expressamente</strong> que administradores e pessoas com acesso a informação relevante protejam ou penhorem as ações da companhia — entre outras razões, porque um collar ou um put alinha o seu interesse contra o da própria ação que você ajuda a dirigir. A CVM 44 ainda impõe <strong>períodos de vedação</strong> (blackout) ao redor de resultados e fatos relevantes, em que você simplesmente não pode operar.</p>
+
+    <p>Isso não é nota de rodapé. É o primeiro filtro. Se o seu plano veda hedge e penhor sobre a ação da empresa, duas das três ferramentas saem da mesa antes de você calcular o primeiro número. Abra o <em>plan document</em> e a política de negociação, confirme o seu enquadramento e, se houver dúvida, valide com o jurídico ou o compliance da companhia. Tudo o que vem a seguir pressupõe que esse portão esteja aberto — e ele é assunto de um próximo artigo, sobre a CVM 44 na vida do insider.</p>
+
+    <h2>O princípio que torna isso possível — e o seu limite</h2>
+
+    <p>A razão de existir um caminho do meio é um princípio simples do nosso sistema: <strong>o imposto sobre a ação só incide quando há alienação</strong>. Enquanto você apenas <em>segura</em> o papel, a valorização é ganho latente — não tributado, por maior que seja. O fato gerador é a venda, não a posse (art. 43 do CTN).</p>
+
+    <p>Daí decorre o ponto que mais separa o Brasil dos Estados Unidos. Lá existe a <em>constructive sale rule</em> (Section 1259): certos hedges "apertados" demais sobre uma posição são tratados como <strong>venda ficta</strong>, e o imposto do ganho latente é antecipado na hora. <strong>No Brasil não há regra equivalente.</strong> Montar um collar ou tomar um empréstimo com as ações em garantia, por si só, não é alienação — e não antecipa o IR da ação subjacente. Também não temos os <em>exchange funds</em> americanos, que permitem trocar uma ação concentrada por uma cesta diversificada com diferimento de imposto. A ferramenta de diferimento, aqui, é o conjunto abaixo.</p>
+
+    <p>O limite tem que ficar dito com a mesma clareza: <strong>o ganho não evapora, ele fica adiado.</strong> O imposto que você não pagou continua latente e será cobrado quando a ação for vendida. Você está comprando tempo e cortando risco, não apagando a conta. E estruturas muito agressivas, montadas com o único propósito de simular uma venda sem os efeitos dela, podem ser questionadas à luz das normas gerais antielisivas. O objetivo aqui é gestão de risco real, não mágica fiscal.</p>
+
+    <h2>As três ferramentas</h2>
+
+    <p><strong>1. Collar — travar a faixa de preço, com baixo desembolso.</strong> Você compra uma <em>put</em> (que põe um piso no preço da ação) e financia parte ou tudo do custo dela vendendo uma <em>call</em> (que põe um teto). No <em>zero-cost collar</em>, o prêmio recebido na call paga a put — desembolso próximo de zero. O efeito é um corredor: abaixo do piso você está protegido; acima do teto você abre mão do upside. Enquanto o preço fica dentro do corredor, a ação continua sua e o ganho latente segue apenas adiado; nesse intervalo, a pegada de imposto está só nas opções: <strong>listadas na B3, são renda variável — 15% nas operações comuns, 20% no day trade, apuração mensal</strong> (DARF 6015), e <strong>sem</strong> a isenção de R$ 20 mil/mês, que vale apenas para ações à vista. Atenção ao desfecho, porém: opções de ação na B3 costumam ter <strong>liquidação física</strong>. Se a call é exercida (ação acima do teto) ou se você exerce a put (ação abaixo do piso), as ações são entregues — e aí a venda realiza o ganho. O collar adia o imposto enquanto o preço fica no corredor; ele não o cancela. Cuidado de realidade: opções de ação líquidas existem na B3 para poucos nomes, e muito executivo carrega ação <em>listada lá fora</em> — nesses casos o collar é uma estrutura de <strong>balcão com banco privado</strong>, não uma ordem de tela. A call vendida exige margem, mas, se as ações estão custodiadas como lastro, ela é coberta e o risco de chamada cai.</p>
+
+    <p><strong>2. Crédito com garantia (lombard) — liquidez sem realizar a venda.</strong> Em vez de proteger o preço, esta ferramenta resolve outra dor: você precisa de caixa — para diversificar de fato, comprar um imóvel, pagar o imposto de outra operação — mas não quer vender a ação. Você toma um empréstimo dando os papéis em garantia. <strong>Tomar dívida não é fato gerador de IR</strong>: o dinheiro que entra vem com uma obrigação de igual valor, não é renda. E dar a ação em garantia não realiza o ganho — você segue titular dela. Os parâmetros de mercado: para ação (ativo volátil), o crédito costuma ficar <strong>abaixo de 70% do valor</strong> dado em garantia; a taxa, para cliente com colateral robusto, fica <strong>poucos pontos acima do CDI</strong> — outro mundo frente ao crédito de varejo. Os juros <strong>não são dedutíveis</strong> para pessoa física. O risco real é o <strong>margin call</strong>: se a ação cai, o banco pode exigir reforço de garantia ou, no limite, vender os papéis — e aí, ironicamente, a venda forçada realiza o imposto que você queria adiar. Lombard combina com posição cuja tese você ainda acredita; é alavancagem, e pede folga de garantia.</p>
+
+    <p><strong>3. Hedge com derivativos — proteger valor de forma direcionada.</strong> Quando o que você quer é só piso de proteção, sem teto, a <em>put</em> de proteção comprada isolada faz isso: custa o prêmio, e preserva todo o upside. Variações vão de contratos a termo a swaps e NDF, conforme o ativo e o objetivo. Aqui a régua tributária se bifurca, e a diferença muda a conta: derivativos <strong>listados</strong> na B3 (opções, termo) seguem a renda variável (15%/20%, mensal); estruturas de <strong>balcão</strong> fechadas com banco (swap, NDF, termo com liquidação financeira) seguem um <strong>regime próprio</strong>, definido caso a caso na estruturação, em geral com retenção na fonte e tratamento que não acompanha a regra das ações à vista — terreno menos uniforme, com discussão técnica inclusive sobre a incidência quando o derivativo é hedge puro. Regra prática: antes de assinar um derivativo de balcão, exija do estruturador a memória de cálculo tributária <em>daquele</em> contrato.</p>
+
+    <div class="callout">
+      <span class="label">A regra de bolso</span>
+      <p>Quer cortar o risco de preço gastando pouco e topa abrir mão do upside acima de um teto: <strong>collar</strong>. Precisa de caixa e ainda acredita na ação: <strong>crédito com garantia</strong>. Quer só um piso, mantendo o upside: <strong>put de proteção</strong>. Nenhuma delas vende a ação — e nenhuma apaga o imposto; todas o adiam, cada uma com seu custo e sua pegada.</p>
+    </div>
+
+    <h2>O quadro de decisão</h2>
+
+    <p>A escolha não é "qual é a melhor", é "qual resolve o <em>seu</em> problema, dado o que o seu plano permite". O quadro abaixo é o resumo que cabe numa página.</p>
+
+    <div class="table-wrap">
+    <table class="decision-table">
+      <thead>
+        <tr>
+          <th>Ferramenta</th>
+          <th>O que resolve</th>
+          <th>Pegada de imposto</th>
+          <th>Risco principal</th>
+          <th>Quando faz sentido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Collar</strong><br>(put + call)</td>
+          <td>Trava a faixa de preço (piso e teto), desembolso próximo de zero</td>
+          <td>Só as opções: listadas = renda variável 15%/20%, mensal, sem isenção R$20k. Ação não é realizada</td>
+          <td>Abre mão do upside acima do teto; margem na call (coberta se ações custodiadas)</td>
+          <td>Quer proteção barata e aceita teto no ganho</td>
+        </tr>
+        <tr>
+          <td><strong>Crédito com garantia</strong><br>(lombard)</td>
+          <td>Gera caixa sem vender a ação</td>
+          <td>Dívida não é fato gerador. Juros não dedutíveis p/ PF</td>
+          <td>Margin call: queda da ação força reforço de garantia ou venda</td>
+          <td>Precisa de liquidez e ainda acredita na tese da ação</td>
+        </tr>
+        <tr>
+          <td><strong>Hedge / put de proteção</strong></td>
+          <td>Põe um piso, preservando o upside</td>
+          <td>Listado = renda variável 15%/20%. Balcão (swap/NDF) = regime próprio, conferir na estruturação</td>
+          <td>Custo do prêmio; em balcão, risco de contraparte</td>
+          <td>Quer downside protegido sem abrir mão da alta</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>Três caveats fecham o quadro, e valem para as três colunas. Primeiro, o <strong>portão</strong>: se o seu plano veda hedge e penhor da ação da empresa, collar e lombard sobre <em>esse</em> papel saem da mesa. Segundo, a <strong>liquidez</strong>: collar e put listados pressupondo opção negociável — para ação sem mercado de opções, é balcão com banco privado, com mínimos e custos diferentes. Terceiro, o <strong>diferimento</strong>: nenhuma delas resolve a concentração em definitivo. Em algum momento a ação ainda precisa ser desmontada — e essas ferramentas servem justamente para fazer isso no seu ritmo, escalonado, e não num susto de mercado.</p>
+
+    <blockquote>Concentração não se resolve num clique de "vender tudo". Resolve-se com sequência: proteger o que não pode cair, gerar caixa sem realizar de uma vez, e desmontar a posição no seu calendário — não no do pânico.</blockquote>
+
+    <p>Qual ferramenta entra, em que ordem e em que tamanho depende de três coisas suas: o que o plano permite, quanto da sua vida financeira depende daquele papel, e qual é o seu horizonte de saída. Essa é uma conversa de estrutura — com o banco que monta o instrumento, com o tributarista que confirma a pegada do contrato específico, e com o compliance da empresa antes de qualquer ordem. O que este artigo te dá é o mapa para chegar nela já sabendo o que perguntar.</p>
+
+    <!-- ─── CTA → calculadora (Trilho C, no ar) ─── -->
+    <div class="cta-block">
+      <h2>Calcule o imposto antes de desmontar a posição</h2>
+      <p>A calculadora estima o IR sobre suas ações em diferentes cenários de venda — à vista, escalonada, em janelas distintas. A conta que decide o ritmo da diversificação, antes de o mercado decidir por você.</p>
+      <a class="btn" href="https://calculadora.marcelosiqueiracfp.com.br/?origem=insights-concentracao" target="_blank" rel="noopener">Abrir a calculadora</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — bate 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Dá para reduzir o risco de uma ação concentrada sem vender e sem pagar imposto?</summary>
+      <p>Dá para reduzir o risco sem vender — e, com isso, sem realizar de imediato o imposto sobre o ganho embutido na ação. No Brasil o IR sobre a ação só incide na alienação (art. 43 do CTN), e não existe regra de "constructive sale" como a Section 1259 dos Estados Unidos, que trata certos hedges como venda antecipada. Mas atenção: o imposto não some, fica adiado — o ganho continua latente e será cobrado quando você vender. E cada ferramenta de proteção tem custo e tributação próprios. Reduzir risco sem vender é diferir o imposto, não eliminá-lo.</p>
+    </details>
+
+    <details>
+      <summary>Posso fazer collar ou dar minhas ações em garantia se elas são da empresa onde trabalho?</summary>
+      <p>Depende — e é a primeira coisa a checar. Muitos planos de ações, políticas internas de negociação e a regulação de mercado (CVM 44) proíbem expressamente que o executivo faça hedge ou dê em garantia as ações da própria companhia, sobretudo quem é administrador ou tem acesso a informação relevante. Há ainda períodos de vedação (blackout) em que você simplesmente não pode operar. Antes de discutir collar, crédito com garantia ou qualquer hedge, leia o seu plano e a política de negociação da empresa. Esse portão decide se as ferramentas estão disponíveis para você.</p>
+    </details>
+
+    <details>
+      <summary>Como é tributado o collar (comprar put e vender call) sobre ações que já tenho?</summary>
+      <p>Montar o collar não realiza o imposto da ação que continua na sua carteira — o IR da ação só aparece quando você efetivamente vende. O que é tributado é o resultado das opções: opções listadas na B3 entram no regime de renda variável, 15% nas operações comuns e 20% no day trade, apuração mensal (DARF 6015). E a isenção de R$ 20 mil por mês não vale aqui: ela é só para vendas de ações no mercado à vista, não para opções.</p>
+    </details>
+
+    <details>
+      <summary>Tomar empréstimo com as ações em garantia (lombard) paga imposto?</summary>
+      <p>Não. Receber um empréstimo não é renda — você assume uma dívida de valor equivalente, então não há acréscimo patrimonial e não há fato gerador de IR. Dar as ações em garantia também não realiza o ganho: você continua titular dos papéis. Só haveria imposto se as ações fossem efetivamente vendidas no futuro, inclusive numa execução da garantia. Na prática: para ação volátil o crédito costuma ficar abaixo de 70% do valor dado em garantia, a taxa para colateral robusto fica poucos pontos acima do CDI, os juros não são dedutíveis para pessoa física, e há risco de chamada de garantia (margin call) se a ação cair.</p>
+    </details>
+
+    <details>
+      <summary>Qual a diferença de imposto entre um hedge listado na bolsa e um de balcão (OTC)?</summary>
+      <p>É uma diferença que muda a conta. Derivativos listados na B3 — opções e mercado a termo — seguem o regime de renda variável (15%/20%, apuração mensal pelo próprio investidor). Já estruturas de balcão fechadas com um banco — swaps, NDF, termos com liquidação financeira — seguem um regime próprio, definido caso a caso na estruturação, normalmente com retenção na fonte e tratamento que não acompanha a regra das ações à vista. É um terreno menos uniforme, e há até discussão técnica sobre a incidência quando o derivativo é hedge puro. Antes de fechar, peça ao estruturador a memória de cálculo tributária do contrato específico.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

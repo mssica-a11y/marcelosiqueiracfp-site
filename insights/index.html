@@ -77,7 +77,10 @@
 <main class="wrap">
   <div class="article-grid">
 
-    <!-- Artigo 1 — publicado primeiro (S2) -->
+    <!-- Cards em ordem de publicação. Ao publicar um "Em breve",
+         converter o <div class="card card--soon"> em <a class="card" href="…"> e renumerar. -->
+
+    <!-- Artigo 1 — publicado (S2) -->
     <a class="card" href="/insights/rsu-saida-empresa-imposto-de-renda">
       <span class="tag">Tributação · Equity</span>
       <h3>O que acontece com suas ações quando você sai da empresa</h3>
@@ -85,8 +88,7 @@
       <span class="read">8 min · Artigo 1</span>
     </a>
 
-    <!-- Artigos 2–6: ainda não publicados. Cards "Em breve" (sem href) para não gerar 404
-         nem links seguidos por crawler. Ao publicar cada um, reverter para <a class="card" href="…">. -->
+    <!-- Artigo 2 — publicado -->
     <a class="card" href="/insights/tema-1226-stj-stock-options-executivo">
       <span class="tag">Tributação · STJ</span>
       <h3>Tema 1.226 do STJ: o que a decisão muda para você com equity</h3>
@@ -94,24 +96,27 @@
       <span class="read">8 min · Artigo 2</span>
     </a>
 
+    <!-- Artigo 3 — publicado (fecha o cluster equity) -->
+    <a class="card" href="/insights/reduzir-concentracao-acionaria-sem-vender">
+      <span class="tag">Equity concentrado · Estrutura</span>
+      <h3>Posição concentrada numa ação: como reduzir o risco sem vender</h3>
+      <p>Collar, crédito com garantia e hedge — três ferramentas para cortar o risco de concentração sem disparar o imposto. E o portão que vem antes de todas.</p>
+      <span class="read">9 min · Artigo 3</span>
+    </a>
+
+    <!-- Artigos 4–6: ainda não publicados. Cards "Em breve" (sem href) para não gerar 404
+         nem links seguidos por crawler. -->
     <div class="card card--soon" aria-disabled="true">
       <span class="tag">Compliance · Liquidez</span>
       <h3>CVM 44 e blackout period: planejar liquidez sem travar patrimônio</h3>
       <p>As janelas de negociação ditam quando você pode vender. Como desenhar a liquidez em torno delas.</p>
-      <span class="read">Em breve · Artigo 3</span>
+      <span class="read">Em breve · Artigo 4</span>
     </div>
 
     <div class="card card--soon" aria-disabled="true">
       <span class="tag">Offshore · Lei 14.754</span>
       <h3>Lei 14.754/23 e o executivo com conta no exterior</h3>
       <p>O que mudou na tributação de offshore e investimentos no exterior — e o que ainda não está precificado.</p>
-      <span class="read">Em breve · Artigo 4</span>
-    </div>
-
-    <div class="card card--soon" aria-disabled="true">
-      <span class="tag">Engenharia financeira</span>
-      <h3>Collar, lombard e hedge: proteger equity concentrado sem vender</h3>
-      <p>Estruturas para reduzir risco de concentração em ações do empregador sem disparar o evento tributário.</p>
       <span class="read">Em breve · Artigo 5</span>
     </div>
 
