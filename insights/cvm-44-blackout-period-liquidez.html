@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     Marcelo Siqueira CFP / Insights — Artigo 4
+     Slug: /insights/cvm-44-blackout-period-liquidez
+     Abre a sequência "compliance/liquidez" depois do cluster equity
+     (Art1 RSU saída, Art2 Tema 1.226, Art3 concentração). É o "portão
+     zero" do Art3 desenvolvido: a CVM 44 na vida do insider.
+     Fatos verificados em fonte primária 2026-06-10 (Resolução CVM 44,
+     texto consolidado, conteudo.cvm.gov.br):
+       · Art. 13 — vedação GERAL: proíbe usar info relevante não divulgada
+         por QUALQUER pessoa que teve acesso (condicional a ter a info).
+         §1º II presume acesso de controladores/diretores/cons. admin/fiscal.
+       · Art. 14 — blackout OBJETIVO 15 dias antes de ITR/DFP. Lista ESTREITA
+         no caput: companhia, controladores, diretores [estatutários],
+         conselho de administração, conselho fiscal. Independe do conhecimento
+         do conteúdo (§1º). §3º exceções (renda fixa c/ recompra; obrigações
+         pré-assumidas; instituições financeiras no curso normal).
+       · Art. 15 — política de negociação aprovada pelo conselho de admin;
+         pode trazer regras ADICIONAIS e abranger "pessoas vinculadas".
+       · Art. 16 — plano individual de investimento (análogo BR ao 10b5-1):
+         §1º I escrito · II verificável · III irrevogável/irretratável (datas
+         ou eventos + valores ou quantidades) · IV prazo mínimo 3 meses p/
+         plano, modificações e cancelamento produzirem efeitos. §2º permite
+         negociar INCLUSIVE no blackout se a companhia tiver cronograma de
+         divulgação aprovado + cláusula de devolução de ganhos por mudança de data.
+       · Art. 8 §2 — ex-administrador: bar de 3 meses após o afastamento (liga
+         ao Art1). Crime: art. 27-D da Lei 6.385/76, reclusão 1–5 anos + multa.
+       · Escopo: CVM 44 = companhia ABERTA registrada no Brasil. Ação de matriz
+         listada no exterior = regime do regulador de lá (SEC / Rule 10b5-1).
+     FAQ visível bate 1:1 com FAQPage. Person @id idêntico aos Art1/2/3.
+     ════════════════════════════════════════════════════════════ -->
+
+<title>CVM 44 e blackout period: como planejar liquidez sem travar o patrimônio</title>
+<meta name="description" content="As janelas em que o executivo pode vender ações da própria empresa não são livres. A CVM 44 impõe três camadas de restrição — e a cadeira que você ocupa decide quais te prendem. O caminho legal para vender mesmo dentro do blackout, e por que ele se monta com um trimestre de antecedência.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="CVM 44 e blackout period: como planejar liquidez sem travar o patrimônio">
+<meta property="og:description" content="A janela em que você pode vender ações da própria empresa não é livre. Três camadas de restrição, a cadeira que decide quais te prendem, e o caminho legal para vender dentro do blackout.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/cvm-44-blackout.png">
+<meta property="article:published_time" content="2026-06-10">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CVM 44 e blackout period: como planejar liquidez sem travar o patrimônio">
+<meta name="twitter:description" content="A janela em que você pode vender ações da própria empresa não é livre. Três camadas de restrição, e o caminho legal para vender dentro do blackout.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/cvm-44-blackout.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (alavanca de entidade nomeada) →
+     Organization → Article → FAQPage. Crawlers que não rodam JS leem aqui.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez#article",
+      "headline": "CVM 44 e blackout period: como planejar liquidez sem travar o patrimônio",
+      "description": "As janelas em que o executivo pode vender ações da própria empresa não são livres. A CVM 44 impõe três camadas de restrição — e a cadeira que você ocupa decide quais te prendem. O caminho legal para vender mesmo dentro do blackout, e por que ele se monta com um trimestre de antecedência.",
+      "datePublished": "2026-06-10",
+      "dateModified": "2026-06-10",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/cvm-44-blackout.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez",
+      "about": [
+        { "@type": "Thing", "name": "Resolução CVM 44" },
+        { "@type": "Thing", "name": "Blackout period" },
+        { "@type": "Thing", "name": "Insider trading" },
+        { "@type": "Thing", "name": "Política de negociação" },
+        { "@type": "Thing", "name": "Plano individual de investimento" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/cvm-44-blackout-period-liquidez#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Todo executivo fica proibido de negociar nos 15 dias antes do resultado da empresa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O blackout automático de 15 dias antes da divulgação das informações trimestrais (ITR) e anuais (DFP), previsto no art. 14 da Resolução CVM 44, prende uma lista estreita: a companhia, os acionistas controladores, os diretores estatutários, os membros do conselho de administração e do conselho fiscal. Para essas pessoas a vedação é objetiva — vale mesmo que você não saiba o conteúdo do resultado. Um VP ou diretor não estatutário não cai automaticamente nesse blackout pela força do art. 14. Mas ele ainda pode estar proibido por outras duas vias: a vedação geral do art. 13 (se estiver de posse de informação relevante não divulgada) e a política interna de negociação da própria empresa, que costuma ser mais ampla que a norma."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Não sou diretor estatutário. Posso vender minhas ações da empresa quando eu quiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende de três filtros, nessa ordem. Primeiro, o art. 13 da CVM 44: se você está de posse de informação relevante ainda não divulgada, não pode negociar — isso independe do seu cargo e pega qualquer pessoa com acesso à informação. Segundo, a política de negociação da sua empresa (art. 15): ela quase sempre enquadra empregados com acesso como 'pessoas vinculadas' e estende as restrições ao seu cônjuge, dependentes e sociedades que você controla, com janelas próprias e frequentemente mais rígidas que a regulação. Terceiro, onde a ação é listada: a CVM 44 só governa companhia aberta registrada no Brasil. Antes de operar, leia a política de negociação da empresa e confirme o seu enquadramento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como vender ações da própria empresa de forma legal mesmo dentro do blackout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pelo plano individual de investimento previsto no art. 16 da CVM 44 — o instrumento brasileiro análogo ao 10b5-1 dos Estados Unidos. O plano precisa: ser formalizado por escrito; ser passível de verificação; estabelecer, em caráter irrevogável e irretratável, as datas ou eventos e as quantidades a serem negociadas; e prever prazo mínimo de 3 meses para que o plano, suas alterações e seu cancelamento produzam efeitos. Cumpridos esses requisitos, e desde que a companhia tenha aprovado um cronograma de datas de divulgação dos resultados, o plano permite negociar inclusive durante o período de vedação do art. 14. A lógica é simples: você pré-compromete as vendas quando ainda não sabe o resultado, então não há como usar informação privilegiada."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso montar o plano de venda na semana em que minha RSU vence dentro do blackout?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O art. 16 exige prazo mínimo de 3 meses para o plano produzir efeitos, e ele é irrevogável e irretratável — você fixa datas e quantidades e não pode mexer reativamente quando o vesting cai numa janela fechada. Na prática, isso vira regra de planejamento: o plano de liquidez se desenha com um trimestre de antecedência, antes de você saber o preço da ação na data da venda. Tratar a venda de equity como decisão de última hora é exatamente o que a norma impede — e o que mais trava patrimônio de executivo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "A CVM 44 vale para minhas ações de uma empresa listada nos Estados Unidos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A Resolução CVM 44 disciplina a negociação em companhia aberta registrada no Brasil. Se o seu equity é de uma matriz ou empresa listada no exterior — caso comum de quem trabalha em multinacional —, quem rege é o regulador de lá (nos Estados Unidos, a SEC, com o mecanismo de plano de negociação programada do Rule 10b5-1) somado à política global de negociação da própria companhia. A lógica é parecida — blackouts ao redor de resultados, vedação a operar com informação privilegiada, plano pré-comprometido como porta de saída —, mas os prazos, as exceções e a autoridade competente são outros. Confirme sob qual jurisdição as suas ações estão antes de aplicar qualquer regra deste artigo."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights" aria-current="page">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Compliance · Liquidez</div>
+    <h1>CVM 44 e blackout period: como planejar liquidez sem travar o patrimônio</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-10">10 de junho de 2026</time>
+      <span>·</span>
+      <span>9 min de leitura</span>
+    </div>
+    <p class="dek">Você decidiu diversificar, fez a conta do imposto, escolheu o ritmo de venda. E aí descobre que não pode operar: a janela está fechada. Para o executivo com ações da própria empresa, quando vender não é só uma decisão sua — é uma regra. Este é o mapa de quem a CVM 44 prende, em qual camada, e o caminho legal para vender mesmo dentro do bloqueio.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY ─────────────────────────────────────── -->
+<article class="article-body">
+  <div class="prose">
+
+    <p>No artigo anterior, sobre <a href="/insights/reduzir-concentracao-acionaria-sem-vender">como reduzir o risco de uma posição concentrada sem vender</a>, abri tudo com um aviso: antes de qualquer estrutura, existe um portão. Você tem permissão para negociar, proteger ou dar em garantia as ações da sua própria empresa? Prometi que esse portão seria assunto de um próximo texto. É este.</p>
+
+    <p>O portão tem nome: <strong>Resolução CVM 44</strong> — a norma que disciplina o uso de informação relevante e a negociação de ações por quem está dentro da companhia. Para o executivo, ela responde a uma pergunta que parece simples e quase nunca é: <em>quando eu posso vender?</em> A resposta certa não é "quando o mercado estiver bom". É "quando a janela estiver aberta para a cadeira que você ocupa". E a maioria descobre as duas coisas — que existe janela, e em qual cadeira está sentado — tarde demais, com a ordem já recusada pela corretora ou, pior, depois de executada.</p>
+
+    <p>Antes de seguir, um recorte que muda tudo: <strong>este artigo trata da ação listada no Brasil</strong> — companhia aberta registrada na CVM. Se o seu equity é de uma matriz listada no exterior, como acontece com boa parte de quem está em multinacional, quem rege é o regulador de lá (nos EUA, a SEC, e o seu primo do plano de venda programada, o <em>Rule 10b5-1</em>) somado à política global da empresa. A lógica se parece; os prazos e a autoridade, não. Trate cada bloco de ações sob a jurisdição correta.</p>
+
+    <h2>Três camadas de restrição — e a cadeira decide quais te prendem</h2>
+
+    <p>O erro mais comum é achar que "todo mundo fica proibido de negociar 15 dias antes do resultado". Está errado, e a imprecisão custa caro — para os dois lados: gente que se trava sem precisar e gente que opera achando que está livre. A CVM 44 empilha <strong>três camadas independentes</strong>, e cada uma alcança um conjunto diferente de pessoas.</p>
+
+    <p><strong>Camada 1 — a vedação geral (art. 13): vale para qualquer um, mas só se você tem a informação.</strong> A regra-mãe proíbe usar informação relevante ainda não divulgada, <em>por qualquer pessoa que a ela tenha tido acesso</em>, para auferir vantagem na negociação. Não importa o cargo: importa o que você sabe. Se você está sentado numa reunião onde se discute uma aquisição, um resultado fora da curva ou a saída de um executivo-chave, e isso ainda não veio a público, você não pode operar — seja você o CFO ou o analista que montou o slide. A norma ainda presume que controladores, diretores e membros dos conselhos de administração e fiscal têm acesso a toda informação relevante não divulgada. É uma presunção que você teria de desmontar com prova — não um benefício da dúvida.</p>
+
+    <p><strong>Camada 2 — o blackout objetivo (art. 14): automático, mas para uma lista estreita.</strong> Aqui mora os "15 dias". No período de 15 dias que antecede a divulgação das informações trimestrais (ITR) e das demonstrações anuais (DFP), ficam impedidos de negociar a companhia, os acionistas controladores, os <strong>diretores estatutários</strong>, e os membros do <strong>conselho de administração</strong> e do <strong>conselho fiscal</strong>. O ponto fino, que quase ninguém acerta: essa vedação é <em>objetiva</em> — vale ainda que a pessoa não tenha a menor ideia do conteúdo do resultado. Você está bloqueado pelo calendário, não pelo que sabe. Mas ela alcança <strong>só aquela lista</strong>. Um VP sênior, um diretor não estatutário — por mais graúdo que seja o cargo no organograma — não está, pela força do art. 14, dentro do blackout automático. Ele pode estar preso pela Camada 1 (se tiver informação) ou pela Camada 3 (quase sempre). Mas não por esta.</p>
+
+    <p><strong>Camada 3 — a política interna da empresa (art. 15): onde a maior parte dos executivos é, de fato, pega.</strong> A companhia pode aprovar, pelo conselho de administração, uma política de negociação com <em>regras adicionais</em> às da lei. E é o que elas fazem — quase sempre indo além da norma. A política tipicamente: estende as vedações a "pessoas vinculadas", o que inclui empregados com acesso a informação, seus cônjuges, dependentes na declaração de IR e sociedades que controlam; cria janelas de bloqueio próprias, mais largas que os 15 dias; e proíbe expressamente fazer <em>hedge</em> ou dar em garantia as ações da companhia — exatamente o collar e o lombard do artigo anterior. Para a maioria do meu público, <strong>é esta camada que decide o que dá para fazer</strong>. E ela não está na CVM 44: está num documento interno que você assinou ao entrar, e que provavelmente não relê desde então.</p>
+
+    <div class="callout">
+      <span class="label">A pergunta que vem antes de tudo</span>
+      <p>Em qual cadeira você senta? <strong>Diretor estatutário ou conselheiro</strong> → blackout automático de 15 dias, todo trimestre, valendo mesmo sem saber do resultado. <strong>Executivo com acesso, mas sem cargo estatutário</strong> → não é o blackout automático que te prende, e sim a vedação geral (quando você tem informação) e a política da sua empresa (quase sempre). Antes de planejar qualquer venda, releia o seu plano de ações e a política de negociação — eles, e não a sua intuição de mercado, dizem quando a janela abre.</p>
+    </div>
+
+    <h2>O que está em jogo se a janela for ignorada</h2>
+
+    <p>Vale dizer o tamanho da aposta, uma vez, sem dramatizar. Operar com informação relevante não divulgada não é só infração administrativa sujeita a multa e processo na CVM: é <strong>crime</strong>. O art. 27-D da Lei 6.385/76 prevê reclusão de 1 a 5 anos, além de multa, para o uso de informação privilegiada na negociação de valores mobiliários. E mesmo onde não há dolo nem proveito — o caso de quem simplesmente operou dentro do blackout objetivo por desatenção ao calendário —, a violação já basta para responder administrativamente. Não é um tema de "compliance chato". É exposição pessoal, no seu nome, com o seu CPF.</p>
+
+    <h2>O caminho legal: o plano que destrava a janela</h2>
+
+    <p>Aqui está a parte que quase ninguém usa, e que resolve o problema na raiz. A própria CVM 44 desenha uma saída — o <strong>plano individual de investimento</strong> do art. 16, o equivalente brasileiro ao <em>10b5-1</em> americano. A ideia é elegante: se você <strong>pré-compromete</strong> as suas vendas <em>antes</em> de saber qualquer coisa, não há como acusá-lo de usar informação privilegiada. O plano afasta as presunções — e, cumpridas as condições, permite negociar <strong>inclusive dentro do blackout</strong> do art. 14.</p>
+
+    <p>Para valer, o plano precisa cumprir quatro requisitos. Ele deve <strong>(i)</strong> ser formalizado por escrito; <strong>(ii)</strong> ser passível de verificação, inclusive quanto à sua criação e a qualquer alteração; <strong>(iii)</strong> estabelecer, em caráter <strong>irrevogável e irretratável</strong>, as datas ou eventos e os valores ou quantidades dos negócios; e <strong>(iv)</strong> prever <strong>prazo mínimo de 3 meses</strong> para que o plano — e qualquer modificação ou cancelamento dele — produza efeitos. Para negociar especificamente dentro do período de vedação, soma-se ainda que a companhia tenha aprovado um cronograma de datas de divulgação dos resultados, e que o plano obrigue a devolver à companhia ganhos que surjam de uma eventual mudança nessas datas.</p>
+
+    <p>Leia o requisito (iv) de novo, porque é nele que está a virada de chave do planejamento. <strong>O plano leva 3 meses para produzir efeitos, e é irretratável.</strong> Tradução prática: você não monta a venda na semana em que a RSU vence e cai dentro de uma janela fechada. Você fixa datas e quantidades <strong>um trimestre antes</strong> — comprometido, sem poder recuar — quando ainda não sabe o preço da ação naquela data futura. É contraintuitivo para quem está acostumado a decidir rápido e a reagir ao mercado. Mas é justamente esse desconforto que torna o instrumento à prova de suspeita: ao abrir mão do timing, você compra o direito de vender em qualquer janela.</p>
+
+    <blockquote>A liquidez do executivo com equity não se resolve no impulso de "vender agora". Resolve-se com um plano pré-comprometido, desenhado trimestres à frente — para que a venda aconteça no seu calendário, e não fique refém da próxima janela aberta.</blockquote>
+
+    <h2>O quadro de decisão</h2>
+
+    <p>A pergunta operacional não é "a CVM 44 me proíbe?". É "qual camada me alcança, e tenho um plano que me destrava?". O resumo que cabe numa página:</p>
+
+    <div class="table-wrap">
+    <table class="decision-table">
+      <thead>
+        <tr>
+          <th>Camada</th>
+          <th>Quem alcança</th>
+          <th>Quando bloqueia</th>
+          <th>O que fazer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Vedação geral</strong><br>(art. 13)</td>
+          <td>Qualquer pessoa com acesso a informação relevante não divulgada</td>
+          <td>Sempre que você está de posse da informação, até ela vir a público</td>
+          <td>Não operar enquanto tiver a informação; documentar que não a tinha</td>
+        </tr>
+        <tr>
+          <td><strong>Blackout objetivo</strong><br>(art. 14)</td>
+          <td>Companhia, controladores, diretores estatutários, conselho de administração e fiscal</td>
+          <td>15 dias antes de cada ITR/DFP — independe de você saber o conteúdo</td>
+          <td>Mapear o calendário de resultados; usar plano do art. 16 para vender mesmo assim</td>
+        </tr>
+        <tr>
+          <td><strong>Política interna</strong><br>(art. 15)</td>
+          <td>"Pessoas vinculadas": empregados com acesso, cônjuge, dependentes, sociedades controladas</td>
+          <td>Janelas próprias, em geral mais largas; muitas vezes veda hedge e penhor das ações</td>
+          <td>Reler a política assinada; confirmar enquadramento com o compliance</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>Dois avisos fecham o quadro. O primeiro, para quem deixa o cargo: a saída não te liberta na hora. O <strong>ex-administrador</strong> que se afasta antes de a companhia divulgar um fato relevante iniciado na sua gestão fica impedido de negociar por até 3 meses — um detalhe que se conecta diretamente ao que escrevi sobre <a href="/insights/rsu-saida-empresa-imposto-de-renda">o que acontece com suas ações quando você sai da empresa</a>. O segundo: nada aqui dispensa a leitura do <em>seu</em> plano de ações e da <em>sua</em> política de negociação. A CVM 44 é o piso. A sua empresa quase sempre construiu um teto mais baixo.</p>
+
+    <p>Qual janela é a sua, se você precisa de um plano do art. 16, em que datas e em que tamanho — isso depende de três coisas: a cadeira que você ocupa, o calendário de resultados da companhia e o seu cronograma de vesting. É uma conversa de estrutura, feita com o jurídico ou o compliance da empresa e com quem desenha o seu plano de liquidez. O que este artigo te dá é o mapa para chegar nela já sabendo a pergunta certa: não "posso vender?", mas "quando a minha janela abre, e o que eu pré-comprometo antes dela fechar?".</p>
+
+    <!-- ─── CTA → calculadora (Trilho C, no ar) ─── -->
+    <div class="cta-block">
+      <h2>Desenhe o calendário de venda antes de a janela decidir por você</h2>
+      <p>A calculadora estima o IR sobre suas ações em diferentes cenários de venda — à vista, escalonada, em janelas distintas. A base para montar um plano do art. 16 com datas e quantidades definidas, em vez de reagir à próxima abertura de janela.</p>
+      <a class="btn" href="https://calculadora.marcelosiqueiracfp.com.br/?origem=insights-cvm44" target="_blank" rel="noopener">Abrir a calculadora</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — bate 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Todo executivo fica proibido de negociar nos 15 dias antes do resultado da empresa?</summary>
+      <p>Não. O blackout automático de 15 dias antes da divulgação das informações trimestrais (ITR) e anuais (DFP), previsto no art. 14 da Resolução CVM 44, prende uma lista estreita: a companhia, os acionistas controladores, os diretores estatutários, os membros do conselho de administração e do conselho fiscal. Para essas pessoas a vedação é objetiva — vale mesmo que você não saiba o conteúdo do resultado. Um VP ou diretor não estatutário não cai automaticamente nesse blackout pela força do art. 14. Mas ele ainda pode estar proibido por outras duas vias: a vedação geral do art. 13 (se estiver de posse de informação relevante não divulgada) e a política interna de negociação da própria empresa, que costuma ser mais ampla que a norma.</p>
+    </details>
+
+    <details>
+      <summary>Não sou diretor estatutário. Posso vender minhas ações da empresa quando eu quiser?</summary>
+      <p>Depende de três filtros, nessa ordem. Primeiro, o art. 13 da CVM 44: se você está de posse de informação relevante ainda não divulgada, não pode negociar — isso independe do seu cargo e pega qualquer pessoa com acesso à informação. Segundo, a política de negociação da sua empresa (art. 15): ela quase sempre enquadra empregados com acesso como "pessoas vinculadas" e estende as restrições ao seu cônjuge, dependentes e sociedades que você controla, com janelas próprias e frequentemente mais rígidas que a regulação. Terceiro, onde a ação é listada: a CVM 44 só governa companhia aberta registrada no Brasil. Antes de operar, leia a política de negociação da empresa e confirme o seu enquadramento.</p>
+    </details>
+
+    <details>
+      <summary>Como vender ações da própria empresa de forma legal mesmo dentro do blackout?</summary>
+      <p>Pelo plano individual de investimento previsto no art. 16 da CVM 44 — o instrumento brasileiro análogo ao 10b5-1 dos Estados Unidos. O plano precisa: ser formalizado por escrito; ser passível de verificação; estabelecer, em caráter irrevogável e irretratável, as datas ou eventos e as quantidades a serem negociadas; e prever prazo mínimo de 3 meses para que o plano, suas alterações e seu cancelamento produzam efeitos. Cumpridos esses requisitos, e desde que a companhia tenha aprovado um cronograma de datas de divulgação dos resultados, o plano permite negociar inclusive durante o período de vedação do art. 14. A lógica é simples: você pré-compromete as vendas quando ainda não sabe o resultado, então não há como usar informação privilegiada.</p>
+    </details>
+
+    <details>
+      <summary>Posso montar o plano de venda na semana em que minha RSU vence dentro do blackout?</summary>
+      <p>Não. O art. 16 exige prazo mínimo de 3 meses para o plano produzir efeitos, e ele é irrevogável e irretratável — você fixa datas e quantidades e não pode mexer reativamente quando o vesting cai numa janela fechada. Na prática, isso vira regra de planejamento: o plano de liquidez se desenha com um trimestre de antecedência, antes de você saber o preço da ação na data da venda. Tratar a venda de equity como decisão de última hora é exatamente o que a norma impede — e o que mais trava patrimônio de executivo.</p>
+    </details>
+
+    <details>
+      <summary>A CVM 44 vale para minhas ações de uma empresa listada nos Estados Unidos?</summary>
+      <p>Não. A Resolução CVM 44 disciplina a negociação em companhia aberta registrada no Brasil. Se o seu equity é de uma matriz ou empresa listada no exterior — caso comum de quem trabalha em multinacional —, quem rege é o regulador de lá (nos Estados Unidos, a SEC, com o mecanismo de plano de negociação programada do Rule 10b5-1) somado à política global de negociação da própria companhia. A lógica é parecida — blackouts ao redor de resultados, vedação a operar com informação privilegiada, plano pré-comprometido como porta de saída —, mas os prazos, as exceções e a autoridade competente são outros. Confirme sob qual jurisdição as suas ações estão antes de aplicar qualquer regra deste artigo.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
