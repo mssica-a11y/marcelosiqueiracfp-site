@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     Marcelo Siqueira CFP / Insights — Artigo 6
+     Slug: /insights/sucessao-equity-executivo
+     FECHA O ROADMAP. Amarra o cluster inteiro (RSU→1.226→concentração→
+     CVM 44→offshore) no evento em que cada camada se sustenta ou desmorona:
+     a sucessão / incapacidade. Centro de gravidade = trap cross-border
+     (duas autoridades fiscais na mesma morte: ITCMD por domicílio +
+     US estate tax por situs, sem tratado).
+     Fatos verificados em FONTE PRIMÁRIA 2026-06-12:
+       · CC (Lei 10.406/2002) art. 682 — o mandato CESSA: II morte ou
+         INTERDIÇÃO de uma das partes; III mudança de estado que inabilite
+         o mandante. (planalto.gov.br) → procuração comum morre na
+         incapacidade; instrumento é a curatela (judicial, lenta).
+       · Lei 15.040/2024 (novo marco legal dos seguros, em vigor) art. 116 —
+         "o capital segurado devido em razão de morte não é considerado herança
+         para nenhum efeito"; parágrafo único EQUIPARA a previdência complementar
+         ao seguro de vida p/ esse fim. (CC art. 794 foi REVOGADO pela Lei 15.040
+         — NÃO citar o 794.) Paga fora do inventário; liquidez p/ o imposto.
+       · EC 132/2023 art. 155 §1 VI — ITCMD SERÁ progressivo (obrigatório);
+         art. 16 III — bens do de cujus "ainda que situados no exterior" ao
+         Estado onde domiciliado (ponte até LC); art. 17 — vale p/ sucessões
+         abertas a partir de 20/12/2023. (planalto.gov.br)
+       · LC 227/2026 (sancionada com vetos 13/01/2026, PLP 108/2024) —
+         regula o ITCMD: progressivas até 8% por faixas; tributa bens no
+         exterior (residente no BR → Estado do domicílio); base de quotas/
+         ações NÃO listadas = valor de MERCADO do PL + fundo de comércio
+         (fecha a jogada de base barata por valor patrimonial); PGBL/VGBL
+         FORA da base. CAVEAT: SP/RJ (leis declaradas inconst.) precisam de
+         NOVA lei estadual + anterioridade → cobrança rampa 2026–2027.
+         (fontes: Senado materia 166095; bancas Machado Meyer / g5 / Loria.)
+       · US estate tax (IRS, fonte primária): non-resident alien → Form
+         706-NA se ativos de situs US > US$ 60.000; AÇÃO de corporation dos
+         EUA é situs US "even if held abroad or in nominee name". Top rate
+         40% (IRC §2001). SEM tratado de estate tax Brasil-EUA.
+       · Situs: ação de PJ NÃO-americana = situs não-US (fora do US estate
+         tax); UCITS domiciliados na Irlanda idem. MAS holding estrangeira
+         carrega o 15% anual da Lei 14.754 (Art5) — sem almoço grátis.
+     FAQ visível bate 1:1 com FAQPage. Person @id idêntico aos Art1–5.
+     ════════════════════════════════════════════════════════════ -->
+
+<title>Sucessão de equity: o que acontece com suas ações quando você não pode mais agir</title>
+<meta name="description" content="O plano padrão para o seu equity não é um plano — é o inventário, e ações são o ativo que pior sobrevive a ele. Para o executivo com equity no exterior, a morte aciona duas autoridades fiscais ao mesmo tempo. E há um cenário pior que a morte, que quase ninguém estrutura: a incapacidade.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Sucessão de equity: o que acontece com suas ações quando você não pode mais agir">
+<meta property="og:description" content="O plano padrão para o seu equity é o inventário — e ações são o ativo que pior sobrevive a ele. Quem tem equity no exterior aciona duas autoridades fiscais na mesma morte. E a incapacidade é o cenário que ninguém estrutura.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/sucessao-equity.png">
+<meta property="article:published_time" content="2026-06-12">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sucessão de equity: o que acontece com suas ações quando você não pode mais agir">
+<meta name="twitter:description" content="O inventário é o plano padrão do seu equity — e ações são o ativo que pior sobrevive a ele. Duas autoridades fiscais na mesma morte, e o cenário da incapacidade que ninguém estrutura.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/sucessao-equity.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (alavanca de entidade nomeada) →
+     Organization → Article → FAQPage. Crawlers que não rodam JS leem aqui.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo#article",
+      "headline": "Sucessão de equity: o que acontece com suas ações quando você não pode mais agir",
+      "description": "O plano padrão para o seu equity não é um plano — é o inventário, e ações são o ativo que pior sobrevive a ele. Para o executivo com equity no exterior, a morte aciona duas autoridades fiscais ao mesmo tempo. E há um cenário pior que a morte, que quase ninguém estrutura: a incapacidade.",
+      "datePublished": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/sucessao-equity.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo",
+      "about": [
+        { "@type": "Thing", "name": "Sucessão patrimonial" },
+        { "@type": "Thing", "name": "ITCMD" },
+        { "@type": "Thing", "name": "US estate tax" },
+        { "@type": "Thing", "name": "Holding patrimonial" },
+        { "@type": "Thing", "name": "Incapacidade civil" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Tenho ações da minha empresa, listada nos Estados Unidos, numa corretora lá fora. O que acontece com elas se eu falecer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Você pode acionar duas autoridades fiscais ao mesmo tempo. Pelo lado americano, ação emitida por empresa dos Estados Unidos é considerada um ativo de situs americano mesmo que você a detenha numa corretora fora dos EUA ou em nome de nominee — e o espólio de um não residente que não seja cidadão americano paga US estate tax sobre ativos de situs americano acima de apenas US$ 60.000, com alíquota que chega a 40%. Pelo lado brasileiro, como você era residente fiscal no Brasil, incide o ITCMD do seu estado de domicílio sobre a mesma transmissão. E não existe tratado de estate tax entre Brasil e Estados Unidos para creditar um imposto contra o outro. O resultado é uma dupla tributação sobre as mesmas ações, num momento em que o espólio está bloqueado e sem liquidez para pagar nenhuma das duas. É a exposição que mais vejo ignorada em quem tem equity de empregador americano. Um recorte essencial: isso se aplica se você é não residente para fins fiscais nos Estados Unidos. Green-card holders e residentes fiscais americanos têm a isenção cheia, da ordem de US$ 13 milhões, e este risco específico não é o deles — confirme o seu status antes de aplicar a regra."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Deixei uma procuração para minha família cuidar de tudo se eu não puder agir. Isso resolve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não para o cenário de incapacidade — e é aí que está a armadilha. O art. 682 do Código Civil determina que o mandato cessa pela morte ou interdição de uma das partes (inciso II) e pela mudança de estado que inabilite o mandante a conferir os poderes (inciso III). Ou seja: a procuração comum perde a validade exatamente no momento em que a incapacidade chega, que é quando você precisaria dela. O Brasil não tem um equivalente robusto ao mandato duradouro de outros países. O caminho que resta é a curatela — nomeação judicial de quem vai administrar seus bens —, que é decidida depois do fato, leva tempo e tira a escolha das suas mãos. Para o equity, isso significa que uma opção pode vencer enquanto você está vivo mas sem poder exercer, sem ninguém legalmente habilitado a agir. Não há um instrumento que resolva isso de forma limpa; o que existe é estruturar para que o patrimônio não dependa da sua ação no momento em que você não pode agir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Montei uma holding para reduzir o ITCMD. Ainda funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A função mudou. A Lei Complementar 227/2026, que regulou o ITCMD da reforma tributária, definiu que a base de cálculo na transmissão de quotas ou ações não negociadas em bolsa passa a ser o valor de mercado dos bens que compõem o patrimônio líquido da empresa, acrescido do valor de mercado do fundo de comércio. Isso fecha a jogada clássica de usar a holding para recolher ITCMD sobre o valor patrimonial contábil, quase sempre menor que o de mercado. A holding continua valiosa — para transmitir o patrimônio por quotas em vez de inventariar dezenas de ativos um a um, para permitir doação com reserva de usufruto e para organizar a governança familiar. Mas ela deixou de ser um atalho de base barata. E lembre que o ITCMD passou a ser progressivo por faixas por força da Emenda Constitucional 132, até o teto de 8% fixado pelo Senado Federal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O ITCMD agora alcança meus bens no exterior?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Passou a alcançar. Por anos os estados não conseguiam cobrar ITCMD sobre bens no exterior porque faltava a lei complementar nacional exigida pela Constituição — o que o STF reconheceu no Tema 825. A Emenda Constitucional 132/2023 e, agora, a Lei Complementar 227/2026 fecharam essa lacuna: quando o falecido ou doador era residente no Brasil, a competência é do estado do seu domicílio, ainda que o bem esteja no exterior. Na prática, o escudo que a estrutura offshore dava à sucessão está sendo desmontado. Há um detalhe de ritmo: estados que tiveram suas leis sobre o tema declaradas inconstitucionais, como São Paulo e Rio de Janeiro, precisam editar novas leis estaduais, sujeitas à anterioridade — então a cobrança efetiva sobre bens no exterior tende a se materializar ao longo de 2026 e 2027, não de um dia para o outro. A direção, porém, é uma só."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Minhas stock options vencem daqui a alguns anos. Se eu falecer antes, meus herdeiros podem exercê-las?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende do plano, e o problema raramente é a regra — é o relógio. A maioria dos planos concede ao espólio uma janela para exercer as opções após o falecimento, em geral de alguns meses. O inventário brasileiro costuma levar de um a mais de dois anos. Quando a janela de exercício é mais curta que o inventário, o direito de exercer expira antes de o espólio ser desbloqueado — e a opção, que tinha valor, vira nada. Some a isso que, mesmo havendo quem exercer, as restrições de negociação que tratei no artigo sobre a CVM 44 continuam valendo para a venda das ações resultantes. É por isso que opção de compra não é um ativo que se administra reativamente: exige liquidez disponível e estrutura montada antes, justamente para o cenário em que você não está lá para decidir."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights" aria-current="page">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Sucessão</div>
+    <h1>Sucessão de equity: o que acontece com suas ações quando você não pode mais agir</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-12">12 de junho de 2026</time>
+      <span>·</span>
+      <span>11 min de leitura</span>
+    </div>
+    <p class="dek">Tudo o que você fez com o seu equity — administrar o vesting, calcular o imposto, reduzir a concentração, respeitar as janelas, estruturar o que está no exterior — pressupõe que você está aqui para decidir. Este texto é sobre o cenário em que você não está. E o seu equity é o ativo que pior sobrevive a ele.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY ─────────────────────────────────────── -->
+<article class="article-body">
+  <div class="prose">
+
+    <p>Os cinco artigos anteriores formam uma sequência: o que acontece com <a href="/insights/rsu-saida-empresa-imposto-de-renda">suas ações quando você sai da empresa</a>, como o <a href="/insights/tema-1226-stj-stock-options-executivo">Tema 1.226 muda a tributação</a>, como <a href="/insights/reduzir-concentracao-acionaria-sem-vender">reduzir uma posição concentrada sem vender</a>, como planejar liquidez dentro das <a href="/insights/cvm-44-blackout-period-liquidez">janelas da CVM 44</a>, e o que a <a href="/insights/lei-14754-executivo-conta-exterior">Lei 14.754 fez com a sua estrutura no exterior</a>. Todos têm um pressuposto silencioso: você, vivo e capaz, tomando a decisão na hora certa. Este fecha a série pela porta que ninguém gosta de abrir — o dia em que você não pode mais agir. Por morte, ou, pior e mais provável antes dela, por incapacidade.</p>
+
+    <p>Para a maioria do patrimônio, isso é um problema administrável. Para equity, não. Ações da empresa, opções, RSU — são o ativo com o pior comportamento sob bloqueio: têm prazo, têm janela, têm imposto que vence rápido e, no caso do executivo brasileiro de hoje, frequentemente moram em outra jurisdição. Quando você sai de cena, cada uma dessas características vira um problema separado. Vamos pelos três que importam.</p>
+
+    <h2>O plano padrão não é um plano — é o inventário</h2>
+
+    <p>Se você não estruturou nada, o destino do seu equity é o <strong>inventário</strong>: o procedimento que apura, paga impostos e partilha os bens antes de qualquer herdeiro poder dispor deles. No Brasil, ele costuma levar de <strong>um a mais de dois anos</strong>. Durante esse tempo, os ativos ficam bloqueados. Para uma carteira de renda fixa, isso é incômodo. Para equity, pode ser fatal — e por um motivo específico que quase ninguém antecipa.</p>
+
+    <p><strong>A opção de compra tem relógio próprio, e ele corre mais rápido que o inventário.</strong> A maioria dos planos concede ao espólio uma janela para exercer as opções após o falecimento — em geral, alguns meses. Confronte isso com o um-a-dois-anos do inventário e o problema salta: quando a janela de exercício é mais curta que o tempo de desbloqueio do espólio, <em>o direito de exercer expira antes de existir alguém autorizado a exercê-lo</em>. A opção que valia não vira dinheiro — vira nada, sem ninguém ter errado, só porque o calendário jurídico é mais lento que o calendário do plano. E mesmo quando há quem exercer dentro do prazo, as restrições de negociação da <a href="/insights/cvm-44-blackout-period-liquidez">CVM 44</a> continuam valendo para a venda das ações: o espólio herda não só o ativo, mas o blackout.</p>
+
+    <div class="callout">
+      <span class="label">O detalhe que decide</span>
+      <p>Compare dois prazos no seu plano de ações, hoje: <strong>a janela de exercício pós-falecimento</strong> (quantos meses o espólio tem?) e <strong>o tempo provável do seu inventário</strong> (um a dois anos é realista). Se o primeiro é menor que o segundo, suas opções não vão sobreviver à sua ausência por inércia — elas precisam de liquidez e estrutura montadas <em>antes</em>. Esse é o tipo de prazo que não está na sua cabeça, e que define se um ativo relevante chega ou não aos seus herdeiros.</p>
+    </div>
+
+    <h2>O cenário que ninguém estrutura: incapacidade, não morte</h2>
+
+    <p>A morte pelo menos abre o inventário. A incapacidade não abre nada — e é o cenário mais provável de um executivo na faixa dos 50, 60 anos. Um AVC, um acidente, um diagnóstico que tira a sua capacidade de decidir, sem tirar a sua vida. Aqui mora o erro mais comum, e ele é contraintuitivo: <strong>a procuração que quase todo mundo deixa não funciona exatamente nesse momento.</strong></p>
+
+    <p>O art. 682 do Código Civil é direto: o mandato <strong>cessa pela morte ou interdição de uma das partes</strong> (inciso II) e pela <strong>mudança de estado que inabilite o mandante a conferir os poderes</strong> (inciso III). Leia o que isso significa na prática: a procuração que você assinou para a sua família "cuidar de tudo se algo acontecer" perde a validade no instante em que você se torna incapaz — que é precisamente quando ela seria usada. O instrumento foi desenhado para o mandante capaz; ele morre junto com a sua capacidade. O Brasil não tem um equivalente robusto ao <em>durable power of attorney</em> de outros países, que sobrevive à incapacidade do outorgante.</p>
+
+    <p>O que resta é a <strong>curatela</strong>: um juiz nomeia quem vai administrar os seus bens. É decidida <em>depois</em> do fato, leva meses, e tira a escolha das suas mãos — quem decide é o processo, não você. Enquanto isso corre, uma opção pode vencer, uma RSU pode cair numa conta que ninguém pode movimentar, uma chamada de margem pode forçar uma venda. Não vou vender uma solução limpa, porque ela não existe: não há, no direito brasileiro, um instrumento que delegue de forma segura a gestão do seu equity para o cenário de incapacidade. O valor aqui é nomear o problema e construir ao redor dele — <strong>estruturas que não dependam da sua ação ao vivo</strong>: um plano de liquidez pré-comprometido (como o do art. 16 da CVM 44, que segue executando sozinho), participações dentro de uma sociedade com administração definida em contrato, decisões que já foram tomadas enquanto você podia tomá-las.</p>
+
+    <h2>O trap que ninguém conecta: duas autoridades fiscais na mesma morte</h2>
+
+    <p>Aqui está o ponto central deste artigo, e o que não tem dono no mercado brasileiro. O equity do executivo de hoje mora cada vez mais no exterior — RSU de uma matriz listada nos Estados Unidos, ações numa corretora americana, uma estrutura offshore. E a morte de um residente brasileiro com ativos de equity nos EUA aciona, ao mesmo tempo, <strong>duas máquinas de arrecadação que não conversam entre si</strong>.</p>
+
+    <p><strong>O lado brasileiro: o ITCMD ganhou dentes.</strong> A Emenda Constitucional 132/2023 tornou o ITCMD <strong>progressivo obrigatório</strong> (art. 155, §1º, VI). A Lei Complementar 227/2026 — sancionada em 13 de janeiro de 2026, regulamentando a reforma — fixou as alíquotas progressivas por faixas, limitadas a <strong>8%</strong>, e regulou o que faltava: a tributação de <strong>bens no exterior</strong>. Quando o falecido era residente no Brasil, a competência é do estado do seu domicílio, ainda que o bem esteja lá fora. O escudo que a estrutura offshore dava à sucessão está sendo desmontado. Há ritmo nisso — estados como São Paulo e Rio, que tiveram leis sobre o tema declaradas inconstitucionais, precisam editar novas leis estaduais sujeitas à anterioridade, então a cobrança efetiva se materializa ao longo de 2026 e 2027 —, mas a direção é uma só.</p>
+
+    <p><strong>O lado americano: o US estate tax, que quase ninguém calcula.</strong> Os Estados Unidos cobram imposto sobre herança a partir do <em>situs</em> do ativo, não da residência do morto. E <strong>ação emitida por empresa americana é ativo de situs americano</strong> — a própria Receita americana é explícita: vale "mesmo que o não residente mantenha os certificados no exterior ou registrados em nome de um nominee". Para o espólio de um não residente que não seja cidadão americano, o imposto incide sobre os ativos de situs americano acima de apenas <strong>US$ 60.000</strong> — não os ~US$ 13 milhões de isenção do cidadão americano, mas sessenta mil dólares — com alíquota que sobe até <strong>40%</strong>. E <strong>não há tratado de estate tax entre Brasil e Estados Unidos</strong> para creditar um imposto contra o outro. Um recorte que muda tudo: isso vale para o <strong>não residente que não é cidadão americano</strong>. Se você é <em>green-card holder</em> ou residente fiscal nos Estados Unidos — caso real de quem fez um período por lá —, o regime se inverte: vale a isenção cheia, da ordem de US$ 13 milhões, e não os US$ 60 mil. Esta bomba específica não é a sua. Confirme o seu status nos EUA antes de aplicar qualquer coisa daqui.</p>
+
+    <blockquote>Some os dois lados: o executivo que morre residente no Brasil com ações do empregador americano numa corretora nos EUA pode pagar US estate tax pelo situs <em>e</em> ITCMD pelo domicílio, sobre as mesmas ações, sem tratado que alivie a soma. É uma dupla tributação na morte — e a primeira vez que a maioria das famílias ouve falar dela é com o inventário já aberto e a conta já formada.</blockquote>
+
+    <h2>O que muda a conta — e o que deixou de ser o que era</h2>
+
+    <p>A boa notícia é que quase tudo isso é endereçável <em>antes</em>. A condição é tratar sucessão de equity como engenharia, não como testamento. Quatro alavancas, com as ressalvas que as tornam honestas.</p>
+
+    <p><strong>1. Situs é gatilho, e gatilho se administra.</strong> O US estate tax dispara pelo situs americano da ação. Detê-la de outra forma muda o situs: ação de uma <em>empresa não americana</em> é ativo de situs não-americano, fora do alcance do imposto; o mesmo vale para ETFs domiciliados na Irlanda (UCITS) no lugar dos domiciliados nos EUA. Não estou dizendo "monte uma offshore para escapar do fisco americano" — sou consultor fee-only, e isto é o que se <em>revisa</em> com um advogado cross-border, não uma receita. E não é almoço grátis: a holding estrangeira que muda o situs carrega o imposto anual de 15% da <a href="/insights/lei-14754-executivo-conta-exterior">Lei 14.754</a> que descrevi no artigo passado. A pergunta é se o custo dessa estrutura se paga pela exposição que ela remove — e essa conta é individual.</p>
+
+    <p><strong>2. A holding organiza a sucessão — mas não barateia mais a base.</strong> Transmitir o patrimônio por quotas de uma holding, em vez de inventariar dezenas de ativos individualmente, continua valendo muito: simplifica, permite doação com reserva de usufruto (você antecipa a herança em vida e mantém o controle e os frutos) e define governança. O que <em>acabou</em> foi o atalho da base barata: a LC 227/2026 mandou calcular o ITCMD sobre quotas não listadas pelo <strong>valor de mercado</strong> do patrimônio líquido mais o fundo de comércio — não mais pelo valor patrimonial contábil. A holding virou ferramenta de organização e de evitar o inventário, não de reduzir a base de cálculo.</p>
+
+    <p><strong>3. Liquidez para pagar o imposto, fora do bloqueio.</strong> ITCMD e US estate tax vencem em dinheiro, rápido, enquanto o espólio está congelado — exatamente quando não há caixa. É o aperto clássico: o patrimônio existe, mas está preso, e o imposto não espera. O <strong>seguro de vida</strong> resolve isso com precisão cirúrgica: pelo art. 116 da Lei 15.040/2024, o novo marco legal dos seguros, o capital segurado pago em razão de morte <em>não é considerado herança para nenhum efeito</em> — vai direto ao beneficiário, fora do inventário, e serve para quitar o imposto sem ter de liquidar o equity às pressas. A mesma lei equipara a previdência complementar ao seguro de vida para esse fim; e a <strong>previdência</strong> (PGBL e VGBL) ainda fica, pela LC 227/2026, <strong>fora da base do ITCMD</strong>. São os instrumentos que entregam caixa no momento em que tudo o mais está trancado.</p>
+
+    <p><strong>4. O plano que executa sem você.</strong> Volto ao fio da incapacidade, porque ele costura tudo. O melhor instrumento sucessório é aquele que não precisa de você no comando para funcionar: o plano de liquidez pré-comprometido que segue vendendo nas datas combinadas, a sociedade cuja administração já está definida, a doação que já foi feita. Cada decisão que você toma <em>enquanto pode</em> é uma decisão que o inventário ou a curatela não vão ter de tomar por você, mais devagar e pior.</p>
+
+    <h2>O quadro de decisão</h2>
+
+    <p>Como cada tipo de equity se comporta quando você sai de cena, e a alavanca que muda o resultado:</p>
+
+    <div class="table-wrap">
+    <table class="decision-table">
+      <thead>
+        <tr>
+          <th>O ativo</th>
+          <th>O que acontece no padrão</th>
+          <th>A alavanca</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Opção não exercida</strong></td>
+          <td>Janela pós-morte costuma ser mais curta que o inventário → direito expira antes do desbloqueio</td>
+          <td>Liquidez disponível + plano que exerce/vende sem depender da sua ação</td>
+        </tr>
+        <tr>
+          <td><strong>RSU não vestida</strong></td>
+          <td>Vesta (ou é acelerada/perdida, conforme o plano) para um espólio bloqueado</td>
+          <td>Ler a regra de aceleração do plano; mapear o imposto antes</td>
+        </tr>
+        <tr>
+          <td><strong>Ação vestida (Brasil)</strong></td>
+          <td>Inventário 1–2 anos; ITCMD progressivo até 8% do estado de domicílio</td>
+          <td>Holding p/ transmitir por quotas; seguro de vida p/ a liquidez do imposto</td>
+        </tr>
+        <tr>
+          <td><strong>Equity de empregador listado nos EUA</strong></td>
+          <td>US estate tax (situs, &gt; US$ 60k, até 40%) <em>+</em> ITCMD (domicílio), sem tratado</td>
+          <td>Administrar o situs (holding não-US / UCITS) — com counsel cross-border</td>
+        </tr>
+        <tr>
+          <td><strong>Você incapaz, ainda vivo</strong></td>
+          <td>Procuração cessa (CC art. 682); curatela judicial, lenta; opções vencem sem quem aja</td>
+          <td>Estruturas que executam sozinhas; decisões tomadas enquanto você pode</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>Um aviso fecha o quadro, e vale para o artigo inteiro: nada aqui substitui a leitura do <em>seu</em> caso. Sucessão de equity cross-border é o terreno que mais exige equipe — advogado de sucessões no Brasil, <em>counsel</em> tributário nos Estados Unidos, contador internacional —, porque cada plano de ações, cada estado e cada jurisdição tem a sua regra. O que este texto te dá é o mapa para chegar nessa mesa já sabendo onde estão as minas: o relógio da opção, o vácuo da incapacidade e as duas autoridades fiscais que aparecem na mesma morte.</p>
+
+    <p>Esse é o ponto onde toda a série se encontra. Vesting, tributação, concentração, janelas de liquidez, estrutura no exterior — cada camada que você construiu nos artigos anteriores ou se sustenta na sucessão, ou se desfaz nela. A pergunta que define se você está pronto não é "eu tenho um testamento?". É: <strong>se eu não puder agir amanhã, quem pode, e quais fiscos batem à porta?</strong></p>
+
+    <!-- ─── CTA → contato (revisão de exposição sucessória) ─── -->
+    <div class="cta-block">
+      <h2>Onde está a sua exposição sucessória, hoje?</h2>
+      <p>Se você tem equity — no Brasil ou no exterior —, vale mapear três prazos e dois fiscos antes que o inventário os mapeie por você: a janela de exercício das suas opções, o tempo provável do seu inventário, e a soma de ITCMD e US estate tax sobre o que está lá fora. É uma conversa de estrutura, direta.</p>
+      <a class="btn" href="/contato?origem=insights-sucessao">Iniciar conversa</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — bate 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Tenho ações da minha empresa, listada nos Estados Unidos, numa corretora lá fora. O que acontece com elas se eu falecer?</summary>
+      <p>Você pode acionar duas autoridades fiscais ao mesmo tempo. Pelo lado americano, ação emitida por empresa dos Estados Unidos é considerada um ativo de situs americano mesmo que você a detenha numa corretora fora dos EUA ou em nome de nominee — e o espólio de um não residente que não seja cidadão americano paga US estate tax sobre ativos de situs americano acima de apenas US$ 60.000, com alíquota que chega a 40%. Pelo lado brasileiro, como você era residente fiscal no Brasil, incide o ITCMD do seu estado de domicílio sobre a mesma transmissão. E não existe tratado de estate tax entre Brasil e Estados Unidos para creditar um imposto contra o outro. O resultado é uma dupla tributação sobre as mesmas ações, num momento em que o espólio está bloqueado e sem liquidez para pagar nenhuma das duas. É a exposição que mais vejo ignorada em quem tem equity de empregador americano. Um recorte essencial: isso se aplica se você é não residente para fins fiscais nos Estados Unidos. Green-card holders e residentes fiscais americanos têm a isenção cheia, da ordem de US$ 13 milhões, e este risco específico não é o deles — confirme o seu status antes de aplicar a regra.</p>
+    </details>
+
+    <details>
+      <summary>Deixei uma procuração para minha família cuidar de tudo se eu não puder agir. Isso resolve?</summary>
+      <p>Não para o cenário de incapacidade — e é aí que está a armadilha. O art. 682 do Código Civil determina que o mandato cessa pela morte ou interdição de uma das partes (inciso II) e pela mudança de estado que inabilite o mandante a conferir os poderes (inciso III). Ou seja: a procuração comum perde a validade exatamente no momento em que a incapacidade chega, que é quando você precisaria dela. O Brasil não tem um equivalente robusto ao mandato duradouro de outros países. O caminho que resta é a curatela — nomeação judicial de quem vai administrar seus bens —, que é decidida depois do fato, leva tempo e tira a escolha das suas mãos. Para o equity, isso significa que uma opção pode vencer enquanto você está vivo mas sem poder exercer, sem ninguém legalmente habilitado a agir. Não há um instrumento que resolva isso de forma limpa; o que existe é estruturar para que o patrimônio não dependa da sua ação no momento em que você não pode agir.</p>
+    </details>
+
+    <details>
+      <summary>Montei uma holding para reduzir o ITCMD. Ainda funciona?</summary>
+      <p>A função mudou. A Lei Complementar 227/2026, que regulou o ITCMD da reforma tributária, definiu que a base de cálculo na transmissão de quotas ou ações não negociadas em bolsa passa a ser o valor de mercado dos bens que compõem o patrimônio líquido da empresa, acrescido do valor de mercado do fundo de comércio. Isso fecha a jogada clássica de usar a holding para recolher ITCMD sobre o valor patrimonial contábil, quase sempre menor que o de mercado. A holding continua valiosa — para transmitir o patrimônio por quotas em vez de inventariar dezenas de ativos um a um, para permitir doação com reserva de usufruto e para organizar a governança familiar. Mas ela deixou de ser um atalho de base barata. E lembre que o ITCMD passou a ser progressivo por faixas por força da Emenda Constitucional 132, até o teto de 8% fixado pelo Senado Federal.</p>
+    </details>
+
+    <details>
+      <summary>O ITCMD agora alcança meus bens no exterior?</summary>
+      <p>Passou a alcançar. Por anos os estados não conseguiam cobrar ITCMD sobre bens no exterior porque faltava a lei complementar nacional exigida pela Constituição — o que o STF reconheceu no Tema 825. A Emenda Constitucional 132/2023 e, agora, a Lei Complementar 227/2026 fecharam essa lacuna: quando o falecido ou doador era residente no Brasil, a competência é do estado do seu domicílio, ainda que o bem esteja no exterior. Na prática, o escudo que a estrutura offshore dava à sucessão está sendo desmontado. Há um detalhe de ritmo: estados que tiveram suas leis sobre o tema declaradas inconstitucionais, como São Paulo e Rio de Janeiro, precisam editar novas leis estaduais, sujeitas à anterioridade — então a cobrança efetiva sobre bens no exterior tende a se materializar ao longo de 2026 e 2027, não de um dia para o outro. A direção, porém, é uma só.</p>
+    </details>
+
+    <details>
+      <summary>Minhas stock options vencem daqui a alguns anos. Se eu falecer antes, meus herdeiros podem exercê-las?</summary>
+      <p>Depende do plano, e o problema raramente é a regra — é o relógio. A maioria dos planos concede ao espólio uma janela para exercer as opções após o falecimento, em geral de alguns meses. O inventário brasileiro costuma levar de um a mais de dois anos. Quando a janela de exercício é mais curta que o inventário, o direito de exercer expira antes de o espólio ser desbloqueado — e a opção, que tinha valor, vira nada. Some a isso que, mesmo havendo quem exercer, as restrições de negociação que tratei no artigo sobre a CVM 44 continuam valendo para a venda das ações resultantes. É por isso que opção de compra não é um ativo que se administra reativamente: exige liquidez disponível e estrutura montada antes, justamente para o cenário em que você não está lá para decidir.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
