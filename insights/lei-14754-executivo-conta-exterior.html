@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ════════════════════════════════════════════════════════════
+     Marcelo Siqueira CFP / Insights — Artigo 5
+     Slug: /insights/lei-14754-executivo-conta-exterior
+     Fecha o cluster equity pela tributação do patrimônio no exterior.
+     Hand-off natural do Art4 (CVM 44): a nota "ação listada no exterior →
+     regime da SEC" abre a porta para o offshore.
+     Fatos verificados em fonte primária 2026-06-12 (Lei 14.754/2023,
+     texto consolidado, planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14754.htm):
+       · Art. 2 §1 — IRPF 15% no ajuste anual sobre rendimentos de aplicações
+         financeiras no exterior + lucros/dividendos de controladas; sem dedução.
+         §2 ganho de capital de bens NÃO-financeiros → art. 21 Lei 8.981.
+         §3 variação cambial de conta-corrente não remunerada não tributa.
+         §4 moeda estrangeira em espécie isenta até US$ 5.000 de alienação/ano.
+       · Art. 3 — define aplicações financeiras no exterior.
+       · Art. 5 — controladas tributadas em 31/dez de cada ano (automático),
+         independentemente de distribuição. §1 controle = preponderância ou >50%.
+         §5 GATILHO: (I) tributação favorecida/regime fiscal privilegiado
+         (arts. 24 e 24-A Lei 9.430) OU (II) renda ativa própria < 60% da renda
+         total (i.e., renda passiva > 40%).
+       · Art. 6 — só na efetiva disponibilização: (I) lucros até 31/12/2023 de
+         qualquer controlada; (II) lucros a partir de 2024 de controladas que NÃO
+         se enquadram no §5 do art. 5 (renda ativa, fora de paraíso).
+       · Art. 7 — variação cambial do principal da controlada compõe o ganho de
+         capital só na alienação/baixa/liquidação (art. 21 Lei 8.981).
+       · Art. 8 — opção de transparência (declarar ativos como se detidos
+         diretamente); irrevogável e irretratável.
+       · Art. 9 — compensação de perdas de aplicações financeiras no exterior,
+         na DAA, no mesmo período; excedente com lucros de controladas; saldo
+         carrega para períodos posteriores; uma única vez.
+       · Art. 10 — trust transparente: bens permanecem do instituidor após a
+         instituição (I); passam ao beneficiário na distribuição OU no
+         falecimento do instituidor, o que ocorrer primeiro (II). §2 mudança de
+         titularidade = doação (em vida) ou causa mortis (morte). §3 rendimentos
+         auferidos pelo titular, IRPF conforme regras aplicáveis a ele.
+       · Art. 14 — atualização opcional de bens no exterior a valor de mercado em
+         31/12/2023, IRPF definitivo de 8%. Janela exercida na DAA 2024 (encerrada).
+     Vigência a partir de 1º de janeiro de 2024.
+     FAQ visível bate 1:1 com FAQPage. Person @id idêntico aos Art1/2/3/4.
+     ════════════════════════════════════════════════════════════ -->
+
+<title>Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado</title>
+<meta name="description" content="A Lei 14.754 trocou o diferimento pela tributação anual de 15%. Para o executivo com offshore ou ações em corretora no exterior, isso muda a conta — e mata a razão de existir da maioria das PICs. O que a lei realmente fez, e o que quase ninguém recalculou.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior">
+
+<!-- Open Graph (LinkedIn / WhatsApp share cards) -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado">
+<meta property="og:description" content="A Lei 14.754 trocou o diferimento pela tributação anual de 15%. Para quem tem offshore ou ações em corretora no exterior, a offshore virou decisão de estrutura e sucessão — não de alíquota.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/lei-14754-exterior.png">
+<meta property="article:published_time" content="2026-06-12">
+<meta property="article:author" content="Marcelo Siqueira">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado">
+<meta name="twitter:description" content="A tributação anual de 15% trocou o diferimento. A offshore virou decisão de estrutura e sucessão, não de alíquota. O que quase ninguém recalculou.">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/lei-14754-exterior.png">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — @graph: Person (alavanca de entidade nomeada) →
+     Organization → Article → FAQPage. Crawlers que não rodam JS leem aqui.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional certification",
+        "name": "CFP — Certified Financial Planner (Planejar)"
+      },
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior#article",
+      "headline": "Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado",
+      "description": "A Lei 14.754 trocou o diferimento pela tributação anual de 15%. Para o executivo com offshore ou ações em corretora no exterior, isso muda a conta — e mata a razão de existir da maioria das PICs. O que a lei realmente fez, e o que quase ninguém recalculou.",
+      "datePublished": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "inLanguage": "pt-BR",
+      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
+      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/lei-14754-exterior.png",
+      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior",
+      "about": [
+        { "@type": "Thing", "name": "Lei 14.754/2023" },
+        { "@type": "Thing", "name": "Tributação de offshore" },
+        { "@type": "Thing", "name": "Entidade controlada no exterior" },
+        { "@type": "Thing", "name": "Aplicações financeiras no exterior" },
+        { "@type": "Thing", "name": "Trust" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Montei uma offshore para adiar imposto sobre meus investimentos no exterior. Isso ainda funciona depois da Lei 14.754?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na maioria dos casos, não. O art. 5º da Lei 14.754 passou a tributar os lucros das entidades controladas no exterior em 31 de dezembro de cada ano, automaticamente, independentemente de distribuição — desde que a controlada se enquadre no §5º: esteja em país de tributação favorecida ou regime fiscal privilegiado, ou apure renda ativa própria inferior a 60% da renda total. Uma offshore montada só para deter investimentos (juros, dividendos, ganhos) tem renda quase toda passiva e cai exatamente nessa hipótese. O resultado é que o diferimento — a razão de existir da maioria dessas estruturas — acabou: o imposto de 15% incide todo ano, tenha você distribuído ou não. Estruturas com renda ativa de verdade e fora de paraíso fiscal continuam tributadas só na disponibilização (art. 6º), mas esse não é o perfil da PIC de investimentos típica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tenho ações da minha empresa, listada nos Estados Unidos, numa corretora no exterior. Como elas são tributadas agora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Como aplicação financeira no exterior detida diretamente por você, pessoa física. Pela Lei 14.754, os rendimentos — incluindo os dividendos recebidos e o ganho na venda das ações — são tributados a 15% no ajuste anual da declaração (art. 2º), sem nenhuma dedução de base. Dois pontos que pegam o executivo de surpresa: primeiro, não existe aqui a isenção mensal que vale para vendas de ações na B3 — toda alienação no exterior é tributável. Segundo, o dividendo de ação estrangeira não é isento como o de ação brasileira: entra na conta dos 15% anuais. Quem trata o equity de empregador listado lá fora como se fosse ação brasileira está aplicando o regime errado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Com a alíquota única de 15%, a offshore ainda faz sentido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Faz, mas por motivos diferentes dos de antes. Como a aplicação direta e a controlada são ambas tributadas a 15%, o ganho de alíquota que justificava a estrutura desapareceu. O que sobra é estrutural: compensar perdas de uns investimentos contra ganhos de outros dentro da mesma apuração (art. 9º); diferir a variação cambial do principal aplicado na controlada, que só é tributada na alienação ou liquidação do investimento (art. 7º); organizar a sucessão por meio de quotas, em vez de dezenas de ativos individuais; e a opção de transparência do art. 8º, que permite declarar os ativos como se detidos diretamente. A offshore virou decisão de estrutura e sucessão, não mais de economia de alíquota. Manter uma estrutura cara só pelo diferimento que a lei extinguiu é pagar custo de administração sem contrapartida."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tenho um trust no exterior. A Lei 14.754 muda alguma coisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Muda o pressuposto inteiro. O art. 10 tornou o trust transparente para fins fiscais brasileiros: os bens permanecem sob a titularidade do instituidor enquanto ele estiver vivo, e os rendimentos são tributados na pessoa dele, conforme as regras que se aplicariam se os ativos fossem detidos diretamente. A titularidade só passa ao beneficiário no momento da distribuição ou no falecimento do instituidor — o que ocorrer primeiro — e essa passagem é tratada como transmissão a título gratuito: doação, se em vida, ou causa mortis, se por morte, o que traz o ITCMD para dentro da conta. Trusts montados na lógica de que o patrimônio 'saía' do instituidor para fins de imposto não funcionam mais assim. A lei ainda exigiu adaptar a escritura ou a carta de desejos para refletir essas obrigações."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Perdi a janela de atualização de bens a 8%. E agora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A atualização opcional do art. 14 — reavaliar os bens no exterior ao valor de mercado de 31 de dezembro de 2023 pagando IRPF definitivo de 8% — era exercida na declaração de 2024 e a janela está encerrada. Quem não optou mantém o custo de aquisição histórico, e o ganho futuro será tributado integralmente a 15% (ou pela regra de ganho de capital, conforme o ativo) sobre toda a valorização, não só sobre a parte posterior a 2023. Não há como recuperar a janela, mas há o que organizar daqui para frente: apurar corretamente custos e a variação cambial, usar a compensação de perdas do art. 9º e, no caso de controlada, o diferimento cambial do art. 7º. O foco deixa de ser a alíquota perdida e passa a ser a apuração correta do que vem."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<!-- ─── NAV (shared across site) ─────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights" aria-current="page">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── ARTICLE HEADER ───────────────────────────────────── -->
+<header class="article-head">
+  <div class="prose">
+    <div class="eyebrow">Offshore · Lei 14.754</div>
+    <h1>Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado</h1>
+    <div class="article-meta">
+      <span class="byline">Marcelo Siqueira, CFP</span>
+      <span>·</span>
+      <time datetime="2026-06-12">12 de junho de 2026</time>
+      <span>·</span>
+      <span>10 min de leitura</span>
+    </div>
+    <p class="dek">A lei foi lida como "agora paga 15% lá fora". Para o executivo, o que aconteceu foi mais fino e mais caro de ignorar: o Brasil trocou o diferimento pela tributação anual. A offshore que existia para adiar imposto perdeu a função que justificava o custo dela — e quase ninguém refez essa conta.</p>
+  </div>
+</header>
+
+<!-- ─── ARTICLE BODY ─────────────────────────────────────── -->
+<article class="article-body">
+  <div class="prose">
+
+    <p>No artigo sobre a <a href="/insights/cvm-44-blackout-period-liquidez">CVM 44</a>, fechei com um recorte: a norma brasileira governa a ação listada no Brasil; se o seu equity é de uma matriz no exterior, o regime é outro. Este texto pega exatamente esse fio. Porque o executivo brasileiro de hoje quase sempre tem patrimônio do lado de fora — RSU de uma empresa listada nos Estados Unidos que vesta numa corretora americana, uma conta de investimentos offshore, às vezes uma estrutura societária montada anos atrás por um private. E sobre tudo isso passou, em 1º de janeiro de 2024, a <strong>Lei 14.754/2023</strong>.</p>
+
+    <p>A leitura de mercado foi preguiçosa: "agora os investimentos no exterior pagam 15%". Está certo e é insuficiente. A mudança que importa não é a alíquota — é <em>quando</em> o imposto incide. O Brasil saiu de um regime que premiava o diferimento e entrou num que tributa por competência, ano a ano, parte do que está lá fora. Para quem montou estrutura na lógica antiga, isso não é um ajuste de alíquota: é a remoção da razão pela qual a estrutura existia. E é isso que ainda não foi recalculado na maioria das carteiras que vejo.</p>
+
+    <h2>O que de fato mudou — em três blocos</h2>
+
+    <p>A lei trata o patrimônio no exterior em camadas distintas, e o erro é tratá-las como uma só. Separe por como você detém o ativo, porque a regra muda em cada caso.</p>
+
+    <p><strong>1. Aplicações financeiras que você detém diretamente.</strong> Conta numa corretora no exterior, ações, ETFs, títulos, fundos — em nome da pessoa física. Os rendimentos passaram a ser tributados a <strong>15% no ajuste anual da declaração</strong>, sem dedução de base de cálculo (art. 2º). Aqui a tributação continua acontecendo na realização — quando você vende, resgata ou recebe —, não por marcação a mercado. O que acabou foi a tabela progressiva antiga e o emaranhado de regras que mandavam parte desses ganhos para o carnê-leão. Ficou mais simples e mais previsível. Mas previsível não é o mesmo que barato: <strong>não existe, no exterior, a isenção mensal que vale para vender ações na B3</strong>, e o dividendo de ação estrangeira não é isento como o de ação brasileira — entra nos 15%. O executivo que trata o equity do empregador listado lá fora como se fosse papel de B3 está, simplesmente, no regime errado.</p>
+
+    <p><strong>2. Entidades controladas — a sua offshore.</strong> Aqui está o coração da mudança. Pela lógica anterior, uma sociedade no exterior controlada por você acumulava lucros e o imposto brasileiro só batia quando esses lucros eram distribuídos. Esse era o motor do planejamento: <em>diferir</em>. O art. 5º da Lei 14.754 desligou o motor. Os lucros da controlada passam a ser tributados a 15% <strong>em 31 de dezembro de cada ano, automaticamente, tenha havido distribuição ou não</strong> — desde que a entidade se enquadre em uma de duas hipóteses (§5º): estar em país de <strong>tributação favorecida</strong> ou regime fiscal privilegiado; <em>ou</em> apurar <strong>renda ativa própria inferior a 60% da renda total</strong> — ou seja, ter mais de 40% de renda passiva. Releia o segundo gatilho: uma offshore que existe para deter investimentos vive de juros, dividendos e ganhos de capital. Isso é renda passiva quase integral. Ela cai no gatilho por construção. Para a esmagadora maioria das estruturas de executivo, <strong>o diferimento simplesmente deixou de existir</strong>.</p>
+
+    <p><strong>3. Trusts.</strong> O art. 10 tornou o trust transparente. Os bens permanecem sob a titularidade do <strong>instituidor enquanto ele está vivo</strong>, e os rendimentos são tributados como dele, pelas regras que se aplicariam se os ativos fossem detidos diretamente. A titularidade só passa ao beneficiário na distribuição ou no falecimento do instituidor — o que vier primeiro — e essa passagem é tratada como <strong>doação</strong> (se em vida) ou <strong>transmissão causa mortis</strong> (se por morte), o que traz o ITCMD para dentro da conta. O trust montado na crença de que o patrimônio "saiu" do instituidor para o fisco brasileiro não opera mais assim.</p>
+
+    <div class="callout">
+      <span class="label">A frase que resume a virada</span>
+      <p>A Lei 14.754 não encareceu o investimento no exterior — ela <strong>antecipou</strong> o imposto. Antes você pagava 15% (ou mais) lá na frente, na distribuição; agora paga 15% todo ano, sobre a controlada que se enquadra. Quando o imposto sai do "depois" para o "agora", o valor presente do diferimento — que era a única coisa que muitas offshores entregavam — vira zero. A estrutura continua custando; o benefício que a pagava, não.</p>
+    </div>
+
+    <h2>O que ainda não está precificado</h2>
+
+    <p>Três consequências decorrem disso e quase nunca aparecem na conversa com o executivo. Elas são o motivo deste artigo.</p>
+
+    <p><strong>A offshore "de diferimento" ficou cara sem entregar nada.</strong> Uma PIC de investimentos custa contador no exterior, balanço anual em padrão contábil brasileiro, administração, às vezes diretor fiduciário. Tudo isso se pagava pelo diferimento. Com o art. 5º, a estrutura agora é tributada anualmente <em>igual</em> ao que você teria pagando direto — só que com a camada de custo por cima. Manter uma estrutura dessas sem refazer a conta é pagar manutenção por um benefício que a lei revogou.</p>
+
+    <p><strong>Mas a offshore não morreu — ela trocou de função.</strong> Como a aplicação direta e a controlada hoje pagam os mesmos 15%, a estrutura deixou de competir por alíquota e passou a competir por estrutura. O que ainda justifica uma offshore é concreto: a <strong>compensação de perdas</strong> de uns investimentos contra ganhos de outros dentro da mesma apuração (art. 9º); o <strong>diferimento da variação cambial do principal</strong> aplicado na controlada, que só é tributada na alienação ou liquidação do investimento, e não ano a ano (art. 7º); a <strong>sucessão organizada por quotas</strong>, em vez de dezenas de ativos a inventariar individualmente; e a <strong>opção de transparência do art. 8º</strong>, que deixa você declarar os ativos da controlada como se fossem detidos diretamente. São razões legítimas — mas são razões de <em>arquitetura</em>, não de economia de imposto. A pergunta certa deixou de ser "quanto a offshore economiza?" e passou a ser "a estrutura que tenho ainda resolve algum problema que eu de fato tenho?".</p>
+
+    <p><strong>A janela de 8% foi e não volta.</strong> A lei abriu, no art. 14, uma porta única: atualizar o valor dos bens no exterior ao mercado de 31 de dezembro de 2023 pagando IRPF definitivo de <strong>8%</strong> sobre a valorização — exercida na declaração de 2024. Para quem tinha ativos muito valorizados, era a chance de zerar o custo histórico a uma alíquota pela metade. A janela fechou. Quem não optou carrega o custo de aquisição antigo, e a valorização inteira será tributada a 15% (ou pela regra de ganho de capital, conforme o ativo) lá na frente. Não há recuperação — há, no máximo, organizar bem o que vem.</p>
+
+    <blockquote>A pergunta que o executivo precisa fazer ao seu private ou contador não é "quanto vou pagar de imposto no exterior?". É "a estrutura que eu mantenho ainda faz sentido depois que a lei tirou o diferimento que a justificava?". Na maioria das vezes que faço essa conta, a resposta surpreende quem está do outro lado da mesa.</blockquote>
+
+    <h2>O quadro de decisão</h2>
+
+    <p>O resumo que cabe numa página — como cada forma de deter patrimônio no exterior é tributada, e o que ela ainda resolve:</p>
+
+    <div class="table-wrap">
+    <table class="decision-table">
+      <thead>
+        <tr>
+          <th>Como você detém</th>
+          <th>Quando o imposto incide</th>
+          <th>Alíquota</th>
+          <th>O que reavaliar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Aplicação direta</strong><br>(corretora, ações, ETFs, títulos)</td>
+          <td>Na realização — venda, resgate, dividendo (art. 2º)</td>
+          <td>15% no ajuste anual, sem deduções</td>
+          <td>Declarar dividendos e ganhos no regime certo; não existe a isenção da B3</td>
+        </tr>
+        <tr>
+          <td><strong>Controlada que se enquadra</strong><br>(paraíso ou renda passiva &gt; 40%)</td>
+          <td>Automático, em 31/dez de cada ano, sem distribuir (art. 5º)</td>
+          <td>15% sobre o lucro anual</td>
+          <td>O diferimento acabou; pesar custo da estrutura vs. o que ela ainda entrega</td>
+        </tr>
+        <tr>
+          <td><strong>Controlada que não se enquadra</strong><br>(renda ativa, fora de paraíso)</td>
+          <td>Só na efetiva disponibilização (art. 6º)</td>
+          <td>15% na distribuição</td>
+          <td>Confirmar o enquadramento com cuidado — a PIC de investimentos raramente é "ativa"</td>
+        </tr>
+        <tr>
+          <td><strong>Trust</strong></td>
+          <td>Rendimentos na pessoa do instituidor; transmissão na distribuição ou morte (art. 10)</td>
+          <td>15% nos rendimentos; ITCMD na transmissão</td>
+          <td>Transparência fiscal; revisar escritura e carta de desejos</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <p>Dois lembretes fecham o quadro. O primeiro: a variação cambial tem regras próprias que jogam a favor de quem as conhece — a de conta-corrente não remunerada no exterior não é tributada, e a de moeda estrangeira em espécie é isenta até o equivalente a <strong>US$ 5.000</strong> de alienação por ano (art. 2º). São detalhes, mas detalhes que mudam a apuração de quem movimenta dólar com frequência. O segundo, e mais importante: nada aqui substitui a leitura do <em>seu</em> caso com um tributarista. Enquadramento de controlada, opção de transparência, tratamento de cada ativo — isso se decide com o documento na mão, não por regra geral. E há uma camada nova por cima: o imposto mínimo sobre altas rendas que entrou em vigor em 2026 (Lei 15.270) olha a renda total do contribuinte, e a sua interação com o que já é tributado a 15% no exterior é precisamente o tipo de cálculo que se faz caso a caso, para o executivo no topo da faixa. O que este artigo te dá é a pergunta certa para levar a essa mesa.</p>
+
+    <p>Esse raciocínio se conecta direto ao que escrevi sobre <a href="/insights/rsu-saida-empresa-imposto-de-renda">o que acontece com suas ações quando você sai da empresa</a> e sobre <a href="/insights/reduzir-concentracao-acionaria-sem-vender">como reduzir uma posição concentrada sem vender</a>: o equity do executivo brasileiro mora cada vez mais fora do país, e a Lei 14.754 é a régua nova com que ele é medido. Quem ainda opera pela régua antiga está, na melhor das hipóteses, pagando caro por uma vantagem que não existe mais.</p>
+
+    <!-- ─── CTA → contato (revisão de estrutura) ─── -->
+    <div class="cta-block">
+      <h2>Sua estrutura no exterior ainda resolve o problema para o qual foi montada?</h2>
+      <p>A conta mudou em 1º de janeiro de 2024. Se você tem offshore, trust ou ações em corretora no exterior montados na lógica antiga do diferimento, vale revisar enquadramento, custo e função antes da próxima declaração. É uma conversa de estrutura — direta, sem rodeio.</p>
+      <a class="btn" href="/contato?origem=insights-lei14754">Iniciar conversa</a>
+    </div>
+
+  </div>
+</article>
+
+<!-- ─── FAQ (VISÍVEL — bate 1:1 com o FAQPage JSON-LD acima) ─ -->
+<section class="faq" id="perguntas-frequentes">
+  <div class="prose">
+    <h2>Perguntas frequentes</h2>
+
+    <details>
+      <summary>Montei uma offshore para adiar imposto sobre meus investimentos no exterior. Isso ainda funciona depois da Lei 14.754?</summary>
+      <p>Na maioria dos casos, não. O art. 5º da Lei 14.754 passou a tributar os lucros das entidades controladas no exterior em 31 de dezembro de cada ano, automaticamente, independentemente de distribuição — desde que a controlada se enquadre no §5º: esteja em país de tributação favorecida ou regime fiscal privilegiado, ou apure renda ativa própria inferior a 60% da renda total. Uma offshore montada só para deter investimentos (juros, dividendos, ganhos) tem renda quase toda passiva e cai exatamente nessa hipótese. O resultado é que o diferimento — a razão de existir da maioria dessas estruturas — acabou: o imposto de 15% incide todo ano, tenha você distribuído ou não. Estruturas com renda ativa de verdade e fora de paraíso fiscal continuam tributadas só na disponibilização (art. 6º), mas esse não é o perfil da PIC de investimentos típica.</p>
+    </details>
+
+    <details>
+      <summary>Tenho ações da minha empresa, listada nos Estados Unidos, numa corretora no exterior. Como elas são tributadas agora?</summary>
+      <p>Como aplicação financeira no exterior detida diretamente por você, pessoa física. Pela Lei 14.754, os rendimentos — incluindo os dividendos recebidos e o ganho na venda das ações — são tributados a 15% no ajuste anual da declaração (art. 2º), sem nenhuma dedução de base. Dois pontos que pegam o executivo de surpresa: primeiro, não existe aqui a isenção mensal que vale para vendas de ações na B3 — toda alienação no exterior é tributável. Segundo, o dividendo de ação estrangeira não é isento como o de ação brasileira: entra na conta dos 15% anuais. Quem trata o equity de empregador listado lá fora como se fosse ação brasileira está aplicando o regime errado.</p>
+    </details>
+
+    <details>
+      <summary>Com a alíquota única de 15%, a offshore ainda faz sentido?</summary>
+      <p>Faz, mas por motivos diferentes dos de antes. Como a aplicação direta e a controlada são ambas tributadas a 15%, o ganho de alíquota que justificava a estrutura desapareceu. O que sobra é estrutural: compensar perdas de uns investimentos contra ganhos de outros dentro da mesma apuração (art. 9º); diferir a variação cambial do principal aplicado na controlada, que só é tributada na alienação ou liquidação do investimento (art. 7º); organizar a sucessão por meio de quotas, em vez de dezenas de ativos individuais; e a opção de transparência do art. 8º, que permite declarar os ativos como se detidos diretamente. A offshore virou decisão de estrutura e sucessão, não mais de economia de alíquota. Manter uma estrutura cara só pelo diferimento que a lei extinguiu é pagar custo de administração sem contrapartida.</p>
+    </details>
+
+    <details>
+      <summary>Tenho um trust no exterior. A Lei 14.754 muda alguma coisa?</summary>
+      <p>Muda o pressuposto inteiro. O art. 10 tornou o trust transparente para fins fiscais brasileiros: os bens permanecem sob a titularidade do instituidor enquanto ele estiver vivo, e os rendimentos são tributados na pessoa dele, conforme as regras que se aplicariam se os ativos fossem detidos diretamente. A titularidade só passa ao beneficiário no momento da distribuição ou no falecimento do instituidor — o que ocorrer primeiro — e essa passagem é tratada como transmissão a título gratuito: doação, se em vida, ou causa mortis, se por morte, o que traz o ITCMD para dentro da conta. Trusts montados na lógica de que o patrimônio "saía" do instituidor para fins de imposto não funcionam mais assim. A lei ainda exigiu adaptar a escritura ou a carta de desejos para refletir essas obrigações.</p>
+    </details>
+
+    <details>
+      <summary>Perdi a janela de atualização de bens a 8%. E agora?</summary>
+      <p>A atualização opcional do art. 14 — reavaliar os bens no exterior ao valor de mercado de 31 de dezembro de 2023 pagando IRPF definitivo de 8% — era exercida na declaração de 2024 e a janela está encerrada. Quem não optou mantém o custo de aquisição histórico, e o ganho futuro será tributado integralmente a 15% (ou pela regra de ganho de capital, conforme o ativo) sobre toda a valorização, não só sobre a parte posterior a 2023. Não há como recuperar a janela, mas há o que organizar daqui para frente: apurar corretamente custos e a variação cambial, usar a compensação de perdas do art. 9º e, no caso de controlada, o diferimento cambial do art. 7º. O foco deixa de ser a alíquota perdida e passa a ser a apuração correta do que vem.</p>
+    </details>
+
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
