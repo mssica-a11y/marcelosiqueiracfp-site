@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>O Teste dos 90 Dias — diagnóstico de liquidez sob evento | Marcelo Siqueira CFP</title>
+<meta name="description" content="Em 6 perguntas, veja onde seu patrimônio está exposto se um evento de liquidez chegar antes da estrutura ficar pronta. Diagnóstico gratuito para o executivo C-level — sem cadastro, resultado na tela.">
+
+<link rel="canonical" href="https://marcelosiqueiracfp.com.br/teste-90-dias">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="O Teste dos 90 Dias — diagnóstico de liquidez sob evento">
+<meta property="og:description" content="Patrimônio no papel não paga conta. Liquidez paga. Em 6 perguntas, veja onde você está exposto.">
+<meta property="og:url" content="https://marcelosiqueiracfp.com.br/teste-90-dias">
+<meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="/insights/styles.css">
+
+<!-- ════════════════════════════════════════════════════════════
+     JSON-LD — página de ferramenta. Referencia a entidade nomeada
+     (Person/WebSite) pelos mesmos @id da home, para consolidar grafo.
+     ════════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#webpage",
+      "name": "O Teste dos 90 Dias — diagnóstico de liquidez sob evento",
+      "description": "Diagnóstico de exposição patrimonial em 6 perguntas para o executivo C-level brasileiro.",
+      "url": "https://marcelosiqueiracfp.com.br/teste-90-dias",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://marcelosiqueiracfp.com.br/#website" },
+      "about": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
+      "name": "Marcelo Siqueira",
+      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
+      "url": "https://marcelosiqueiracfp.com.br",
+      "sameAs": ["https://www.linkedin.com/in/marcelosiqueiracfp"]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ────────────────────────────────────────────────────────────
+   Estilos próprios do diagnóstico (namespace lm-* para não colidir
+   com styles.css; .wrap do site = 1120px, este = 720px focado).
+   Tokens de cor/fonte herdados de styles.css; aqui só os que faltam.
+   ──────────────────────────────────────────────────────────── */
+:root {
+  --vectis-warning: #B8860B;
+  --vectis-font-display: var(--fd);
+  --vectis-font-body: var(--fs);
+  --vectis-font-mono: var(--fm);
+  --vectis-radius-sm: 4px;
+  --vectis-radius-md: 6px;
+  --vectis-radius-lg: 8px;
+}
+
+.lm-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Progress */
+.progress { display: flex; gap: 6px; margin-bottom: 40px; }
+.progress .seg { height: 2px; flex: 1; background: var(--vectis-stone); transition: background 0.3s ease; }
+.progress .seg.active { background: var(--vectis-navy); }
+.progress .seg.done { background: var(--vectis-brass); }
+
+/* Typography (escopado em .lm-wrap para não sobrepor h1/h2 do site) */
+.lm-wrap h1 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 40px; line-height: 1.15; color: var(--vectis-navy); margin-bottom: 20px; }
+.lm-wrap h2 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 28px; line-height: 1.25; color: var(--vectis-navy); margin-bottom: 16px; }
+.lede { font-size: 18px; color: var(--vectis-graphite); margin-bottom: 36px; max-width: 620px; }
+.kicker { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 20px; }
+.qcount { font-family: var(--vectis-font-mono); font-size: 13px; color: var(--vectis-cool-gray); margin-bottom: 14px; }
+
+/* Screens */
+.screen { display: none; animation: fade 0.35s ease; }
+.screen.active { display: flex; flex-direction: column; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Options */
+.options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.opt {
+  text-align: left; font-family: var(--vectis-font-body); font-size: 16px;
+  color: var(--vectis-navy); background: var(--vectis-white);
+  border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-md);
+  padding: 18px 20px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
+}
+.opt:hover { border-color: var(--vectis-navy); background: var(--vectis-linen); }
+.opt .sub { display: block; font-size: 13px; color: var(--vectis-cool-gray); margin-top: 3px; }
+
+/* Buttons (lm-btn para não colidir com .btn do site) */
+.lm-btn {
+  font-family: var(--vectis-font-body); font-weight: 500; font-size: 16px;
+  border-radius: var(--vectis-radius-md); padding: 14px 28px; cursor: pointer;
+  border: none; transition: filter 0.15s ease; display: inline-block;
+  text-decoration: none; text-align: center;
+}
+.lm-btn:hover { filter: brightness(0.92); text-decoration: none; }
+.lm-btn-primary { background: var(--vectis-navy); color: var(--vectis-white); }
+.lm-btn-accent { background: var(--vectis-brass); color: var(--vectis-white); }
+.start-row { margin-top: 8px; }
+.back {
+  background: none; border: none; color: var(--vectis-cool-gray);
+  font-family: var(--vectis-font-body); font-size: 14px; cursor: pointer;
+  margin-top: 24px; padding: 4px 0; align-self: flex-start;
+}
+.back:hover { color: var(--vectis-graphite); }
+
+/* Result */
+.result-band { border-left: 2px solid var(--vectis-brass); padding-left: 24px; margin-bottom: 36px; }
+.exposure-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 8px; }
+.exposure-score { font-family: var(--vectis-font-mono); font-size: 52px; line-height: 1; color: var(--vectis-navy); margin-bottom: 4px; }
+.exposure-score .max { font-size: 22px; color: var(--vectis-cool-gray); }
+.exposure-verdict { font-family: var(--vectis-font-display); font-size: 26px; color: var(--vectis-navy); margin-top: 10px; }
+
+.painline { background: var(--vectis-navy); color: var(--vectis-warm-white); border-radius: var(--vectis-radius-lg); padding: 32px; margin-bottom: 32px; }
+.painline .q { font-family: var(--vectis-font-display); font-size: 24px; line-height: 1.3; margin-bottom: 18px; }
+.painline .nums { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 20px; }
+.painline .num-block .v { font-family: var(--vectis-font-mono); font-size: 28px; color: var(--vectis-white); }
+.painline .num-block .v.bad { color: var(--vectis-brass); }
+.painline .num-block .l { font-size: 12px; color: var(--vectis-cool-gray); letter-spacing: 0.04em; margin-top: 4px; }
+
+.readout { margin-bottom: 32px; }
+.readout .row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--vectis-stone); }
+.readout .row:last-child { border-bottom: none; }
+.readout .row .k { font-size: 15px; color: var(--vectis-graphite); }
+.readout .row .val { font-family: var(--vectis-font-mono); font-size: 15px; color: var(--vectis-navy); }
+.readout .row .val.flag { color: var(--vectis-danger); }
+.readout .row .val.ok { color: var(--vectis-success); }
+
+.interp { font-size: 17px; color: var(--vectis-graphite); margin-bottom: 36px; max-width: 620px; }
+.interp strong { font-weight: 500; color: var(--vectis-navy); }
+
+.cta-box { background: var(--vectis-white); border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-lg); padding: 32px; margin-bottom: 24px; }
+.cta-box h2 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 26px; color: var(--vectis-navy); margin-bottom: 16px; }
+.cta-box p { font-size: 16px; margin-bottom: 24px; max-width: 560px; }
+
+.disclaimer { font-size: 12px; color: var(--vectis-cool-gray); line-height: 1.5; margin-top: 12px; max-width: 620px; }
+.footer-mark { padding-top: 32px; font-size: 12px; color: var(--vectis-cool-gray); letter-spacing: 0.04em; }
+
+@media (max-width: 600px) {
+  .lm-wrap h1 { font-size: 32px; }
+  .lm-wrap { padding: 32px 20px 60px; }
+  .painline { padding: 24px; }
+  .painline .q { font-size: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ─── NAV ──────────────────────────────────────────────── -->
+<nav class="site-nav">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
+      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+  </a>
+  <div class="links">
+    <a href="/insights">Insights</a>
+  </div>
+  <a href="/contato" class="cta">Iniciar conversa</a>
+</nav>
+
+<!-- ─── DIAGNÓSTICO ──────────────────────────────────────── -->
+<div class="lm-wrap">
+
+  <div class="progress" id="progress"></div>
+
+  <!-- INTRO -->
+  <section class="screen active" id="screen-intro">
+    <div class="kicker">Diagnóstico de liquidez sob evento</div>
+    <h1>Patrimônio no papel não paga conta.<br>Liquidez paga.</h1>
+    <p class="lede">A maioria dos patrimônios acima de R$10 milhões tem o mesmo ponto cego: tudo parece organizado até o dia em que precisa virar caixa. Em 6 perguntas, você vê onde está exposto — e o que aconteceria se um evento chegasse antes da estrutura ficar pronta.</p>
+    <div class="start-row">
+      <button class="lm-btn lm-btn-primary" onclick="next()">Começar — leva 2 minutos</button>
+    </div>
+    <div class="footer-mark">Sem cadastro. O resultado aparece na tela.</div>
+  </section>
+
+  <!-- Q1 -->
+  <section class="screen" id="screen-1">
+    <div class="qcount">01 / 06</div>
+    <h2>Somando tudo — investimentos, empresa, imóveis, equity — em que faixa está o seu patrimônio total?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('patrimonio','ate5',this)">Até R$ 5 milhões</button>
+      <button class="opt" onclick="answer('patrimonio','5a10',this)">R$ 5 a 10 milhões</button>
+      <button class="opt" onclick="answer('patrimonio','10a30',this)">R$ 10 a 30 milhões</button>
+      <button class="opt" onclick="answer('patrimonio','30a70',this)">R$ 30 a 70 milhões</button>
+      <button class="opt" onclick="answer('patrimonio','70mais',this)">Acima de R$ 70 milhões</button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- Q2 -->
+  <section class="screen" id="screen-2">
+    <div class="qcount">02 / 06</div>
+    <h2>Quanto do seu patrimônio está concentrado num único ativo — sua empresa, o equity do empregador, ou um imóvel dominante?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('concentracao','baixa',this)">Menos de 25%</button>
+      <button class="opt" onclick="answer('concentracao','media',this)">Entre 25% e 50%</button>
+      <button class="opt" onclick="answer('concentracao','alta',this)">Entre 50% e 75%</button>
+      <button class="opt" onclick="answer('concentracao','critica',this)">Mais de 75%</button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- Q3 -->
+  <section class="screen" id="screen-3">
+    <div class="qcount">03 / 06</div>
+    <h2>Se você precisasse de caixa equivalente a 20% do seu patrimônio em 90 dias — sem vender o ativo principal — você consegue?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('liquidez','tranquilo',this)">Tranquilamente<span class="sub">Tenho reserva e ativos líquidos suficientes</span></button>
+      <button class="opt" onclick="answer('liquidez','esforco',this)">Com algum esforço<span class="sub">Daria, mas mexeria em coisas que não queria mexer</span></button>
+      <button class="opt" onclick="answer('liquidez','forcado',this)">Só vendendo o ativo principal<span class="sub">Teria que liquidar a empresa, o equity ou o imóvel</span></button>
+      <button class="opt" onclick="answer('liquidez','naosei',this)">Não sei dizer<span class="sub">Nunca calculei isso</span></button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- Q4 -->
+  <section class="screen" id="screen-4">
+    <div class="qcount">04 / 06</div>
+    <h2>Há algum evento à vista nos próximos 24 meses?</h2>
+    <p class="lede" style="margin-bottom:20px;">Venda de empresa, vesting relevante, abertura de capital, saída de cargo, sucessão, assembleia, earn-out.</p>
+    <div class="options">
+      <button class="opt" onclick="answer('evento','data',this)">Sim, com data ou janela definida</button>
+      <button class="opt" onclick="answer('evento','provavel',this)">Provável, mas sem data ainda</button>
+      <button class="opt" onclick="answer('evento','nao',this)">Não, nada no horizonte</button>
+      <button class="opt" onclick="answer('evento','entender',this)">É justamente o que quero entender</button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- Q5 -->
+  <section class="screen" id="screen-5">
+    <div class="qcount">05 / 06</div>
+    <h2>Sua estrutura atual — holding, offshore, previdência, seguro — foi desenhada por alguém olhando o conjunto inteiro?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('estrutura','integrada',this)">Sim, alguém olhou o todo<span class="sub">Existe uma visão consolidada e coordenada</span></button>
+      <button class="opt" onclick="answer('estrutura','fragmentada',this)">Cada peça foi montada por um profissional diferente<span class="sub">Banco, contador e advogado, em momentos diferentes</span></button>
+      <button class="opt" onclick="answer('estrutura','nenhuma',this)">Não tenho estrutura montada<span class="sub">Está tudo em pessoa física ou solto</span></button>
+      <button class="opt" onclick="answer('estrutura','naosei',this)">Não sei dizer</button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- Q6 -->
+  <section class="screen" id="screen-6">
+    <div class="qcount">06 / 06</div>
+    <h2>Hoje, quem tem a visão completa do seu patrimônio numa única página?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('visao','eu',this)">Eu mesmo, de cabeça<span class="sub">Monto o quebra-cabeça quando preciso decidir</span></button>
+      <button class="opt" onclick="answer('visao','ninguem',this)">Ninguém — está espalhado<span class="sub">Cada instituição enxerga só a própria fatia</span></button>
+      <button class="opt" onclick="answer('visao','profissional',this)">Um profissional que coordena o conjunto</button>
+      <button class="opt" onclick="answer('visao','documento',this)">Existe um documento consolidado e atualizado</button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
+  <!-- RESULT -->
+  <section class="screen" id="screen-result">
+    <div class="result-band">
+      <div class="exposure-label">Índice de exposição patrimonial</div>
+      <div class="exposure-score"><span id="scoreVal">0</span><span class="max"> / 100</span></div>
+      <div class="exposure-verdict" id="verdict">—</div>
+    </div>
+
+    <div class="painline" id="painline">
+      <div class="q" id="painQ">—</div>
+      <div class="nums" id="painNums"></div>
+    </div>
+
+    <div class="readout" id="readout"></div>
+
+    <div class="interp" id="interp"></div>
+
+    <div id="ctaArea"></div>
+
+    <p class="disclaimer">Este diagnóstico é uma leitura de exposição, não um cálculo tributário ou jurídico. Os valores usam o piso da faixa que você informou, de forma conservadora. O número real só aparece quando os seus dados entram na mesa — extratos, posição de equity, estrutura atual. É exatamente isso que uma conversa de diagnóstico faz.</p>
+
+    <button class="back" onclick="restart()">↻ Refazer o teste</button>
+    <div class="footer-mark">Marcelo Siqueira — arquitetura patrimonial para quem construiu por desempenho.</div>
+  </section>
+</div>
+
+<!-- ─── FOOTER ───────────────────────────────────────────── -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
+      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+    </div>
+    <div>
+      <p><a href="/insights">Insights</a></p>
+      <p><a href="/contato">Iniciar conversa</a></p>
+      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================================
+   CONFIGURAÇÃO
+   ========================================================================= */
+var CONFIG = {
+  // Agenda Calendly — captura do lead qualificado (>R$10MM).
+  calendarUrl: "https://calendly.com/marcelo-siqueira/revisao-investimentos",
+  // Abaixo do corte de R$10MM: encaminha para a biblioteca de Insights do site.
+  contentUrl: "/insights"
+};
+/* ========================================================================= */
+
+var TOTAL = 6;
+var state = {};
+var current = 0; // 0 = intro, 1..6 = perguntas, 7 = resultado
+
+var screens = ['screen-intro','screen-1','screen-2','screen-3','screen-4','screen-5','screen-6','screen-result'];
+
+function buildProgress(){
+  var p = document.getElementById('progress');
+  p.innerHTML = '';
+  for(var i=0;i<TOTAL;i++){
+    var s = document.createElement('div');
+    s.className = 'seg';
+    s.id = 'seg-'+i;
+    p.appendChild(s);
+  }
+}
+function paintProgress(){
+  for(var i=0;i<TOTAL;i++){
+    var seg = document.getElementById('seg-'+i);
+    if(!seg) continue;
+    seg.className = 'seg';
+    var qIndex = i+1;
+    if(current > qIndex) seg.classList.add('done');
+    else if(current === qIndex) seg.classList.add('active');
+  }
+}
+function show(idx){
+  for(var i=0;i<screens.length;i++){
+    document.getElementById(screens[i]).classList.remove('active');
+  }
+  document.getElementById(screens[idx]).classList.add('active');
+  current = idx;
+  paintProgress();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function next(){ if(current < 7) show(current+1); }
+function prev(){ if(current > 0) show(current-1); }
+function answer(key, val, el){
+  state[key] = val;
+  // micro feedback
+  if(el){ el.style.borderColor = 'var(--vectis-brass)'; }
+  setTimeout(function(){
+    if(current === 6){ computeResult(); show(7); }
+    else next();
+  }, 160);
+}
+function restart(){ state = {}; show(0); }
+
+/* ---------- Cálculo ---------- */
+var PATRIMONIO_PISO = { ate5: 2.5, '5a10': 5, '10a30': 10, '30a70': 30, '70mais': 70 }; // em R$ MM
+var CONCENTRACAO_PCT = { baixa: 0.15, media: 0.375, alta: 0.625, critica: 0.80 };
+
+function computeResult(){
+  var score = 0;
+
+  // concentração
+  var cMap = { baixa:0, media:20, alta:35, critica:45 };
+  score += cMap[state.concentracao] || 0;
+
+  // liquidez
+  var lMap = { tranquilo:0, esforco:15, forcado:30, naosei:25 };
+  score += lMap[state.liquidez] || 0;
+
+  // evento
+  var eMap = { data:15, provavel:10, nao:0, entender:8 };
+  score += eMap[state.evento] || 0;
+
+  // estrutura
+  var sMap = { integrada:0, fragmentada:10, nenhuma:12, naosei:8 };
+  score += sMap[state.estrutura] || 0;
+
+  // visão consolidada
+  var vMap = { eu:6, ninguem:10, profissional:0, documento:0 };
+  score += vMap[state.visao] || 0;
+
+  if(score > 100) score = 100;
+
+  renderResult(score);
+}
+
+function fmtMM(v){
+  // v em milhões
+  if(v >= 1) return 'R$ ' + (v % 1 === 0 ? v.toFixed(0) : v.toFixed(1)) + ' mi';
+  return 'R$ ' + (v*1000).toFixed(0) + ' mil';
+}
+
+function renderResult(score){
+  document.getElementById('scoreVal').textContent = score;
+
+  var verdict;
+  if(score <= 25){ verdict = 'Exposição baixa'; }
+  else if(score <= 50){ verdict = 'Exposição moderada'; }
+  else if(score <= 75){ verdict = 'Exposição alta'; }
+  else { verdict = 'Exposição crítica'; }
+  document.getElementById('verdict').textContent = verdict;
+
+  // ----- pain line: o número que dói -----
+  var piso = PATRIMONIO_PISO[state.patrimonio] || 10;
+  var conc = CONCENTRACAO_PCT[state.concentracao] || 0.5;
+  var concVal = piso * conc;
+  var need90 = piso * 0.20;
+
+  var painQ, nums = '';
+  var liqLabel = {
+    tranquilo: 'consegue, com folga',
+    esforco: 'consegue, com esforço',
+    forcado: 'só vendendo o ativo principal',
+    naosei: 'você não sabe dizer'
+  }[state.liquidez] || '';
+
+  painQ = 'Você tem cerca de ' + fmtMM(piso) + ' em patrimônio. Se precisasse de ' + fmtMM(need90) + ' em 90 dias, hoje a resposta é: <span style="color:var(--vectis-brass)">' + liqLabel + '</span>.';
+
+  nums += '<div class="num-block"><div class="v">'+fmtMM(piso)+'</div><div class="l">Patrimônio (piso da faixa)</div></div>';
+  nums += '<div class="num-block"><div class="v '+(conc>=0.5?'bad':'')+'">'+fmtMM(concVal)+'</div><div class="l">Preso no ativo principal</div></div>';
+  nums += '<div class="num-block"><div class="v">'+fmtMM(need90)+'</div><div class="l">Necessidade em 90 dias (20%)</div></div>';
+
+  document.getElementById('painQ').innerHTML = painQ;
+  document.getElementById('painNums').innerHTML = nums;
+
+  // ----- readout -----
+  var rows = [];
+  var concTxt = { baixa:'Abaixo de 25%', media:'25% a 50%', alta:'50% a 75%', critica:'Acima de 75%' }[state.concentracao];
+  var concFlag = (state.concentracao==='alta'||state.concentracao==='critica') ? 'flag' : (state.concentracao==='baixa'?'ok':'');
+  rows.push(['Concentração no maior ativo', concTxt, concFlag]);
+
+  var liqTxt = { tranquilo:'Saudável', esforco:'Apertada', forcado:'Crítica', naosei:'Não medida' }[state.liquidez];
+  var liqFlag = (state.liquidez==='forcado') ? 'flag' : (state.liquidez==='tranquilo'?'ok':'');
+  rows.push(['Liquidez em 90 dias', liqTxt, liqFlag]);
+
+  var evTxt = { data:'Iminente, com prazo', provavel:'Provável', nao:'Sem evento', entender:'A esclarecer' }[state.evento];
+  var evFlag = (state.evento==='data') ? 'flag' : '';
+  rows.push(['Evento de liquidez à vista', evTxt, evFlag]);
+
+  var stTxt = { integrada:'Coordenada', fragmentada:'Fragmentada', nenhuma:'Inexistente', naosei:'Indefinida' }[state.estrutura];
+  var stFlag = (state.estrutura==='fragmentada'||state.estrutura==='nenhuma') ? 'flag' : (state.estrutura==='integrada'?'ok':'');
+  rows.push(['Estrutura patrimonial', stTxt, stFlag]);
+
+  var html = '';
+  rows.forEach(function(r){
+    html += '<div class="row"><div class="k">'+r[0]+'</div><div class="val '+r[2]+'">'+r[1]+'</div></div>';
+  });
+  document.getElementById('readout').innerHTML = html;
+
+  // ----- interpretação -----
+  var interp = '';
+  if(state.evento === 'data' && (state.liquidez==='forcado'||state.liquidez==='naosei')){
+    interp = '<strong>Esta é a combinação mais perigosa.</strong> Você tem um evento com data marcada e a liquidez para atravessá-lo depende de vender justamente o ativo que deveria estar protegido. Quando o evento chega antes da estrutura, a decisão deixa de ser sua — vira forced-sale no pior momento.';
+  } else if(state.concentracao==='critica' || state.concentracao==='alta'){
+    interp = '<strong>Concentração é o risco que não aparece em planilha nenhuma.</strong> Enquanto o ativo principal vai bem, parece estabilidade. É exatamente nesse período que a janela para reduzir exposição sem custo tributário catastrófico está aberta — e é exatamente quando quase ninguém age.';
+  } else if(state.estrutura==='fragmentada' || state.visao==='ninguem'){
+    interp = '<strong>O problema não é falta de profissionais. É falta de arquitetura.</strong> Banco, contador e advogado cuidam cada um da própria peça. Ninguém puxa o conjunto. As peças existem — o desenho que faz elas conversarem, não.';
+  } else if(score <= 25){
+    interp = '<strong>Sua exposição está baixa — e isso é raro.</strong> Vale uma revisão periódica para garantir que a estrutura acompanhe mudanças tributárias e de patrimônio, mas você não está na zona de urgência.';
+  } else {
+    interp = '<strong>Há pontos cegos que ainda não viraram problema.</strong> Não é uma emergência hoje — mas cada um deles tem um custo composto que só aparece quando a janela já fechou.';
+  }
+  document.getElementById('interp').innerHTML = interp;
+
+  // ----- CTA condicional ao corte de R$10MM -----
+  renderCTA();
+}
+
+function renderCTA(){
+  var qualified = (state.patrimonio === '10a30' || state.patrimonio === '30a70' || state.patrimonio === '70mais');
+  var area = document.getElementById('ctaArea');
+
+  if(qualified){
+    area.innerHTML =
+      '<div class="cta-box">' +
+        '<h2>O que você viu é a superfície.</h2>' +
+        '<p>Este diagnóstico usa o piso da sua faixa e quatro variáveis. O número real — o que você de fato consegue acessar, o custo fiscal exato de diversificar, onde a estrutura trava — exige os seus dados na mesa. É o que acontece numa Sessão de Diagnóstico Patrimonial: 3 horas, e você sai com o mapa do seu patrimônio numa página e as decisões prioritárias dos próximos 12 meses.</p>' +
+        '<a class="lm-btn lm-btn-accent" href="'+CONFIG.calendarUrl+'" target="_blank" rel="noopener">Agendar uma conversa de diagnóstico</a>' +
+      '</div>';
+  } else {
+    area.innerHTML =
+      '<div class="cta-box">' +
+        '<h2>Onde você está, o melhor próximo passo é estudar.</h2>' +
+        '<p>O trabalho de arquitetura patrimonial que eu faço foi desenhado para patrimônios com a complexidade que normalmente aparece acima de R$ 10 milhões — múltiplas estruturas, concentração relevante, eventos de liquidez. No seu momento, o maior retorno vem de entender os mecanismos antes de precisar deles. É exatamente isso que eu publico.</p>' +
+        '<a class="lm-btn lm-btn-primary" href="'+CONFIG.contentUrl+'">Acompanhar o conteúdo</a>' +
+      '</div>';
+  }
+}
+
+buildProgress();
+paintProgress();
+</script>
+</body>
+</html>
