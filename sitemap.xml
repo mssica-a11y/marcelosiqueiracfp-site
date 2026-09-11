@@ -34,6 +34,31 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Fase 3 — páginas-resposta (AEO), 2026-09-11 -->
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/patrimonio-apos-vender-empresa</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/quanto-custa-planejamento-financeiro-fee-only</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/family-office-10-milhoes</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://marcelosiqueiracfp.com.br/sucessao-filhos-bens-exterior</loc>
+    <lastmod>2026-09-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Lead magnet — diagnóstico interativo de liquidez sob evento -->
   <url>
     <loc>https://marcelosiqueiracfp.com.br/teste-90-dias</loc>

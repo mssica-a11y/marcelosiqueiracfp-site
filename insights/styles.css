@@ -125,6 +125,18 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .decision-table tbody tr:last-child td { border-bottom: none; }
 .decision-table tbody td:first-child { color: var(--vectis-navy); white-space: nowrap; }
 .decision-table strong { color: var(--vectis-navy); font-weight: 500; }
+/* variante para tabelas de texto: 1ª coluna quebra linha e a tabela cabe na coluna de leitura */
+.decision-table--wrap { min-width: 0; }
+.decision-table--wrap tbody td:first-child { white-space: normal; min-width: 9em; }
+@media (max-width: 600px) {
+  .decision-table--wrap thead { display: none; }
+  .decision-table--wrap, .decision-table--wrap tbody, .decision-table--wrap tr, .decision-table--wrap td { display: block; width: 100%; }
+  .decision-table--wrap tr { border-bottom: 1px solid var(--vectis-stone); padding: 6px 0; }
+  .decision-table--wrap tbody tr:last-child { border-bottom: none; }
+  .decision-table--wrap td { border-bottom: none; padding: 6px 16px; }
+  .decision-table--wrap td::before { content: attr(data-label); display: block; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 2px; }
+  .decision-table--wrap tbody td:first-child { font-weight: 500; }
+}
 
 /* ─── FAQ ─────────────────────────────────────────────── */
 .faq { border-top: 1px solid var(--vectis-stone); padding: 48px 0 8px; }
