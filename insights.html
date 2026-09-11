@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Insights — Marcelo Siqueira CFP | Sucessão, tributação e patrimônio complexo</title>
-<meta name="description" content="Análises técnicas sobre sucessão, ITCMD, holding familiar, RSU, stock options, CVM 44 e Lei 14.754 — para quem construiu patrimônio por empresa ou por carreira.">
+<title>Insights: patrimônio, sucessão e equity | M. Siqueira CFP®</title>
+<meta name="description" content="ITCMD, holding familiar, RSU, stock options, CVM 44 e Lei 14.754: análises técnicas com o dispositivo legal e o número.">
 
 <link rel="canonical" href="https://marcelosiqueiracfp.com.br/insights">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:site_name" content="Marcelo Siqueira CFP®">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Insights — Marcelo Siqueira CFP">
-<meta property="og:description" content="Sucessão, ITCMD, equity e tributação de patrimônio complexo. O território técnico que ninguém no Brasil cobre.">
+<meta property="og:title" content="Insights — Marcelo Siqueira CFP®">
+<meta property="og:description" content="Três trilhas: equity executivo, sucessão e estrutura familiar, internacional.">
 <meta property="og:url" content="https://marcelosiqueiracfp.com.br/insights">
 <meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/insights-hub.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -138,7 +138,7 @@
     {
       "@type": "Blog",
       "@id": "https://marcelosiqueiracfp.com.br/insights#blog",
-      "name": "Insights — Marcelo Siqueira CFP",
+      "name": "Insights — Marcelo Siqueira CFP®",
       "description": "Análises técnicas sobre patrimônio, tributação e sucessão — equity executivo, estrutura familiar e patrimônio no exterior.",
       "url": "https://marcelosiqueiracfp.com.br/insights",
       "inLanguage": "pt-BR",
@@ -178,14 +178,17 @@
 <body>
 
 <nav class="site-nav">
-  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP® — início">
     <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
       <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+    <span>Marcelo Siqueira</span><span class="cred">CFP®</span>
   </a>
   <div class="links">
+    <a href="/executivo">Executivo</a>
+    <a href="/founder">Founder</a>
     <a href="/insights" aria-current="page">Insights</a>
+    <a href="/na-midia">Na mídia</a>
   </div>
   <a href="/contato" class="cta">Iniciar conversa</a>
 </nav>
@@ -193,74 +196,83 @@
 <header class="hub-head">
   <div class="wrap">
     <div class="eyebrow">Insights</div>
-    <h1>O território técnico do patrimônio complexo — de quem construiu empresa ou carreira. E que ninguém no Brasil cobre.</h1>
-    <p>Sucessão, ITCMD, holding familiar, RSU, stock options, CVM 44, Lei 14.754. Análises diretas, escritas para quem decide rápido e entende a complexidade.</p>
+    <h1>O território técnico do patrimônio concentrado.</h1>
+    <p>De quem construiu patrimônio por empresa ou por carreira. ITCMD, holding familiar, RSU, stock options, CVM 44, Lei 14.754 — análises diretas, com o dispositivo legal e o número na mesa.</p>
   </div>
 </header>
 
 <main class="wrap">
+  <!-- Filtro por trilha: radio + :has() no CSS, sem JavaScript. -->
+  <fieldset class="trilhas">
+    <legend>Filtrar por trilha</legend>
+    <input type="radio" name="trilha" id="t-todas" checked><label for="t-todas">Todas</label>
+    <input type="radio" name="trilha" id="t-equity"><label for="t-equity">Equity executivo</label>
+    <input type="radio" name="trilha" id="t-sucessao"><label for="t-sucessao">Sucessão e estrutura familiar</label>
+    <input type="radio" name="trilha" id="t-internacional"><label for="t-internacional">Internacional</label>
+  </fieldset>
+
   <div class="article-grid">
 
     <!-- Cards em ordem de publicação. Ao publicar um "Em breve",
          converter o <div class="card card--soon"> em <a class="card" href="…"> e renumerar. -->
 
     <!-- Artigo 1 — publicado (S2) -->
-    <a class="card" href="/insights/rsu-saida-empresa-imposto-de-renda">
-      <span class="tag">Tributação · Equity</span>
+    <a class="card" href="/insights/rsu-saida-empresa-imposto-de-renda" data-trilha="equity">
+      <span class="tag">Equity executivo</span>
       <h3>O que acontece com suas ações quando você sai da empresa</h3>
       <p>O custo de IR sobre RSU em vesting que a maioria dos executivos só descobre depois de assinar — e como estruturar a saída antes.</p>
       <span class="read">8 min · Artigo 1</span>
     </a>
 
     <!-- Artigo 2 — publicado -->
-    <a class="card" href="/insights/tema-1226-stj-stock-options-executivo">
-      <span class="tag">Tributação · STJ</span>
+    <a class="card" href="/insights/tema-1226-stj-stock-options-executivo" data-trilha="equity">
+      <span class="tag">Equity executivo</span>
       <h3>Tema 1.226 do STJ: o que a decisão muda para você com equity</h3>
       <p>Remuneratória ou mercantil? A natureza jurídica das stock options decide quanto e quando você paga de IR.</p>
       <span class="read">8 min · Artigo 2</span>
     </a>
 
     <!-- Artigo 3 — publicado (fecha o cluster equity) -->
-    <a class="card" href="/insights/reduzir-concentracao-acionaria-sem-vender">
-      <span class="tag">Equity concentrado · Estrutura</span>
+    <a class="card" href="/insights/reduzir-concentracao-acionaria-sem-vender" data-trilha="equity">
+      <span class="tag">Equity executivo</span>
       <h3>Posição concentrada numa ação: como reduzir o risco sem vender</h3>
       <p>Collar, crédito com garantia e hedge — três ferramentas para cortar o risco de concentração sem disparar o imposto. E o portão que vem antes de todas.</p>
       <span class="read">9 min · Artigo 3</span>
     </a>
 
     <!-- Artigo 4 — publicado (abre a sequência compliance/liquidez) -->
-    <a class="card" href="/insights/cvm-44-blackout-period-liquidez">
-      <span class="tag">Compliance · Liquidez</span>
+    <a class="card" href="/insights/cvm-44-blackout-period-liquidez" data-trilha="equity">
+      <span class="tag">Equity executivo</span>
       <h3>CVM 44 e blackout period: planejar liquidez sem travar patrimônio</h3>
       <p>As janelas de negociação ditam quando você pode vender. Três camadas de restrição, a cadeira que decide quais te prendem, e o plano que destrava a venda mesmo no bloqueio.</p>
       <span class="read">9 min · Artigo 4</span>
     </a>
 
-    <a class="card" href="/insights/lei-14754-executivo-conta-exterior">
-      <span class="tag">Offshore · Lei 14.754</span>
+    <a class="card" href="/insights/lei-14754-executivo-conta-exterior" data-trilha="internacional">
+      <span class="tag">Internacional</span>
       <h3>Lei 14.754/23 e o executivo com conta no exterior</h3>
       <p>A lei trocou o diferimento pela tributação anual de 15% — e matou a razão de existir da maioria das offshores de executivo. O que mudou, e o que ainda não foi recalculado.</p>
       <span class="read">10 min · Artigo 5</span>
     </a>
 
-    <a class="card" href="/insights/sucessao-equity-executivo">
-      <span class="tag">Sucessão</span>
+    <a class="card" href="/insights/sucessao-equity-executivo" data-trilha="sucessao">
+      <span class="tag">Sucessão e estrutura familiar</span>
       <h3>Sucessão de equity: o que acontece com suas ações quando você não pode mais agir</h3>
       <p>O inventário é o plano padrão do seu equity — e ações são o ativo que pior sobrevive a ele. Duas autoridades fiscais na mesma morte, e o cenário da incapacidade que ninguém estrutura.</p>
       <span class="read">11 min · Artigo 6</span>
     </a>
 
     <!-- Artigo 7 — publicado (abre a série Sucessão · Patrimônio familiar) -->
-    <a class="card" href="/insights/itcmd-reforma-tributaria-por-estado">
-      <span class="tag">Sucessão · Patrimônio familiar</span>
+    <a class="card" href="/insights/itcmd-reforma-tributaria-por-estado" data-trilha="sucessao">
+      <span class="tag">Sucessão e estrutura familiar</span>
       <h3>ITCMD vai aumentar? Quanto sobe o imposto sobre herança, estado por estado</h3>
       <p>A progressividade virou regra constitucional. Para uma família de R$ 25M em SP, a diferença é R$ 680 mil — e a janela da alíquota atual fecha em 31/dez/2026.</p>
       <span class="read">9 min · Artigo 7</span>
     </a>
 
     <!-- Artigo 8 — publicado (série founder: holding familiar) -->
-    <a class="card" href="/insights/holding-familiar-vale-a-pena">
-      <span class="tag">Sucessão · Patrimônio familiar</span>
+    <a class="card" href="/insights/holding-familiar-vale-a-pena" data-trilha="sucessao">
+      <span class="tag">Sucessão e estrutura familiar</span>
       <h3>Holding familiar vale a pena? A conta completa que ninguém mostra</h3>
       <p>Vendida como redutor de ITCMD, a holding perdeu justamente essa vantagem com a LC 227/2026. Os custos que a proposta não soma, a armadilha do IR e quando ela ainda vence.</p>
       <span class="read">10 min · Artigo 8</span>
@@ -272,11 +284,14 @@
 <footer class="site-foot">
   <div class="wrap">
     <div>
-      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
-      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP®</span></div>
+      <p style="margin-top:8px;max-width:340px;">Arquitetura patrimonial fee-only para executivos com equity, founders e famílias empresárias. Sem prateleira de produto; remuneração paga pelo cliente.</p>
     </div>
     <div class="foot-links">
+      <p><a href="/executivo">Para o executivo com equity</a></p>
+      <p><a href="/founder">Para o founder e a família empresária</a></p>
       <p><a href="/insights">Insights</a></p>
+      <p><a href="/na-midia">Na mídia</a></p>
       <p><a href="/teste-90-dias">Teste dos 90 Dias</a></p>
       <p><a href="/contato">Iniciar conversa</a></p>
       <div class="social">

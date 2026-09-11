@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>O Teste dos 90 Dias — diagnóstico de liquidez sob evento | Marcelo Siqueira CFP</title>
-<meta name="description" content="Em 6 perguntas, veja onde seu patrimônio está exposto se um evento de liquidez chegar antes da estrutura ficar pronta. Diagnóstico gratuito para o executivo C-level — sem cadastro, resultado na tela.">
+<title>O Teste dos 90 Dias — diagnóstico de liquidez sob evento</title>
+<meta name="description" content="Em 7 perguntas, veja onde o seu patrimônio trava se o evento de liquidez chegar antes da estrutura. Sem cadastro.">
 
 <link rel="canonical" href="https://marcelosiqueiracfp.com.br/teste-90-dias">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Marcelo Siqueira CFP">
+<meta property="og:site_name" content="Marcelo Siqueira CFP®">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:title" content="O Teste dos 90 Dias — diagnóstico de liquidez sob evento">
-<meta property="og:description" content="Patrimônio no papel não paga conta. Liquidez paga. Em 6 perguntas, veja onde você está exposto.">
+<meta property="og:description" content="Patrimônio no papel não paga conta. Liquidez paga. Em 7 perguntas, veja onde você está exposto — para o executivo com equity e para o founder.">
 <meta property="og:url" content="https://marcelosiqueiracfp.com.br/teste-90-dias">
 <meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -143,7 +143,7 @@
       "@type": "WebPage",
       "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#webpage",
       "name": "O Teste dos 90 Dias — diagnóstico de liquidez sob evento",
-      "description": "Diagnóstico de exposição patrimonial em 6 perguntas: concentração no maior ativo, liquidez em 90 dias e evento de liquidez à vista.",
+      "description": "Diagnóstico de exposição patrimonial em 7 perguntas, para o executivo com equity e para o founder: concentração no maior ativo, liquidez em 90 dias e evento de liquidez à vista.",
       "url": "https://marcelosiqueiracfp.com.br/teste-90-dias",
       "inLanguage": "pt-BR",
       "isPartOf": {
@@ -294,14 +294,17 @@
 
 <!-- ─── NAV ──────────────────────────────────────────────── -->
 <nav class="site-nav">
-  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP — início">
+  <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP® — início">
     <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
       <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
-    <span>Marcelo Siqueira</span><span class="cred">CFP</span>
+    <span>Marcelo Siqueira</span><span class="cred">CFP®</span>
   </a>
   <div class="links">
+    <a href="/executivo">Executivo</a>
+    <a href="/founder">Founder</a>
     <a href="/insights">Insights</a>
+    <a href="/na-midia">Na mídia</a>
   </div>
   <a href="/contato" class="cta">Iniciar conversa</a>
 </nav>
@@ -315,16 +318,28 @@
   <section class="screen active" id="screen-intro">
     <div class="kicker">Diagnóstico de liquidez sob evento</div>
     <h1>Patrimônio no papel não paga conta.<br>Liquidez paga.</h1>
-    <p class="lede">A maioria dos patrimônios acima de R$10 milhões tem o mesmo ponto cego: tudo parece organizado até o dia em que precisa virar caixa. Em 6 perguntas, você vê onde está exposto — e o que aconteceria se um evento chegasse antes da estrutura ficar pronta.</p>
+    <p class="lede">A maioria dos patrimônios acima de R$10 milhões tem o mesmo ponto cego: tudo parece organizado até o dia em que precisa virar caixa. Em <span id="nq">7</span> perguntas, você vê onde está exposto — e o que aconteceria se um evento chegasse antes da estrutura ficar pronta.</p>
     <div class="start-row">
       <button class="lm-btn lm-btn-primary" onclick="next()">Começar — leva 2 minutos</button>
     </div>
     <div class="footer-mark">Sem cadastro. O resultado aparece na tela.</div>
   </section>
 
+  <!-- Q0 — bifurcação de perfil (pulada quando a URL já traz ?perfil=executivo|founder) -->
+  <section class="screen" id="screen-0">
+    <div class="qcount"></div>
+    <h2>A maior parte do seu patrimônio está em equity da empresa onde você trabalha, ou na empresa que você construiu?</h2>
+    <div class="options">
+      <button class="opt" onclick="answer('perfil','executivo',this)">Equity da empresa onde eu trabalho<span class="sub">RSU, stock options, deferred comp, ações recebidas como remuneração</span></button>
+      <button class="opt" onclick="answer('perfil','founder',this)">Na empresa que eu construí<span class="sub">Participação societária, holding, empresa familiar</span></button>
+      <button class="opt" onclick="answer('perfil','outro',this)">Em nenhuma das duas<span class="sub">Imóveis, carteira de investimentos, herança</span></button>
+    </div>
+    <button class="back" onclick="prev()">← Voltar</button>
+  </section>
+
   <!-- Q1 -->
   <section class="screen" id="screen-1">
-    <div class="qcount">01 / 06</div>
+    <div class="qcount"></div>
     <h2>Somando tudo — investimentos, empresa, imóveis, equity — em que faixa está o seu patrimônio total?</h2>
     <div class="options">
       <button class="opt" onclick="answer('patrimonio','ate5',this)">Até R$ 5 milhões</button>
@@ -338,8 +353,8 @@
 
   <!-- Q2 -->
   <section class="screen" id="screen-2">
-    <div class="qcount">02 / 06</div>
-    <h2>Quanto do seu patrimônio está concentrado num único ativo — sua empresa, o equity do empregador, ou um imóvel dominante?</h2>
+    <div class="qcount"></div>
+    <h2 id="q2-title">Quanto do seu patrimônio está concentrado num único ativo — sua empresa, o equity do empregador, ou um imóvel dominante?</h2>
     <div class="options">
       <button class="opt" onclick="answer('concentracao','baixa',this)">Menos de 25%</button>
       <button class="opt" onclick="answer('concentracao','media',this)">Entre 25% e 50%</button>
@@ -351,12 +366,12 @@
 
   <!-- Q3 -->
   <section class="screen" id="screen-3">
-    <div class="qcount">03 / 06</div>
+    <div class="qcount"></div>
     <h2>Se você precisasse de caixa equivalente a 20% do seu patrimônio em 90 dias — sem vender o ativo principal — você consegue?</h2>
     <div class="options">
       <button class="opt" onclick="answer('liquidez','tranquilo',this)">Tranquilamente<span class="sub">Tenho reserva e ativos líquidos suficientes</span></button>
       <button class="opt" onclick="answer('liquidez','esforco',this)">Com algum esforço<span class="sub">Daria, mas mexeria em coisas que não queria mexer</span></button>
-      <button class="opt" onclick="answer('liquidez','forcado',this)">Só vendendo o ativo principal<span class="sub">Teria que liquidar a empresa, o equity ou o imóvel</span></button>
+      <button class="opt" onclick="answer('liquidez','forcado',this)">Só vendendo o ativo principal<span class="sub" id="q3-forcado">Teria que liquidar a empresa, o equity ou o imóvel</span></button>
       <button class="opt" onclick="answer('liquidez','naosei',this)">Não sei dizer<span class="sub">Nunca calculei isso</span></button>
     </div>
     <button class="back" onclick="prev()">← Voltar</button>
@@ -364,9 +379,9 @@
 
   <!-- Q4 -->
   <section class="screen" id="screen-4">
-    <div class="qcount">04 / 06</div>
+    <div class="qcount"></div>
     <h2>Há algum evento à vista nos próximos 24 meses?</h2>
-    <p class="lede" style="margin-bottom:20px;">Venda de empresa, vesting relevante, abertura de capital, saída de cargo, sucessão, assembleia, earn-out.</p>
+    <p class="lede" id="q4-lede" style="margin-bottom:20px;">Venda de empresa, vesting relevante, abertura de capital, saída de cargo, sucessão, assembleia, earn-out.</p>
     <div class="options">
       <button class="opt" onclick="answer('evento','data',this)">Sim, com data ou janela definida</button>
       <button class="opt" onclick="answer('evento','provavel',this)">Provável, mas sem data ainda</button>
@@ -378,7 +393,7 @@
 
   <!-- Q5 -->
   <section class="screen" id="screen-5">
-    <div class="qcount">05 / 06</div>
+    <div class="qcount"></div>
     <h2>Sua estrutura atual — holding, offshore, previdência, seguro — foi desenhada por alguém olhando o conjunto inteiro?</h2>
     <div class="options">
       <button class="opt" onclick="answer('estrutura','integrada',this)">Sim, alguém olhou o todo<span class="sub">Existe uma visão consolidada e coordenada</span></button>
@@ -391,7 +406,7 @@
 
   <!-- Q6 -->
   <section class="screen" id="screen-6">
-    <div class="qcount">06 / 06</div>
+    <div class="qcount"></div>
     <h2>Hoje, quem tem a visão completa do seu patrimônio numa única página?</h2>
     <div class="options">
       <button class="opt" onclick="answer('visao','eu',this)">Eu mesmo, de cabeça<span class="sub">Monto o quebra-cabeça quando preciso decidir</span></button>
@@ -432,11 +447,14 @@
 <footer class="site-foot">
   <div class="wrap">
     <div>
-      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
-      <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
+      <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP®</span></div>
+      <p style="margin-top:8px;max-width:340px;">Arquitetura patrimonial fee-only para executivos com equity, founders e famílias empresárias. Sem prateleira de produto; remuneração paga pelo cliente.</p>
     </div>
     <div class="foot-links">
+      <p><a href="/executivo">Para o executivo com equity</a></p>
+      <p><a href="/founder">Para o founder e a família empresária</a></p>
       <p><a href="/insights">Insights</a></p>
+      <p><a href="/na-midia">Na mídia</a></p>
       <p><a href="/teste-90-dias">Teste dos 90 Dias</a></p>
       <p><a href="/contato">Iniciar conversa</a></p>
       <div class="social">
@@ -460,11 +478,54 @@ var CONFIG = {
 };
 /* ========================================================================= */
 
-var TOTAL = 6;
 var state = {};
-var current = 0; // 0 = intro, 1..6 = perguntas, 7 = resultado
+var current = 0; // índice em steps(): 0 = intro, depois as perguntas, por último o resultado
 
-var screens = ['screen-intro','screen-1','screen-2','screen-3','screen-4','screen-5','screen-6','screen-result'];
+// Perfil vindo da porta (/executivo ou /founder): pula a pergunta de bifurcação.
+var PERFIL_URL = (function(){
+  var m = /[?&]perfil=(executivo|founder)\b/.exec(location.search);
+  return m ? m[1] : null;
+})();
+if(PERFIL_URL) state.perfil = PERFIL_URL;
+
+var ALL = ['screen-intro','screen-0','screen-1','screen-2','screen-3','screen-4','screen-5','screen-6','screen-result'];
+function steps(){ return PERFIL_URL ? ALL.filter(function(id){ return id !== 'screen-0'; }) : ALL; }
+var screens = steps();
+var TOTAL = screens.length - 2;
+var LAST_Q = screens.length - 2;
+
+// Textos por perfil. "outro" usa o texto neutro original.
+var COPY = {
+  executivo: {
+    q2: 'Quanto do seu patrimônio está em ações da empresa onde você trabalha — somando RSU, options e ações já recebidas?',
+    q3: 'Teria que vender ações do empregador',
+    q4: 'Vesting relevante, IPO, saída do cargo, mudança de controle, fim de lock-up.',
+    origem: 'Equity do empregador',
+    conc: '<strong>Concentração é o risco que não aparece em planilha nenhuma.</strong> Enquanto a ação do empregador vai bem, parece estabilidade — e cada tranche de vesting aumenta a exposição sem que você decida nada. É nesse período que a janela para desconcentrar sem um custo tributário desproporcional está aberta. E é exatamente quando quase ninguém age.'
+  },
+  founder: {
+    q2: 'Quanto do seu patrimônio está na sua participação na empresa — direta ou via holding?',
+    q3: 'Teria que vender participação ou tirar caixa da empresa',
+    q4: 'Venda da empresa, entrada de sócio ou fundo, earn-out, sucessão na gestão, transição de controle.',
+    origem: 'Empresa própria',
+    conc: '<strong>Concentração é o risco que não aparece em planilha nenhuma.</strong> Enquanto a empresa vai bem, parece estabilidade. É nesse período que dá para separar o patrimônio da família do risco do negócio e desenhar a transmissão antes do evento. E é exatamente quando quase ninguém age.'
+  }
+};
+var DEFAULT = {
+  q2: document.getElementById('q2-title').textContent,
+  q3: document.getElementById('q3-forcado').textContent,
+  q4: document.getElementById('q4-lede').textContent,
+  origem: 'Outros ativos',
+  conc: '<strong>Concentração é o risco que não aparece em planilha nenhuma.</strong> Enquanto o ativo principal vai bem, parece estabilidade. É exatamente nesse período que a janela para reduzir exposição sem custo tributário catastrófico está aberta — e é exatamente quando quase ninguém age.'
+};
+function copy(){ return COPY[state.perfil] || DEFAULT; }
+function applyProfile(){
+  var c = copy();
+  document.getElementById('q2-title').textContent = c.q2;
+  document.getElementById('q3-forcado').textContent = c.q3;
+  document.getElementById('q4-lede').textContent = c.q4;
+}
+function pad(n){ return (n < 10 ? '0' : '') + n; }
 
 function buildProgress(){
   var p = document.getElementById('progress');
@@ -487,27 +548,38 @@ function paintProgress(){
   }
 }
 function show(idx){
-  for(var i=0;i<screens.length;i++){
-    document.getElementById(screens[i]).classList.remove('active');
+  for(var i=0;i<ALL.length;i++){
+    document.getElementById(ALL[i]).classList.remove('active');
   }
-  document.getElementById(screens[idx]).classList.add('active');
+  var el = document.getElementById(screens[idx]);
+  el.classList.add('active');
+  var qc = el.querySelector('.qcount');
+  if(qc) qc.textContent = pad(idx) + ' / ' + pad(TOTAL);
   current = idx;
   paintProgress();
   // rolagem instantânea e só quando necessária: o scroll suave a cada resposta pesava no INP
   if(window.scrollY > 0) window.scrollTo(0, 0);
 }
-function next(){ if(current < 7) show(current+1); }
+function next(){ if(current < screens.length - 1) show(current+1); }
 function prev(){ if(current > 0) show(current-1); }
 function answer(key, val, el){
   state[key] = val;
+  if(key === 'perfil') applyProfile();
   // micro feedback
   if(el){ el.style.borderColor = 'var(--vectis-brass)'; }
   setTimeout(function(){
-    if(current === 6){ computeResult(); show(7); }
+    if(current === LAST_Q){ computeResult(); show(screens.length - 1); }
     else next();
   }, 160);
 }
-function restart(){ state = {}; show(0); }
+function restart(){
+  state = {};
+  if(PERFIL_URL) state.perfil = PERFIL_URL;
+  applyProfile();
+  var opts = document.querySelectorAll('.opt');
+  for(var i=0;i<opts.length;i++) opts[i].style.borderColor = '';
+  show(0);
+}
 
 /* ---------- Cálculo ---------- */
 var PATRIMONIO_PISO = { ate5: 2.5, '5a10': 5, '10a30': 10, '30a70': 30, '70mais': 70 }; // em R$ MM
@@ -582,6 +654,7 @@ function renderResult(score){
 
   // ----- readout -----
   var rows = [];
+  rows.push(['Origem da concentração', copy().origem, '']);
   var concTxt = { baixa:'Abaixo de 25%', media:'25% a 50%', alta:'50% a 75%', critica:'Acima de 75%' }[state.concentracao];
   var concFlag = (state.concentracao==='alta'||state.concentracao==='critica') ? 'flag' : (state.concentracao==='baixa'?'ok':'');
   rows.push(['Concentração no maior ativo', concTxt, concFlag]);
@@ -609,7 +682,7 @@ function renderResult(score){
   if(state.evento === 'data' && (state.liquidez==='forcado'||state.liquidez==='naosei')){
     interp = '<strong>Esta é a combinação mais perigosa.</strong> Você tem um evento com data marcada e a liquidez para atravessá-lo depende de vender justamente o ativo que deveria estar protegido. Quando o evento chega antes da estrutura, a decisão deixa de ser sua — vira forced-sale no pior momento.';
   } else if(state.concentracao==='critica' || state.concentracao==='alta'){
-    interp = '<strong>Concentração é o risco que não aparece em planilha nenhuma.</strong> Enquanto o ativo principal vai bem, parece estabilidade. É exatamente nesse período que a janela para reduzir exposição sem custo tributário catastrófico está aberta — e é exatamente quando quase ninguém age.';
+    interp = copy().conc;
   } else if(state.estrutura==='fragmentada' || state.visao==='ninguem'){
     interp = '<strong>O problema não é falta de profissionais. É falta de arquitetura.</strong> Banco, contador e advogado cuidam cada um da própria peça. Ninguém puxa o conjunto. As peças existem — o desenho que faz elas conversarem, não.';
   } else if(score <= 25){
@@ -644,7 +717,9 @@ function renderCTA(){
   }
 }
 
+document.getElementById('nq').textContent = TOTAL;
 buildProgress();
+applyProfile();
 paintProgress();
 </script>
 </body>

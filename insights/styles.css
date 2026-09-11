@@ -149,6 +149,7 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .hub-head h1 { color: var(--vectis-warm-white); font-size: 52px; max-width: 720px; }
 .hub-head p { color: var(--vectis-cool-gray); font-size: 19px; margin-top: 20px; max-width: 600px; }
 .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 28px; padding: 64px 0; }
+.article-grid--4 { grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr)); padding-top: 0; }
 .card {
   background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px;
   padding: 32px; transition: border-color 150ms, transform 150ms;
@@ -200,6 +201,72 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 }
 .dx-band .btn:hover { background: #0d2650; text-decoration: none; }
 @media (max-width: 600px) { .dx-band { padding: 28px 24px; } .dx-band h2 { font-size: 23px; } }
+/* ─── HUB (home) — Fase 2 ─────────────────────────────── */
+.hub-head .sub-h1 { font-family: var(--fd); font-size: 32px; line-height: 1.2; color: var(--vectis-brass); margin-top: 14px; max-width: 720px; }
+.hub-head .sub-h1 + p { margin-top: 28px; }
+.section-title { font-family: var(--fd); font-weight: 400; font-size: 34px; line-height: 1.18; color: var(--vectis-navy); margin-bottom: 12px; }
+.section-lede { max-width: 640px; margin-bottom: 8px; }
+.doors { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 28px; padding: 36px 0 8px; }
+.door {
+  background: #fff; border: 1px solid var(--vectis-stone); border-top: 3px solid var(--vectis-brass);
+  border-radius: 10px; padding: 36px 32px; display: flex; flex-direction: column;
+}
+.door h3 { font-family: var(--fd); font-weight: 400; font-size: 30px; line-height: 1.2; color: var(--vectis-navy); margin-bottom: 12px; }
+.door p { font-size: 16px; flex: 1; margin-bottom: 24px; }
+.door .btn {
+  align-self: flex-start; background: var(--vectis-navy); color: #fff; font-weight: 500; font-size: 15px;
+  padding: 0 24px; min-height: 48px; display: inline-flex; align-items: center; border-radius: 6px;
+}
+.door .btn:hover { background: #0d2650; text-decoration: none; }
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 28px; margin-top: 32px; }
+.pillars h3 { font-family: var(--fs); font-weight: 500; font-size: 18px; color: var(--vectis-navy); margin-bottom: 8px; }
+.pillars p { font-size: 16px; }
+.cred-line { display: flex; gap: 20px; align-items: baseline; flex-wrap: wrap; }
+.cred-line .mark { font-family: var(--fd); font-size: 40px; color: var(--vectis-navy); line-height: 1; }
+.prose .checklist { list-style: none; padding: 0; margin: 8px 0 24px; }
+.prose .checklist li { padding: 12px 0 12px 28px; border-bottom: 1px solid var(--vectis-stone); position: relative; }
+.prose .checklist li::before { content: ''; position: absolute; left: 4px; top: 22px; width: 10px; height: 2px; background: var(--vectis-brass); }
+.prose .checklist li strong { color: var(--vectis-navy); font-weight: 500; }
+.link-list { list-style: none; padding: 0; margin: 8px 0 0; }
+.link-list li { border-bottom: 1px solid var(--vectis-stone); }
+.link-list a { display: block; padding: 14px 0; min-height: 48px; }
+.link-list a span { display: block; font-size: 14px; color: var(--vectis-cool-gray); }
+
+/* links dentro de texto corrido: sublinhado discreto em latão (o navy sozinho se confunde com o negrito) */
+.home-section .prose p a, .home-section .prose .checklist a, .video-entry + p a, main.prose > p a {
+  text-decoration: underline; text-decoration-color: var(--vectis-brass); text-underline-offset: 3px;
+}
+
+/* ─── PORTA (link contextual no fim de cada artigo) ───── */
+.porta { border: 1px solid var(--vectis-stone); border-left: 3px solid var(--vectis-brass); border-radius: 8px; padding: 20px 24px; margin: 40px 0 0; background: #fff; }
+.porta .label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-brass); font-weight: 500; display: block; margin-bottom: 6px; }
+.article-body .porta p { margin: 0 0 8px; font-size: 16px; }
+.porta a { font-weight: 500; display: inline-flex; align-items: center; min-height: 44px; }
+
+/* ─── FILTRO DE TRILHAS (/insights) — sem JS: radio + :has() ─ */
+.trilhas { display: flex; flex-wrap: wrap; gap: 10px; margin: 48px 0 0; padding: 0; border: 0; min-width: 0; }
+/* float tira o legend da borda do fieldset e o devolve ao fluxo normal */
+.trilhas legend { float: left; width: 100%; padding: 0; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-cool-gray); font-weight: 500; margin-bottom: 4px; }
+.trilhas input { position: absolute; opacity: 0; pointer-events: none; }
+.trilhas label {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 22px;
+  border: 1px solid var(--vectis-stone); background: #fff; color: var(--vectis-graphite); font-size: 15px; cursor: pointer;
+}
+.trilhas input:checked + label { background: var(--vectis-navy); border-color: var(--vectis-navy); color: #fff; }
+.trilhas input:focus-visible + label { outline: 2px solid var(--vectis-brass); outline-offset: 2px; }
+main:has(#t-equity:checked) .article-grid .card:not([data-trilha~="equity"]),
+main:has(#t-sucessao:checked) .article-grid .card:not([data-trilha~="sucessao"]),
+main:has(#t-internacional:checked) .article-grid .card:not([data-trilha~="internacional"]) { display: none; }
+.card .trilha { font-size: 13px; color: var(--vectis-cool-gray); margin-top: 6px; }
+
+/* ─── NA MÍDIA ───────────────────────────────────────── */
+.video-entry { padding: 48px 0; border-bottom: 1px solid var(--vectis-stone); }
+.video-entry:last-child { border-bottom: 0; }
+.video-entry h2 { font-family: var(--fd); font-weight: 400; font-size: 28px; line-height: 1.2; color: var(--vectis-navy); margin-bottom: 8px; }
+.video-entry .meta { font-size: 14px; color: var(--vectis-cool-gray); margin-bottom: 20px; }
+.video-frame { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: var(--vectis-navy); border-radius: 8px; overflow: hidden; margin-bottom: 20px; }
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
 /* ─── FORM (contato) ──────────────────────────────────── */
 .form-card { background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px; padding: 40px; margin: 8px 0 40px; }
 .form-card .hs-form fieldset { max-width: 100%; }
@@ -215,13 +282,7 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .site-foot .brand { font-family: var(--fd); font-size: 20px; color: var(--vectis-warm-white); }
 
 /* ─── RESPONSIVE ──────────────────────────────────────── */
-@media (max-width: 720px) {
-  body { font-size: 17px; }
-  h1 { font-size: 34px; }
-  .hub-head h1 { font-size: 36px; }
-  .dek { font-size: 18px; }
-  .article-body h2, .faq h2 { font-size: 26px; }
-  .cta-block { padding: 32px 24px; }
+@media (max-width: 900px) {
   /* Nav mobile: 1ª linha marca + CTA; 2ª linha os links, rolagem horizontal. Sem JS (INP zero). */
   .site-nav { height: auto; flex-wrap: wrap; padding: 6px 16px 0; column-gap: 12px; }
   .site-nav .wordmark { margin-right: 0; font-size: 19px; min-width: 0; min-height: 44px; align-items: center; }
@@ -232,5 +293,18 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
   }
   .site-nav .links::-webkit-scrollbar { display: none; }
   .site-nav .links a { font-size: 15px; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; padding: 0; border-bottom-width: 2px; }
+}
+
+@media (max-width: 720px) {
+  body { font-size: 17px; }
+  h1 { font-size: 34px; }
+  .hub-head h1 { font-size: 36px; }
+  .dek { font-size: 18px; }
+  .article-body h2, .faq h2 { font-size: 26px; }
+  .hub-head .sub-h1 { font-size: 26px; }
+  .section-title, .home-section .prose h2 { font-size: 28px; }
+  .door { padding: 28px 24px; }
+  .door h3 { font-size: 26px; }
+  .cta-block { padding: 32px 24px; }
   .wrap, .prose { padding: 0 20px; }
 }
