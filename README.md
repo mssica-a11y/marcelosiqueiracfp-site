@@ -10,6 +10,9 @@ founder.html              Porta do founder e da família empresária (/founder)
 na-midia.html             Entrevistas Times Brasil | CNBC + VideoObject (/na-midia)
 insights.html             Hub /insights (servido por rewrite 200 no netlify.toml; filtro de trilhas sem JS)
 teste-90-dias.html        Lead magnet; ?perfil=executivo|founder pula a pergunta de bifurcação
+patrimonio-apos-vender-empresa.html · quanto-custa-planejamento-financeiro-fee-only.html
+family-office-10-milhoes.html · sucessao-filhos-bens-exterior.html
+                          Páginas-resposta (AEO) do founder, com FAQPage gerado das perguntas visíveis
 insights/
   <slug>.html             Artigos (cada um termina com a .porta para /executivo ou /founder)
   article-template.html   Template de artigo (noindex; JSON-LD Person→Article→FAQPage)
@@ -33,3 +36,6 @@ _old-domain-redirects/    301 vectis.com.br → este domínio. NÃO é servido a
 - FAQ visível bate 1:1 com o `FAQPage` JSON-LD (senão o Google desconta).
 
 > `article-template.html` é um **template** (corpo é esqueleto). Ao criar um artigo real, copie para `insights/<slug>.html`, preencha o corpo e adicione a URL no `sitemap.xml`.
+
+## Geradores e testes
+O JSON-LD de todas as páginas, a nav e o rodapé são gerados por scripts em `~/mcp-wealth-advisor/brand/site-tools/` (fora do repo porque a raiz é publicada). Ver o README de lá antes de editar schema à mão.
