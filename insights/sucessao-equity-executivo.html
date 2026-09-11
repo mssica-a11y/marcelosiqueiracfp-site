@@ -66,7 +66,17 @@
 <meta name="twitter:description" content="O inventário é o plano padrão do seu equity — e ações são o ativo que pior sobrevive a ele. Duas autoridades fiscais na mesma morte, e o cenário da incapacidade que ninguém estrutura.">
 <meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/sucessao-equity.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="/insights/styles.css">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1E3D">
 
 <!-- ════════════════════════════════════════════════════════════
      JSON-LD — @graph: Person (alavanca de entidade nomeada) →
@@ -82,25 +92,110 @@
       "name": "Marcelo Siqueira",
       "givenName": "Marcelo",
       "familyName": "Siqueira",
-      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
-      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional certification",
-        "name": "CFP — Certified Financial Planner (Planejar)"
+      "jobTitle": "Planejador financeiro CFP®",
+      "description": "Planejador financeiro CFP® dedicado à arquitetura patrimonial de executivos com remuneração em equity, founders e famílias empresárias com patrimônio a partir de R$ 10 milhões. Modelo fee-only: sem prateleira de produto, remuneração paga pelo cliente.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "@id": "https://marcelosiqueiracfp.com.br/#credencial-cfp",
+          "name": "CFP® — Certified Financial Planner",
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Planejar — Associação Brasileira de Planejamento Financeiro",
+            "url": "https://www.planejar.org.br"
+          }
+        }
+      ],
+      "worksFor": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
       },
-      "url": "https://marcelosiqueiracfp.com.br",
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      },
+      "knowsAbout": [
+        "Arquitetura patrimonial",
+        "Remuneração em equity (RSU e stock options)",
+        "Concentração acionária",
+        "Eventos de liquidez e venda de empresa",
+        "Planejamento sucessório e ITCMD",
+        "Holding familiar",
+        "Tributação de investimentos no exterior (Lei 14.754/2023)",
+        "Sucessão com bens e herdeiros no exterior"
+      ],
+      "knowsLanguage": "pt-BR",
+      "url": "https://marcelosiqueiracfp.com.br/",
       "sameAs": [
-        "https://www.linkedin.com/in/marcelosiqueiracfp"
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
       ]
     },
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://marcelosiqueiracfp.com.br/#org",
-      "name": "Marcelo Siqueira CFP",
-      "url": "https://marcelosiqueiracfp.com.br",
-      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
-      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+      "name": "Marcelo Siqueira CFP®",
+      "description": "Arquitetura patrimonial fee-only para executivos com remuneração em equity, founders e famílias empresárias, a partir de R$ 10 milhões de patrimônio. Sem prateleira de produto; remuneração paga pelo cliente.",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://marcelosiqueiracfp.com.br/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/home.png",
+      "founder": {
+        "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        }
+      ],
+      "priceRange": "$$$",
+      "knowsLanguage": "pt-BR",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelosiqueiracfp.com.br/#website",
+      "name": "Marcelo Siqueira CFP®",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://marcelosiqueiracfp.com.br/insights#blog",
+      "name": "Insights — Marcelo Siqueira CFP®",
+      "url": "https://marcelosiqueiracfp.com.br/insights",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      }
     },
     {
       "@type": "Article",
@@ -110,17 +205,42 @@
       "datePublished": "2026-06-12",
       "dateModified": "2026-06-12",
       "inLanguage": "pt-BR",
-      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
-      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "author": {
+        "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira"
+      },
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      },
       "image": "https://marcelosiqueiracfp.com.br/insights/og/sucessao-equity.png",
-      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo"
+      },
       "about": [
-        { "@type": "Thing", "name": "Sucessão patrimonial" },
-        { "@type": "Thing", "name": "ITCMD" },
-        { "@type": "Thing", "name": "US estate tax" },
-        { "@type": "Thing", "name": "Holding patrimonial" },
-        { "@type": "Thing", "name": "Incapacidade civil" }
-      ]
+        {
+          "@type": "Thing",
+          "name": "Sucessão patrimonial"
+        },
+        {
+          "@type": "Thing",
+          "name": "ITCMD"
+        },
+        {
+          "@type": "Thing",
+          "name": "US estate tax"
+        },
+        {
+          "@type": "Thing",
+          "name": "Holding patrimonial"
+        },
+        {
+          "@type": "Thing",
+          "name": "Incapacidade civil"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://marcelosiqueiracfp.com.br/insights#blog"
+      }
     },
     {
       "@type": "FAQPage",
@@ -165,6 +285,30 @@
             "@type": "Answer",
             "text": "Depende do plano, e o problema raramente é a regra — é o relógio. A maioria dos planos concede ao espólio uma janela para exercer as opções após o falecimento, em geral de alguns meses. O inventário brasileiro costuma levar de um a mais de dois anos. Quando a janela de exercício é mais curta que o inventário, o direito de exercer expira antes de o espólio ser desbloqueado — e a opção, que tinha valor, vira nada. Some a isso que, mesmo havendo quem exercer, as restrições de negociação que tratei no artigo sobre a CVM 44 continuam valendo para a venda das ações resultantes. É por isso que opção de compra não é um ativo que se administra reativamente: exige liquidez disponível e estrutura montada antes, justamente para o cenário em que você não está lá para decidir."
           }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://marcelosiqueiracfp.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://marcelosiqueiracfp.com.br/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Sucessão de equity: o que acontece com suas ações quando você não pode mais agir",
+          "item": "https://marcelosiqueiracfp.com.br/insights/sucessao-equity-executivo"
         }
       ]
     }
@@ -246,7 +390,7 @@
 
     <p>A boa notícia é que quase tudo isso é endereçável <em>antes</em>. A condição é tratar sucessão de equity como engenharia, não como testamento. Quatro alavancas, com as ressalvas que as tornam honestas.</p>
 
-    <p><strong>1. Situs é gatilho, e gatilho se administra.</strong> O US estate tax dispara pelo situs americano da ação. Detê-la de outra forma muda o situs: ação de uma <em>empresa não americana</em> é ativo de situs não-americano, fora do alcance do imposto; o mesmo vale para ETFs domiciliados na Irlanda (UCITS) no lugar dos domiciliados nos EUA. Não estou dizendo "monte uma offshore para escapar do fisco americano" — sou consultor fee-only, e isto é o que se <em>revisa</em> com um advogado cross-border, não uma receita. E não é almoço grátis: a holding estrangeira que muda o situs carrega o imposto anual de 15% da <a href="/insights/lei-14754-executivo-conta-exterior">Lei 14.754</a> que descrevi no artigo passado. A pergunta é se o custo dessa estrutura se paga pela exposição que ela remove — e essa conta é individual.</p>
+    <p><strong>1. Situs é gatilho, e gatilho se administra.</strong> O US estate tax dispara pelo situs americano da ação. Detê-la de outra forma muda o situs: ação de uma <em>empresa não americana</em> é ativo de situs não-americano, fora do alcance do imposto; o mesmo vale para ETFs domiciliados na Irlanda (UCITS) no lugar dos domiciliados nos EUA. Não estou dizendo "monte uma offshore para escapar do fisco americano" — sou planejador financeiro fee-only, e isto é o que se <em>revisa</em> com um advogado cross-border, não uma receita. E não é almoço grátis: a holding estrangeira que muda o situs carrega o imposto anual de 15% da <a href="/insights/lei-14754-executivo-conta-exterior">Lei 14.754</a> que descrevi no artigo passado. A pergunta é se o custo dessa estrutura se paga pela exposição que ela remove — e essa conta é individual.</p>
 
     <p><strong>2. A holding organiza a sucessão — mas não barateia mais a base.</strong> Transmitir o patrimônio por quotas de uma holding, em vez de inventariar dezenas de ativos individualmente, continua valendo muito: simplifica, permite doação com reserva de usufruto (você antecipa a herança em vida e mantém o controle e os frutos) e define governança. O que <em>acabou</em> foi o atalho da base barata: a LC 227/2026 mandou calcular o ITCMD sobre quotas não listadas pelo <strong>valor de mercado</strong> do patrimônio líquido mais o fundo de comércio — não mais pelo valor patrimonial contábil. A holding virou ferramenta de organização e de evitar o inventário, não de reduzir a base de cálculo.</p>
 
@@ -362,10 +506,15 @@
       <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
       <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
     </div>
-    <div>
+    <div class="foot-links">
       <p><a href="/insights">Insights</a></p>
+      <p><a href="/teste-90-dias">Teste dos 90 Dias</a></p>
       <p><a href="/contato">Iniciar conversa</a></p>
-      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/marcelosiqueiracfp" rel="me noopener" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@marcelosiqueiracfp" rel="me noopener" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/marcelosiqueiracfp" rel="me noopener" target="_blank">Instagram</a>
+      </div>
     </div>
   </div>
 </footer>

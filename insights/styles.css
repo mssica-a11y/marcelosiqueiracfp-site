@@ -4,7 +4,9 @@
    Token names kept as --vectis-* (internal; do not churn).
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap');
+/* Fontes: carregadas por <link rel="preconnect"> + <link rel="stylesheet"> no <head> de cada página
+   (antes era @import aqui — encadeava CSS → CSS de fontes → arquivos, e a troca tardia de fonte
+   forçava relayout justamente nas primeiras interações). */
 
 :root {
   --vectis-navy:        #0A1E3D;
@@ -36,11 +38,11 @@ body {
   color: var(--vectis-graphite);
   background: var(--vectis-warm-white);
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  /* sem text-rendering: optimizeLegibility — em páginas longas ele encarece cada relayout (INP). */
   overflow-x: clip; /* rede de segurança contra overflow horizontal em telas estreitas; não quebra o sticky nav */
 }
 a { color: var(--vectis-navy); text-decoration: none; }
-a:hover { text-decoration: underline; text-decoration-color: var(--vectis-brass); }
+@media (hover: hover) { a:hover { text-decoration: underline; text-decoration-color: var(--vectis-brass); } }
 img { max-width: 100%; height: auto; }
 
 /* ─── NAV ─────────────────────────────────────────────── */
@@ -48,8 +50,8 @@ img { max-width: 100%; height: auto; }
   position: sticky; top: 0; z-index: 100;
   height: 64px; display: flex; align-items: center;
   padding: 0 32px;
-  background: rgba(247,246,243,0.96);
-  backdrop-filter: saturate(180%) blur(8px);
+  /* fundo opaco: o backdrop-filter anterior re-desfocava a página a cada repaint (INP no mobile) */
+  background: var(--vectis-warm-white);
   border-bottom: 1px solid var(--vectis-stone);
 }
 .site-nav .wordmark {
@@ -59,7 +61,7 @@ img { max-width: 100%; height: auto; }
 }
 .site-nav .wordmark .chev { width: 18px; height: 22px; flex: none; }
 .site-nav .wordmark .cred {
-  font-family: var(--fs); font-size: 10px; font-weight: 500;
+  font-family: var(--fs); font-size: 12px; font-weight: 500;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--vectis-brass); align-self: center;
 }
@@ -79,7 +81,7 @@ img { max-width: 100%; height: auto; }
 /* ─── ARTICLE HEADER ──────────────────────────────────── */
 .article-head { padding: 72px 0 40px; }
 .eyebrow {
-  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
   color: var(--vectis-brass); font-weight: 500; margin-bottom: 20px;
 }
 h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.12; color: var(--vectis-navy); letter-spacing: -0.01em; }
@@ -103,7 +105,7 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
   background: var(--vectis-linen); border: 1px solid var(--vectis-stone);
   border-radius: 8px; padding: 24px 28px; margin: 32px 0;
 }
-.callout .label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-cool-gray); font-weight: 500; margin-bottom: 8px; display: block; }
+.callout .label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-cool-gray); font-weight: 500; margin-bottom: 8px; display: block; }
 .data { font-family: var(--fm); }
 
 /* ─── DECISION TABLE ──────────────────────────────────── */
@@ -127,8 +129,8 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 /* ─── FAQ ─────────────────────────────────────────────── */
 .faq { border-top: 1px solid var(--vectis-stone); padding: 48px 0 8px; }
 .faq h2 { font-family: var(--fd); font-weight: 400; font-size: 32px; color: var(--vectis-navy); margin-bottom: 24px; }
-.faq details { border-bottom: 1px solid var(--vectis-stone); padding: 18px 0; }
-.faq summary { font-weight: 500; font-size: 18px; color: var(--vectis-navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq details { border-bottom: 1px solid var(--vectis-stone); padding: 8px 0; }
+.faq summary { padding: 10px 0; min-height: 44px; font-weight: 500; font-size: 18px; color: var(--vectis-navy); cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after { content: '+'; color: var(--vectis-brass); font-size: 22px; line-height: 1; }
 .faq details[open] summary::after { content: '–'; }
@@ -146,14 +148,15 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .hub-head .eyebrow { color: var(--vectis-brass); }
 .hub-head h1 { color: var(--vectis-warm-white); font-size: 52px; max-width: 720px; }
 .hub-head p { color: var(--vectis-cool-gray); font-size: 19px; margin-top: 20px; max-width: 600px; }
-.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; padding: 64px 0; }
+.article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 28px; padding: 64px 0; }
 .card {
   background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px;
   padding: 32px; transition: border-color 150ms, transform 150ms;
   display: flex; flex-direction: column;
 }
-.card:hover { border-color: var(--vectis-brass); transform: translateY(-2px); text-decoration: none; }
-.card .tag { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-brass); font-weight: 500; margin-bottom: 14px; }
+@media (hover: hover) { .card:hover { border-color: var(--vectis-brass); transform: translateY(-2px); text-decoration: none; } }
+.card:hover { text-decoration: none; }
+.card .tag { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--vectis-brass); font-weight: 500; margin-bottom: 14px; }
 .card h3 { font-family: var(--fd); font-weight: 400; font-size: 24px; line-height: 1.25; color: var(--vectis-navy); margin-bottom: 12px; }
 .card p { font-size: 15px; color: var(--vectis-graphite); flex: 1; }
 .card .read { font-size: 13px; color: var(--vectis-cool-gray); margin-top: 20px; }
@@ -205,7 +208,9 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 /* ─── FOOTER ──────────────────────────────────────────── */
 .site-foot { background: var(--vectis-dark-slate); color: var(--vectis-cool-gray); padding: 56px 0; margin-top: 64px; font-size: 14px; }
 .site-foot .wrap { display: flex; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-.site-foot a { color: var(--vectis-cool-gray); }
+.site-foot a { color: var(--vectis-cool-gray); display: inline-block; padding: 10px 0; min-height: 44px; }
+.site-foot .foot-links p { margin: 0; }
+.site-foot .social { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
 .site-foot a:hover { color: var(--vectis-warm-white); }
 .site-foot .brand { font-family: var(--fd); font-size: 20px; color: var(--vectis-warm-white); }
 
@@ -217,9 +222,15 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
   .dek { font-size: 18px; }
   .article-body h2, .faq h2 { font-size: 26px; }
   .cta-block { padding: 32px 24px; }
-  .site-nav .links { display: none; }
-  .site-nav { padding: 0 16px; gap: 12px; }
-  .site-nav .wordmark { margin-right: 0; font-size: 19px; min-width: 0; }
-  .site-nav .cta { margin-left: auto; padding: 8px 16px; }
+  /* Nav mobile: 1ª linha marca + CTA; 2ª linha os links, rolagem horizontal. Sem JS (INP zero). */
+  .site-nav { height: auto; flex-wrap: wrap; padding: 6px 16px 0; column-gap: 12px; }
+  .site-nav .wordmark { margin-right: 0; font-size: 19px; min-width: 0; min-height: 44px; align-items: center; }
+  .site-nav .cta { margin-left: auto; padding: 0 16px; min-height: 44px; display: inline-flex; align-items: center; }
+  .site-nav .links {
+    order: 3; flex: 0 0 calc(100% + 32px); margin: 6px -16px 0; padding: 0 16px;
+    gap: 24px; overflow-x: auto; scrollbar-width: none; border-top: 1px solid var(--vectis-stone);
+  }
+  .site-nav .links::-webkit-scrollbar { display: none; }
+  .site-nav .links a { font-size: 15px; white-space: nowrap; min-height: 44px; display: inline-flex; align-items: center; padding: 0; border-bottom-width: 2px; }
   .wrap, .prose { padding: 0 20px; }
 }

@@ -66,7 +66,17 @@
 <meta name="twitter:description" content="A tributação anual de 15% trocou o diferimento. A offshore virou decisão de estrutura e sucessão, não de alíquota. O que quase ninguém recalculou.">
 <meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/lei-14754-exterior.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="/insights/styles.css">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1E3D">
 
 <!-- ════════════════════════════════════════════════════════════
      JSON-LD — @graph: Person (alavanca de entidade nomeada) →
@@ -82,25 +92,110 @@
       "name": "Marcelo Siqueira",
       "givenName": "Marcelo",
       "familyName": "Siqueira",
-      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
-      "description": "Planejador financeiro CFP especializado na vida financeira do executivo C-level brasileiro — remuneração em equity (RSU, stock options), planejamento de liquidez e transição de patrimônio.",
-      "hasCredential": {
-        "@type": "EducationalOccupationalCredential",
-        "credentialCategory": "Professional certification",
-        "name": "CFP — Certified Financial Planner (Planejar)"
+      "jobTitle": "Planejador financeiro CFP®",
+      "description": "Planejador financeiro CFP® dedicado à arquitetura patrimonial de executivos com remuneração em equity, founders e famílias empresárias com patrimônio a partir de R$ 10 milhões. Modelo fee-only: sem prateleira de produto, remuneração paga pelo cliente.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "@id": "https://marcelosiqueiracfp.com.br/#credencial-cfp",
+          "name": "CFP® — Certified Financial Planner",
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Planejar — Associação Brasileira de Planejamento Financeiro",
+            "url": "https://www.planejar.org.br"
+          }
+        }
+      ],
+      "worksFor": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
       },
-      "url": "https://marcelosiqueiracfp.com.br",
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      },
+      "knowsAbout": [
+        "Arquitetura patrimonial",
+        "Remuneração em equity (RSU e stock options)",
+        "Concentração acionária",
+        "Eventos de liquidez e venda de empresa",
+        "Planejamento sucessório e ITCMD",
+        "Holding familiar",
+        "Tributação de investimentos no exterior (Lei 14.754/2023)",
+        "Sucessão com bens e herdeiros no exterior"
+      ],
+      "knowsLanguage": "pt-BR",
+      "url": "https://marcelosiqueiracfp.com.br/",
       "sameAs": [
-        "https://www.linkedin.com/in/marcelosiqueiracfp"
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
       ]
     },
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://marcelosiqueiracfp.com.br/#org",
-      "name": "Marcelo Siqueira CFP",
-      "url": "https://marcelosiqueiracfp.com.br",
-      "founder": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
-      "description": "Wealth advisory fee-only para a vida financeira do executivo C-level brasileiro."
+      "name": "Marcelo Siqueira CFP®",
+      "description": "Arquitetura patrimonial fee-only para executivos com remuneração em equity, founders e famílias empresárias, a partir de R$ 10 milhões de patrimônio. Sem prateleira de produto; remuneração paga pelo cliente.",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://marcelosiqueiracfp.com.br/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/home.png",
+      "founder": {
+        "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        }
+      ],
+      "priceRange": "$$$",
+      "knowsLanguage": "pt-BR",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelosiqueiracfp.com.br/#website",
+      "name": "Marcelo Siqueira CFP®",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://marcelosiqueiracfp.com.br/insights#blog",
+      "name": "Insights — Marcelo Siqueira CFP®",
+      "url": "https://marcelosiqueiracfp.com.br/insights",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      }
     },
     {
       "@type": "Article",
@@ -110,17 +205,42 @@
       "datePublished": "2026-06-12",
       "dateModified": "2026-06-12",
       "inLanguage": "pt-BR",
-      "author": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" },
-      "publisher": { "@id": "https://marcelosiqueiracfp.com.br/#org" },
+      "author": {
+        "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira"
+      },
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      },
       "image": "https://marcelosiqueiracfp.com.br/insights/og/lei-14754-exterior.png",
-      "mainEntityOfPage": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior"
+      },
       "about": [
-        { "@type": "Thing", "name": "Lei 14.754/2023" },
-        { "@type": "Thing", "name": "Tributação de offshore" },
-        { "@type": "Thing", "name": "Entidade controlada no exterior" },
-        { "@type": "Thing", "name": "Aplicações financeiras no exterior" },
-        { "@type": "Thing", "name": "Trust" }
-      ]
+        {
+          "@type": "Thing",
+          "name": "Lei 14.754/2023"
+        },
+        {
+          "@type": "Thing",
+          "name": "Tributação de offshore"
+        },
+        {
+          "@type": "Thing",
+          "name": "Entidade controlada no exterior"
+        },
+        {
+          "@type": "Thing",
+          "name": "Aplicações financeiras no exterior"
+        },
+        {
+          "@type": "Thing",
+          "name": "Trust"
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://marcelosiqueiracfp.com.br/insights#blog"
+      }
     },
     {
       "@type": "FAQPage",
@@ -165,6 +285,30 @@
             "@type": "Answer",
             "text": "A atualização opcional do art. 14 — reavaliar os bens no exterior ao valor de mercado de 31 de dezembro de 2023 pagando IRPF definitivo de 8% — era exercida na declaração de 2024 e a janela está encerrada. Quem não optou mantém o custo de aquisição histórico, e o ganho futuro será tributado integralmente a 15% (ou pela regra de ganho de capital, conforme o ativo) sobre toda a valorização, não só sobre a parte posterior a 2023. Não há como recuperar a janela, mas há o que organizar daqui para frente: apurar corretamente custos e a variação cambial, usar a compensação de perdas do art. 9º e, no caso de controlada, o diferimento cambial do art. 7º. O foco deixa de ser a alíquota perdida e passa a ser a apuração correta do que vem."
           }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://marcelosiqueiracfp.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Insights",
+          "item": "https://marcelosiqueiracfp.com.br/insights"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Lei 14.754/23 e o executivo com conta no exterior: o que mudou e o que ainda não está precificado",
+          "item": "https://marcelosiqueiracfp.com.br/insights/lei-14754-executivo-conta-exterior"
         }
       ]
     }
@@ -348,10 +492,15 @@
       <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
       <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
     </div>
-    <div>
+    <div class="foot-links">
       <p><a href="/insights">Insights</a></p>
+      <p><a href="/teste-90-dias">Teste dos 90 Dias</a></p>
       <p><a href="/contato">Iniciar conversa</a></p>
-      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/marcelosiqueiracfp" rel="me noopener" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@marcelosiqueiracfp" rel="me noopener" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/marcelosiqueiracfp" rel="me noopener" target="_blank">Instagram</a>
+      </div>
     </div>
   </div>
 </footer>

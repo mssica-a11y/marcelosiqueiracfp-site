@@ -18,3 +18,23 @@
   for = "/insights/styles.css"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+# Hub /insights servido de insights.html na raiz (antes: insights/index.html, que o
+# Netlify respondia com 301 → /insights/, divergindo do canonical e do sitemap).
+# force = true porque a pasta insights/ ainda existe (artigos) e não pode ganhar a rota.
+[[redirects]]
+  from = "/insights"
+  to = "/insights.html"
+  status = 200
+  force = true
+
+# llms.txt: texto puro em UTF-8 (sem isso, acentos podem chegar quebrados).
+[[headers]]
+  for = "/llms.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=utf-8"
+
+[[headers]]
+  for = "/site.webmanifest"
+  [headers.values]
+    Content-Type = "application/manifest+json"

@@ -18,7 +18,17 @@
 <meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
 <meta name="twitter:card" content="summary_large_image">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap">
 <link rel="stylesheet" href="/insights/styles.css">
+
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0A1E3D">
 
 <!-- ════════════════════════════════════════════════════════════
      JSON-LD — página de ferramenta. Referencia a entidade nomeada
@@ -29,22 +39,140 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#webpage",
-      "name": "O Teste dos 90 Dias — diagnóstico de liquidez sob evento",
-      "description": "Diagnóstico de exposição patrimonial em 6 perguntas para o executivo C-level brasileiro.",
-      "url": "https://marcelosiqueiracfp.com.br/teste-90-dias",
-      "inLanguage": "pt-BR",
-      "isPartOf": { "@id": "https://marcelosiqueiracfp.com.br/#website" },
-      "about": { "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira" }
-    },
-    {
       "@type": "Person",
       "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira",
       "name": "Marcelo Siqueira",
-      "jobTitle": "Consultor de investimentos e planejador financeiro CFP",
-      "url": "https://marcelosiqueiracfp.com.br",
-      "sameAs": ["https://www.linkedin.com/in/marcelosiqueiracfp"]
+      "givenName": "Marcelo",
+      "familyName": "Siqueira",
+      "jobTitle": "Planejador financeiro CFP®",
+      "description": "Planejador financeiro CFP® dedicado à arquitetura patrimonial de executivos com remuneração em equity, founders e famílias empresárias com patrimônio a partir de R$ 10 milhões. Modelo fee-only: sem prateleira de produto, remuneração paga pelo cliente.",
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "@id": "https://marcelosiqueiracfp.com.br/#credencial-cfp",
+          "name": "CFP® — Certified Financial Planner",
+          "credentialCategory": "certification",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Planejar — Associação Brasileira de Planejamento Financeiro",
+            "url": "https://www.planejar.org.br"
+          }
+        }
+      ],
+      "worksFor": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      },
+      "workLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        }
+      },
+      "knowsAbout": [
+        "Arquitetura patrimonial",
+        "Remuneração em equity (RSU e stock options)",
+        "Concentração acionária",
+        "Eventos de liquidez e venda de empresa",
+        "Planejamento sucessório e ITCMD",
+        "Holding familiar",
+        "Tributação de investimentos no exterior (Lei 14.754/2023)",
+        "Sucessão com bens e herdeiros no exterior"
+      ],
+      "knowsLanguage": "pt-BR",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://marcelosiqueiracfp.com.br/#org",
+      "name": "Marcelo Siqueira CFP®",
+      "description": "Arquitetura patrimonial fee-only para executivos com remuneração em equity, founders e famílias empresárias, a partir de R$ 10 milhões de patrimônio. Sem prateleira de produto; remuneração paga pelo cliente.",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://marcelosiqueiracfp.com.br/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "image": "https://marcelosiqueiracfp.com.br/insights/og/home.png",
+      "founder": {
+        "@id": "https://marcelosiqueiracfp.com.br/#marcelo-siqueira"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        {
+          "@type": "City",
+          "name": "São Paulo"
+        }
+      ],
+      "priceRange": "$$$",
+      "knowsLanguage": "pt-BR",
+      "sameAs": [
+        "https://www.linkedin.com/in/marcelosiqueiracfp",
+        "https://www.youtube.com/@marcelosiqueiracfp",
+        "https://www.instagram.com/marcelosiqueiracfp"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://marcelosiqueiracfp.com.br/#website",
+      "name": "Marcelo Siqueira CFP®",
+      "url": "https://marcelosiqueiracfp.com.br/",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#webpage",
+      "name": "O Teste dos 90 Dias — diagnóstico de liquidez sob evento",
+      "description": "Diagnóstico de exposição patrimonial em 6 perguntas: concentração no maior ativo, liquidez em 90 dias e evento de liquidez à vista.",
+      "url": "https://marcelosiqueiracfp.com.br/teste-90-dias",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://marcelosiqueiracfp.com.br/#website"
+      },
+      "about": {
+        "@id": "https://marcelosiqueiracfp.com.br/#org"
+      },
+      "breadcrumb": {
+        "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://marcelosiqueiracfp.com.br/teste-90-dias#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Início",
+          "item": "https://marcelosiqueiracfp.com.br/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "O Teste dos 90 Dias",
+          "item": "https://marcelosiqueiracfp.com.br/teste-90-dias"
+        }
+      ]
     }
   ]
 }
@@ -84,7 +212,7 @@
 .lm-wrap h1 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 40px; line-height: 1.15; color: var(--vectis-navy); margin-bottom: 20px; }
 .lm-wrap h2 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 28px; line-height: 1.25; color: var(--vectis-navy); margin-bottom: 16px; }
 .lede { font-size: 18px; color: var(--vectis-graphite); margin-bottom: 36px; max-width: 620px; }
-.kicker { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 20px; }
+.kicker { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 20px; }
 .qcount { font-family: var(--vectis-font-mono); font-size: 13px; color: var(--vectis-cool-gray); margin-bottom: 14px; }
 
 /* Screens */
@@ -100,7 +228,7 @@
   border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-md);
   padding: 18px 20px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
 }
-.opt:hover { border-color: var(--vectis-navy); background: var(--vectis-linen); }
+@media (hover: hover) { .opt:hover { border-color: var(--vectis-navy); background: var(--vectis-linen); } }
 .opt .sub { display: block; font-size: 13px; color: var(--vectis-cool-gray); margin-top: 3px; }
 
 /* Buttons (lm-btn para não colidir com .btn do site) */
@@ -117,13 +245,13 @@
 .back {
   background: none; border: none; color: var(--vectis-cool-gray);
   font-family: var(--vectis-font-body); font-size: 14px; cursor: pointer;
-  margin-top: 24px; padding: 4px 0; align-self: flex-start;
+  margin-top: 16px; padding: 10px 0; min-height: 44px; align-self: flex-start;
 }
 .back:hover { color: var(--vectis-graphite); }
 
 /* Result */
 .result-band { border-left: 2px solid var(--vectis-brass); padding-left: 24px; margin-bottom: 36px; }
-.exposure-label { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 8px; }
+.exposure-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 8px; }
 .exposure-score { font-family: var(--vectis-font-mono); font-size: 52px; line-height: 1; color: var(--vectis-navy); margin-bottom: 4px; }
 .exposure-score .max { font-size: 22px; color: var(--vectis-cool-gray); }
 .exposure-verdict { font-family: var(--vectis-font-display); font-size: 26px; color: var(--vectis-navy); margin-top: 10px; }
@@ -307,10 +435,15 @@
       <div class="brand">Marcelo Siqueira <span style="color:var(--vectis-brass);font-size:12px;">CFP</span></div>
       <p style="margin-top:8px;max-width:320px;">Wealth advisory para a vida financeira do executivo — equity, liquidez e transição de patrimônio.</p>
     </div>
-    <div>
+    <div class="foot-links">
       <p><a href="/insights">Insights</a></p>
+      <p><a href="/teste-90-dias">Teste dos 90 Dias</a></p>
       <p><a href="/contato">Iniciar conversa</a></p>
-      <p><a href="https://www.linkedin.com/in/marcelosiqueiracfp">LinkedIn</a></p>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/marcelosiqueiracfp" rel="me noopener" target="_blank">LinkedIn</a>
+        <a href="https://www.youtube.com/@marcelosiqueiracfp" rel="me noopener" target="_blank">YouTube</a>
+        <a href="https://www.instagram.com/marcelosiqueiracfp" rel="me noopener" target="_blank">Instagram</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -360,7 +493,8 @@ function show(idx){
   document.getElementById(screens[idx]).classList.add('active');
   current = idx;
   paintProgress();
-  window.scrollTo({top:0, behavior:'smooth'});
+  // rolagem instantânea e só quando necessária: o scroll suave a cada resposta pesava no INP
+  if(window.scrollY > 0) window.scrollTo(0, 0);
 }
 function next(){ if(current < 7) show(current+1); }
 function prev(){ if(current > 0) show(current-1); }
