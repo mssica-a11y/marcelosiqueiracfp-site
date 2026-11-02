@@ -121,7 +121,6 @@
           "name": "São Paulo"
         }
       ],
-      "priceRange": "Diagnóstico R$ 15.000; acompanhamento R$ 3.000/mês",
       "knowsLanguage": "pt-BR",
       "sameAs": [
         "https://www.linkedin.com/in/marcelosiqueiracfp",
@@ -436,7 +435,7 @@
 
     <div id="ctaArea"></div>
 
-    <p class="disclaimer">Este diagnóstico é uma leitura de exposição, não um cálculo tributário ou jurídico. Os valores usam o piso da faixa que você informou, de forma conservadora. O número real só aparece quando os seus dados entram na mesa — extratos, posição de equity, estrutura atual. É exatamente isso que uma conversa de diagnóstico faz.</p>
+    <p class="disclaimer">Este diagnóstico é uma leitura de exposição, não um cálculo tributário ou jurídico. Os valores usam o piso da faixa que você informou, de forma conservadora. O número real só aparece quando os seus dados entram na mesa — extratos, posição de equity, estrutura atual. A conversa inicial de 30 minutos é o primeiro passo.</p>
 
     <button class="back" onclick="restart()">↻ Refazer o teste</button>
     <div class="footer-mark">Marcelo Siqueira — arquitetura patrimonial para quem construiu por desempenho.</div>
@@ -471,8 +470,8 @@
    CONFIGURAÇÃO
    ========================================================================= */
 var CONFIG = {
-  // Agenda Calendly — captura do lead qualificado (>R$10MM).
-  calendarUrl: "https://calendly.com/marcelo-siqueira/revisao-investimentos",
+  // Agenda Calendly — conversa inicial do lead qualificado (>R$10MM).
+  calendarUrl: "https://calendly.com/call-marcelo-siqueira/call-ms",
   // Abaixo do corte de R$10MM: encaminha para a biblioteca de Insights do site.
   contentUrl: "/insights"
 };
@@ -704,8 +703,8 @@ function renderCTA(){
     area.innerHTML =
       '<div class="cta-box">' +
         '<h2>O que você viu é a superfície.</h2>' +
-        '<p>Este diagnóstico usa o piso da sua faixa e quatro variáveis. O número real — o que você de fato consegue acessar, o custo fiscal exato de diversificar, onde a estrutura trava — exige os seus dados na mesa. É o que acontece numa Sessão de Diagnóstico Patrimonial: 3 horas, e você sai com o mapa do seu patrimônio numa página e as decisões prioritárias dos próximos 12 meses.</p>' +
-        '<a class="lm-btn lm-btn-accent" href="'+CONFIG.calendarUrl+'" target="_blank" rel="noopener">Agendar uma conversa de diagnóstico</a>' +
+        '<p>Este diagnóstico usa o piso da sua faixa e quatro variáveis. O número real — o que você de fato consegue acessar, o custo fiscal exato de diversificar, onde a estrutura trava — exige os seus dados na mesa. O primeiro passo é uma conversa inicial de 30 minutos, sem custo: você traz o que concentra o patrimônio e o evento que vem pela frente.</p>' +
+        '<a class="lm-btn lm-btn-accent" href="'+CONFIG.calendarUrl+'" target="_blank" rel="noopener">Agendar a conversa de 30 minutos</a>' +
       '</div>';
   } else {
     area.innerHTML =
