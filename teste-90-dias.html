@@ -288,6 +288,8 @@
   .painline .q { font-size: 20px; }
 }
 </style>
+<script defer data-domain="marcelosiqueiracfp.com.br" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";var o=new URLSearchParams(location.search).get("origem")||"";if(h.indexOf("wa.me/")>-1)plausible("CTA WhatsApp",{props:{pagina:location.pathname,origem:o}});else if(h.indexOf("mailto:")===0)plausible("CTA Email",{props:{pagina:location.pathname,origem:o}})})</script>
 </head>
 
 <body>
@@ -471,8 +473,8 @@
    CONFIGURAÇÃO
    ========================================================================= */
 var CONFIG = {
-  // Agenda Calendly — captura do lead qualificado (>R$10MM).
-  calendarUrl: "https://calendly.com/marcelo-siqueira/revisao-investimentos",
+  // CTA do lead qualificado (>R$10MM): WhatsApp com mensagem pronta (Calendly saiu, deu 404).
+  calendarUrl: "https://wa.me/5511991529545?text=" + encodeURIComponent("Olá, Marcelo. Fiz o teste de 90 dias no seu site e quero uma conversa de 30 minutos. (origem: teste-90-dias)"),
   // Abaixo do corte de R$10MM: encaminha para a biblioteca de Insights do site.
   contentUrl: "/insights"
 };
@@ -704,8 +706,8 @@ function renderCTA(){
     area.innerHTML =
       '<div class="cta-box">' +
         '<h2>O que você viu é a superfície.</h2>' +
-        '<p>Este diagnóstico usa o piso da sua faixa e quatro variáveis. O número real — o que você de fato consegue acessar, o custo fiscal exato de diversificar, onde a estrutura trava — exige os seus dados na mesa. É o que acontece numa Sessão de Diagnóstico Patrimonial: 3 horas, e você sai com o mapa do seu patrimônio numa página e as decisões prioritárias dos próximos 12 meses.</p>' +
-        '<a class="lm-btn lm-btn-accent" href="'+CONFIG.calendarUrl+'" target="_blank" rel="noopener">Agendar uma conversa de diagnóstico</a>' +
+        '<p>Este diagnóstico usa o piso da sua faixa e quatro variáveis. O número real — o que você de fato consegue acessar, o custo fiscal exato de diversificar, onde a estrutura trava — exige os seus dados na mesa. Começa numa conversa de 30 minutos, sem custo: você traz o ativo que concentra o seu patrimônio e o evento que vem pela frente; eu trago o que mudaria primeiro.</p>' +
+        '<a class="lm-btn lm-btn-accent" href="'+CONFIG.calendarUrl+'" target="_blank" rel="noopener">Conversar 30 minutos no WhatsApp</a>' +
       '</div>';
   } else {
     area.innerHTML =

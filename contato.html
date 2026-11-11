@@ -169,6 +169,8 @@
   ]
 }
 </script>
+<script defer data-domain="marcelosiqueiracfp.com.br" src="https://plausible.io/js/script.js"></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";var o=new URLSearchParams(location.search).get("origem")||"";if(h.indexOf("wa.me/")>-1)plausible("CTA WhatsApp",{props:{pagina:location.pathname,origem:o}});else if(h.indexOf("mailto:")===0)plausible("CTA Email",{props:{pagina:location.pathname,origem:o}})})</script>
 </head>
 
 <body>
@@ -203,21 +205,24 @@
 <section class="article-body">
   <div class="prose">
     <div class="form-card">
-      <!-- HubSpot embed. Portal 50152658 · Form a8d1fd06-c176-4f06-9f43-031416f382b1.
-           ⚠️ Verificar a região do portal (na1 vs eu1) ao publicar — se o form não carregar, trocar region. -->
-      <div id="hubspot-form-target"></div>
-      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+      <p style="margin:0 0 20px;">Escolha o canal. A mensagem já vai pronta: você só ajusta e envia.</p>
+      <p style="margin:0 0 12px;"><a id="cta-wa" class="cta" href="#" rel="noopener" style="display:inline-block;">Conversar no WhatsApp</a></p>
+      <p style="margin:0;">Prefere e-mail? <a id="cta-mail" href="#">marcelo@marcelosiqueiracfp.com.br</a></p>
       <script>
-        hbspt.forms.create({
-          region: "na1",
-          portalId: "50152658",
-          formId: "a8d1fd06-c176-4f06-9f43-031416f382b1",
-          target: "#hubspot-form-target"
-        });
+        (function(){
+          var q = new URLSearchParams(location.search);
+          var o = (q.get("origem") || "").replace(/[^a-z0-9_-]/gi, "").slice(0, 40);
+          var sim = (q.get("sim") || "").replace(/[^a-z0-9_-]/gi, "").slice(0, 40);
+          var txt = "Olá, Marcelo. Quero uma conversa de 30 minutos sobre a minha estrutura patrimonial.";
+          if (sim) txt += " Usei o simulador: " + sim + ".";
+          if (o) txt += " (origem: " + o + ")";
+          document.getElementById("cta-wa").href = "https://wa.me/5511991529545?text=" + encodeURIComponent(txt);
+          document.getElementById("cta-mail").href = "mailto:marcelo@marcelosiqueiracfp.com.br?subject=" + encodeURIComponent("Conversa de 30 minutos") + "&body=" + encodeURIComponent(txt);
+        })();
       </script>
       <noscript>
-        <p>Para iniciar uma conversa, escreva para
-        <a href="mailto:contato@marcelosiqueiracfp.com.br">contato@marcelosiqueiracfp.com.br</a>.</p>
+        <p><a href="https://wa.me/5511991529545">WhatsApp</a> ou
+        <a href="mailto:marcelo@marcelosiqueiracfp.com.br">marcelo@marcelosiqueiracfp.com.br</a>.</p>
       </noscript>
     </div>
   </div>
