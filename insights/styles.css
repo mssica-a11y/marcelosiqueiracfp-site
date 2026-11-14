@@ -154,6 +154,13 @@ h1 { font-family: var(--fd); font-weight: 400; font-size: 48px; line-height: 1.1
 .cta-block p { color: var(--vectis-cool-gray); margin-bottom: 28px; max-width: 520px; }
 .cta-block .btn { background: #fff; color: var(--vectis-navy); font-weight: 500; padding: 13px 30px; border-radius: 6px; display: inline-block; }
 .cta-block .btn:hover { background: var(--vectis-linen); text-decoration: none; }
+/* Variante clara: convite da newsletter, logo abaixo do bloco do Teste (não competir com ele). */
+.cta-block--light { background: var(--vectis-linen); color: var(--vectis-dark-slate); margin-top: -32px; }
+.cta-block--light h2 { color: var(--vectis-navy); margin-top: 0; }
+.cta-block--light p { color: var(--vectis-graphite); }
+.cta-block--light .eyebrow { margin-bottom: 12px; }
+.cta-block--light .btn { background: var(--vectis-navy); color: #fff; }
+.cta-block--light .btn:hover { background: var(--vectis-dark-slate); }
 
 /* ─── INSIGHTS HUB (listing) ──────────────────────────── */
 .hub-head { background: var(--vectis-navy); color: var(--vectis-warm-white); padding: 96px 0 72px; }
