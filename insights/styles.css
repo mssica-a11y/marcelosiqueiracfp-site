@@ -327,3 +327,17 @@ main:has(#t-internacional:checked) .article-grid .card:not([data-trilha~="intern
   .cta-block { padding: 32px 24px; }
   .wrap, .prose { padding: 0 20px; }
 }
+
+/* ─── REFORMA DA HOME (rascunho, branch reforma-home) ──── */
+.site-nav .links { justify-content: flex-end; margin-right: 26px; }
+/* Convite da newsletter no topo de artigos e do hub: faixa fina, não empurra o texto. */
+.news-top { background: var(--vectis-linen); border-bottom: 1px solid var(--vectis-stone); padding: 14px 0; }
+.news-top > div { display: flex; align-items: center; gap: 16px 24px; flex-wrap: wrap; }
+.news-top p { margin: 0; flex: 1; min-width: 240px; font-size: 15px; color: var(--vectis-graphite); }
+.news-top .btn, .hero-cta .btn { font-weight: 500; font-size: 14px; padding: 10px 22px; border-radius: 6px; white-space: nowrap; }
+.news-top .btn { background: var(--vectis-navy); color: #fff; }
+.hero-cta { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14); max-width: 600px; }
+.hero-cta p { font-size: 17px; margin: 0 0 18px; }
+.hero-cta .btn { display: inline-block; background: #fff; color: var(--vectis-navy); font-size: 15px; padding: 13px 30px; }
+.news-top .btn:hover, .hero-cta .btn:hover { text-decoration: none; opacity: .9; }
+@media (max-width: 900px) { .site-nav .links { justify-content: flex-start; margin-right: -16px; } }

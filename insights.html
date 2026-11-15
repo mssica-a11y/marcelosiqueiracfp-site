@@ -174,7 +174,7 @@
 }
 </script>
 <script defer data-domain="marcelosiqueiracfp.com.br" src="https://plausible.io/js/script.js"></script>
-<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";var o=new URLSearchParams(location.search).get("origem")||"";if(h.indexOf("wa.me/")>-1)plausible("CTA WhatsApp",{props:{pagina:location.pathname,origem:o}});else if(h.indexOf("mailto:")===0)plausible("CTA Email",{props:{pagina:location.pathname,origem:o}})})</script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var h=a.getAttribute("href")||"";var o=new URLSearchParams(location.search).get("origem")||"";if(h.indexOf("wa.me/")>-1)plausible("CTA WhatsApp",{props:{pagina:location.pathname,origem:o}});else if(h.indexOf("mailto:")===0)plausible("CTA Email",{props:{pagina:location.pathname,origem:o}});else if(h.indexOf("beehiiv.com")>-1)plausible("CTA Newsletter",{props:{pagina:location.pathname,origem:o}})})</script>
 </head>
 
 <body>
@@ -187,10 +187,7 @@
     <span>Marcelo Siqueira</span><span class="cred">CFP®</span>
   </a>
   <div class="links">
-    <a href="/executivo">Executivo</a>
-    <a href="/founder">Founder</a>
-    <a href="/insights" aria-current="page">Insights</a>
-    <a href="/na-midia">Na mídia</a>
+    <a href="/insights" aria-current="page">Blog</a>
   </div>
   <a href="/contato" class="cta">Iniciar conversa</a>
 </nav>
@@ -202,6 +199,14 @@
     <p>De quem construiu patrimônio por empresa ou por carreira. ITCMD, holding familiar, RSU, stock options, CVM 44, Lei 14.754 — análises diretas, com o dispositivo legal e o número na mesa.</p>
   </div>
 </header>
+
+<!-- ─── CONVITE NEWSLETTER (topo) ────────────────────────── -->
+<aside class="news-top">
+  <div class="wrap">
+    <p><strong>Investment Insights</strong> · quinzenal. Uma decisão patrimonial por edição, com o número na mesa.</p>
+    <a class="btn" href="https://newsletter-investment-insights.beehiiv.com" target="_blank" rel="noopener">Assinar</a>
+  </div>
+</aside>
 
 <main class="wrap">
   <!-- Filtro por trilha: radio + :has() no CSS, sem JavaScript. -->
