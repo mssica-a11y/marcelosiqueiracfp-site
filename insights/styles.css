@@ -328,7 +328,7 @@ main:has(#t-internacional:checked) .article-grid .card:not([data-trilha~="intern
   .wrap, .prose { padding: 0 20px; }
 }
 
-/* ─── REFORMA DA HOME (rascunho, branch reforma-home) ──── */
+/* ─── REFORMA DA HOME (nov/2026) ──── */
 .site-nav .links { justify-content: flex-end; margin-right: 26px; }
 /* Convite da newsletter no topo de artigos e do hub: faixa fina, não empurra o texto. */
 .news-top { background: var(--vectis-linen); border-bottom: 1px solid var(--vectis-stone); padding: 14px 0; }
@@ -336,8 +336,14 @@ main:has(#t-internacional:checked) .article-grid .card:not([data-trilha~="intern
 .news-top p { margin: 0; flex: 1; min-width: 240px; font-size: 15px; color: var(--vectis-graphite); }
 .news-top .btn, .hero-cta .btn { font-weight: 500; font-size: 14px; padding: 10px 22px; border-radius: 6px; white-space: nowrap; }
 .news-top .btn { background: var(--vectis-navy); color: #fff; }
-.hero-cta { margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.14); max-width: 600px; }
+.hero-cta { margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--vectis-stone); max-width: 600px; }
 .hero-cta p { font-size: 17px; margin: 0 0 18px; }
-.hero-cta .btn { display: inline-block; background: #fff; color: var(--vectis-navy); font-size: 15px; padding: 13px 30px; }
+.hero-cta .btn { display: inline-block; background: var(--vectis-navy); color: #fff; font-size: 15px; padding: 13px 30px; }
 .news-top .btn:hover, .hero-cta .btn:hover { text-decoration: none; opacity: .9; }
 @media (max-width: 900px) { .site-nav .links { justify-content: flex-start; margin-right: -16px; } }
+/* Hero claro (home, hub, executivo, founder): fundo linen, texto navy. Brass só no eyebrow. */
+.hub-head { background: var(--vectis-linen); color: var(--vectis-navy); border-bottom: 1px solid var(--vectis-stone); }
+.hub-head h1 { color: var(--vectis-navy); }
+.hub-head p, .hub-head .sub-h1 { color: var(--vectis-graphite); }
+.hub-head + .news-top { background: var(--vectis-warm-white); }
+.article-grid--3 { padding-top: 0; }
