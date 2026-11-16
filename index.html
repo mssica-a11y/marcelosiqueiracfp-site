@@ -21,7 +21,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=DM+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
 <link rel="stylesheet" href="/insights/styles.css">
 
 <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -29,7 +29,7 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0A1E3D">
+<meta name="theme-color" content="#F6F3EC">
 
 <!-- JSON-LD gerado a partir da definição canônica (Person + ProfessionalService + Services). -->
 <script type="application/ld+json">
@@ -220,13 +220,12 @@
 
 <nav class="site-nav">
   <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP® — início">
-    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
-      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
     <span>Marcelo Siqueira</span><span class="cred">CFP®</span>
   </a>
   <div class="links">
     <a href="/insights">Blog</a>
+    <a href="/teste-90-dias">Teste dos 90 Dias</a>
+    <a href="/newsletter">Newsletter</a>
   </div>
   <a href="/contato" class="cta">Iniciar conversa</a>
 </nav>
@@ -240,42 +239,101 @@
     <p>Para quem tem a maior parte do patrimônio concentrada num único ativo — o equity da empresa onde trabalha ou a empresa que construiu — e um evento de liquidez chegando antes da estrutura que deveria recebê-lo.</p>
     <div class="hero-cta">
       <p>A cada quinze dias, uma decisão patrimonial com o número na mesa: sucessão, venda da empresa, estrutura.</p>
-      <a class="btn" href="/newsletter?origem=home">Assinar a Investment Insights</a>
+      <div class="actions">
+        <a class="btn" href="/newsletter?origem=home">Assinar a Investment Insights</a>
+        <a class="text-link" href="/teste-90-dias?origem=home">Fazer o teste</a>
+      </div>
     </div>
   </div>
 </header>
 
 <main>
-  <!-- ─── FERRAMENTAS ─────────────────────────────────────── -->
+  <!-- ─── 2. O PROBLEMA COMUM ─────────────────────────────── -->
   <section class="home-section">
-    <div class="wrap">
-      <h2 class="eyebrow">Ferramentas</h2>
-      <div class="article-grid article-grid--3">
-        <a class="card" href="/teste-90-dias?origem=home">
-          <span class="tag">Diagnóstico</span>
-          <h3>O Teste dos 90 Dias</h3>
-          <p>Sete perguntas, sem cadastro. Você vê o seu índice de exposição patrimonial na hora — concentração no maior ativo, liquidez em 90 dias, evento de liquidez à vista.</p>
-          <span class="read">Fazer o teste</span>
-        </a>
-        <a class="card" href="https://calculadora.marcelosiqueiracfp.com.br/?origem=home">
-          <span class="tag">Calculadora</span>
-          <h3>Imposto sobre RSU, stock options e ações no exterior</h3>
-          <p>Estima o imposto devido no Brasil sobre vesting e venda de RSU, venda de stock options, venda de ações e dividendos recebidos no exterior. É uma estimativa educacional.</p>
-          <span class="read">Abrir a calculadora</span>
-        </a>
-        <a class="card" href="/ferramentas/simulador-numero-da-inacao.xlsx" download>
-          <span class="tag">Simulador</span>
-          <h3>O Simulador do Número da Inação</h3>
-          <p>Quanto custa não estruturar a sua sucessão — a conta que o inventário devolve. Planilha com três cenários, sem cadastro.</p>
-          <span class="read">Baixar a planilha (Excel)</span>
-        </a>
+    <div class="wrap split">
+      <div></div>
+      <div class="split-body">
+      <h2>Onde o seu patrimônio trava se o evento chegar antes da estrutura?</h2>
+      <p>O executivo chega nesse ponto por RSU, stock options e deferred comp. O founder, pela participação na própria empresa. O mecanismo é o mesmo: um único ativo concentra o patrimônio, um evento com data vai transformá-lo em caixa — vesting, saída do cargo, venda da empresa, entrada de sócio, sucessão — e a estrutura que deveria receber esse caixa ainda não existe.</p>
+      <p>Quando o evento chega primeiro, a decisão deixa de ser sua. O imposto incide sobre a estrutura que existe no dia, não sobre a que você pretendia montar. A venda acontece no prazo de quem compra. A sucessão segue o inventário.</p>
+      <p class="pull"><strong>Estrutura primeiro, investimento depois.</strong> <span>É a ordem que a maioria inverte.</span></p>
       </div>
     </div>
   </section>
 
-  <!-- ─── 6. INSIGHTS RECENTES ────────────────────────────── -->
+  <!-- ─── 3. AS DUAS PORTAS ───────────────────────────────── -->
+  <section class="home-section home-section--alt">
+    <div class="wrap split">
+      <div class="eyebrow">Por onde o seu patrimônio se concentrou</div>
+      <div class="doors">
+        <div class="door">
+          <h3>Executivo com equity</h3>
+          <p>RSU, stock options e deferred comp concentrados nas ações do empregador. Vesting, blackout period e a saída do cargo definem o calendário — e nenhum deles é decidido por você.</p>
+          <a class="btn" href="/executivo">Para o executivo</a>
+        </div>
+        <div class="door">
+          <h3>Founder e família empresária</h3>
+          <p>A maior parte do patrimônio está na empresa que você construiu. Venda, entrada de sócio ou transição para a próxima geração definem o calendário — e o patrimônio da empresa ainda se mistura ao da família.</p>
+          <a class="btn" href="/founder">Para o founder</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── DIAGNÓSTICO ─────────────────────────────────────── -->
+  <section class="home-section home-section--areia">
+    <div class="wrap split">
+      <h2 class="eyebrow">Diagnóstico</h2>
+      <div class="doors">
+        <div class="door">
+          <h3>O Teste dos 90 Dias</h3>
+          <p>Sete perguntas, sem cadastro. Você vê o seu índice de exposição patrimonial na hora — concentração no maior ativo, liquidez em 90 dias, evento de liquidez à vista.</p>
+          <a class="btn btn--solid" href="/teste-90-dias?origem=home">Fazer o teste</a>
+        </div>
+        <div class="door">
+          <h3>Diagnóstico patrimonial</h3>
+          <p>O mapa do patrimônio numa página: entidades, contratos, jurisdições e herdeiros; o número da inação — quanto a família perde, em patrimônio líquido depois de impostos, se nada mudar; e as decisões prioritárias dos próximos 12 meses, em ordem.</p>
+          <a class="text-link" href="/quanto-custa-planejamento-financeiro-fee-only">O que está dentro do preço</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ─── 4. O MODELO ─────────────────────────────────────── -->
+  <section class="home-section">
+    <div class="wrap split">
+      <div class="eyebrow">O modelo</div>
+      <div>
+      <h2 class="section-title">Fee-only, sem prateleira de produto, remuneração paga pelo cliente.</h2>
+      <p class="section-lede">Advogado vê o jurídico. Contador vê o fiscal. O banco vê a carteira que custodia. Cada um otimiza a própria peça — e ninguém é contratado para olhar o conjunto. Coordenação é uma disciplina separada. É ela o objeto do trabalho.</p>
+      <div class="pillars">
+        <div>
+          <h3>Um mapa só</h3>
+          <p>Entidades, jurisdições, instrumentos e herdeiros numa página — e quem decide o quê se você faltar.</p>
+        </div>
+        <div>
+          <h3>A sequência</h3>
+          <p>O que precisa estar pronto antes do evento, em que ordem, e quem executa cada peça.</p>
+        </div>
+        <div>
+          <h3>O número da inação</h3>
+          <p>Quanto custa não fazer nada, medido em patrimônio líquido depois de impostos — não em imposto pago.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── NEWSLETTER + BLOG ────────────────────────────── -->
   <section class="home-section">
     <div class="wrap">
+      <div class="news-head">
+        <div>
+          <div class="eyebrow">Newsletter · quinzenal</div>
+          <h2>Investment Insights: uma decisão patrimonial a cada quinze dias.</h2>
+          <p>Cada edição trata de uma decisão que o dono do patrimônio tem pela frente — sucessão, venda da empresa, estrutura — com o número na mesa.</p>
+        </div>
+        <a class="btn btn--line" href="/newsletter?origem=home">Assinar a Investment Insights</a>
+      </div>
       <h2 class="eyebrow">Blog</h2>
       <div class="article-grid article-grid--4">
         <a class="card" href="/insights/holding-familiar-vale-a-pena">
@@ -322,7 +380,7 @@
         </a>
         <a class="card card--index" href="/insights">
           <span class="tag">Biblioteca</span>
-          <h3>Todos os artigos do Blog →</h3>
+          <h3>Todos os artigos do Blog</h3>
           <p>Três trilhas: equity executivo, sucessão e estrutura familiar, internacional.</p>
           <span class="read">Ver tudo</span>
         </a>
@@ -330,89 +388,66 @@
     </div>
   </section>
 
-  <!-- ─── 2. O PROBLEMA COMUM ─────────────────────────────── -->
-  <section class="home-section">
-    <div class="prose">
-      <h2>Onde o seu patrimônio trava se o evento chegar antes da estrutura?</h2>
-      <p>O executivo chega nesse ponto por RSU, stock options e deferred comp. O founder, pela participação na própria empresa. O mecanismo é o mesmo: um único ativo concentra o patrimônio, um evento com data vai transformá-lo em caixa — vesting, saída do cargo, venda da empresa, entrada de sócio, sucessão — e a estrutura que deveria receber esse caixa ainda não existe.</p>
-      <p>Quando o evento chega primeiro, a decisão deixa de ser sua. O imposto incide sobre a estrutura que existe no dia, não sobre a que você pretendia montar. A venda acontece no prazo de quem compra. A sucessão segue o inventário.</p>
-      <p><strong>Estrutura primeiro, investimento depois.</strong> É a ordem que a maioria inverte.</p>
-    </div>
-  </section>
-
-  <!-- ─── 3. AS DUAS PORTAS ───────────────────────────────── -->
-  <section class="home-section home-section--alt">
-    <div class="wrap">
-      <div class="eyebrow">Por onde o seu patrimônio se concentrou</div>
-      <div class="doors">
-        <div class="door">
-          <h3>Executivo com equity</h3>
-          <p>RSU, stock options e deferred comp concentrados nas ações do empregador. Vesting, blackout period e a saída do cargo definem o calendário — e nenhum deles é decidido por você.</p>
-          <a class="btn" href="/executivo">Para o executivo</a>
-        </div>
-        <div class="door">
-          <h3>Founder e família empresária</h3>
-          <p>A maior parte do patrimônio está na empresa que você construiu. Venda, entrada de sócio ou transição para a próxima geração definem o calendário — e o patrimônio da empresa ainda se mistura ao da família.</p>
-          <a class="btn" href="/founder">Para o founder</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── 4. O MODELO ─────────────────────────────────────── -->
+  <!-- ─── FERRAMENTAS ─────────────────────────────────────── -->
   <section class="home-section">
     <div class="wrap">
-      <div class="eyebrow">O modelo</div>
-      <h2 class="section-title">Fee-only, sem prateleira de produto, remuneração paga pelo cliente.</h2>
-      <p class="section-lede">Advogado vê o jurídico. Contador vê o fiscal. O banco vê a carteira que custodia. Cada um otimiza a própria peça — e ninguém é contratado para olhar o conjunto. Coordenação é uma disciplina separada. É ela o objeto do trabalho.</p>
-      <div class="pillars">
-        <div>
-          <h3>Um mapa só</h3>
-          <p>Entidades, jurisdições, instrumentos e herdeiros numa página — e quem decide o quê se você faltar.</p>
-        </div>
-        <div>
-          <h3>A sequência</h3>
-          <p>O que precisa estar pronto antes do evento, em que ordem, e quem executa cada peça.</p>
-        </div>
-        <div>
-          <h3>O número da inação</h3>
-          <p>Quanto custa não fazer nada, medido em patrimônio líquido depois de impostos — não em imposto pago.</p>
-        </div>
+      <h2 class="eyebrow">Ferramentas</h2>
+      <div class="article-grid article-grid--3">
+        <a class="card" href="https://calculadora.marcelosiqueiracfp.com.br/?origem=home">
+          <span class="tag">Calculadora</span>
+          <h3>Imposto sobre RSU, stock options e ações no exterior</h3>
+          <p>Estima o imposto devido no Brasil sobre vesting e venda de RSU, venda de stock options, venda de ações e dividendos recebidos no exterior. É uma estimativa educacional.</p>
+          <span class="read">Abrir a calculadora</span>
+        </a>
+        <a class="card" href="/ferramentas/simulador-numero-da-inacao.xlsx" download>
+          <span class="tag">Simulador</span>
+          <h3>O Simulador do Número da Inação</h3>
+          <p>Quanto custa não estruturar a sua sucessão — a conta que o inventário devolve. Planilha com três cenários, sem cadastro.</p>
+          <span class="read">Baixar a planilha (Excel)</span>
+        </a>
       </div>
     </div>
   </section>
 
   <!-- ─── 5. CREDENCIAL ───────────────────────────────────── -->
   <section class="home-section home-section--alt">
-    <div class="prose">
+    <div class="wrap split">
       <div class="eyebrow">Quem conduz</div>
+      <div class="split-body">
       <div class="cred-line">
         <span class="mark">CFP®</span>
         <p><strong>Marcelo Siqueira</strong>, planejador financeiro certificado CFP® pela Planejar — Associação Brasileira de Planejamento Financeiro. Em São Paulo, com atendimento em todo o Brasil. O trabalho é desenhado para patrimônios a partir de R$ 10 milhões.</p>
+      </div>
       </div>
     </div>
   </section>
 
   <!-- ─── 6. NA MÍDIA ─────────────────────────────────────── -->
   <section class="home-section">
-    <div class="prose">
+    <div class="wrap split">
       <div class="eyebrow">Na mídia</div>
+      <div class="split-body">
       <h2>Comentários de mercado na Times Brasil | CNBC</h2>
       <p>Quatro entrevistas sobre abertura de mercado, juros, inflação e política comercial. São comentários de conjuntura, não análise patrimonial.</p>
-      <p><a href="/na-midia#ipca-15-banco-central-oriente-medio">IPCA-15, Banco Central e a guerra no Oriente Médio</a> · Real Time · março de 2026</p>
-      <p><a href="/na-midia#tarifas-payroll-virada-do-pregao">Tarifas americanas, payroll e a virada do pregão</a> · Real Time · agosto de 2025</p>
-      <p><a href="/na-midia#selic-15-custo-de-oportunidade">Selic a 15%: o custo de oportunidade que trava a economia real</a> · Money Times · junho de 2025</p>
-      <p><a href="/na-midia#aco-iof-dolar">Tarifas sobre o aço, IOF e o dólar</a> · Jornal Times Brasil · junho de 2025</p>
-      <p><a href="/na-midia">Ver as quatro entrevistas →</a></p>
+      <ul class="media-list">
+        <li><a href="/na-midia#ipca-15-banco-central-oriente-medio">IPCA-15, Banco Central e a guerra no Oriente Médio</a> <span>Real Time · março de 2026</span></li>
+        <li><a href="/na-midia#tarifas-payroll-virada-do-pregao">Tarifas americanas, payroll e a virada do pregão</a> <span>Real Time · agosto de 2025</span></li>
+        <li><a href="/na-midia#selic-15-custo-de-oportunidade">Selic a 15%: o custo de oportunidade que trava a economia real</a> <span>Money Times · junho de 2025</span></li>
+        <li><a href="/na-midia#aco-iof-dolar">Tarifas sobre o aço, IOF e o dólar</a> <span>Jornal Times Brasil · junho de 2025</span></li>
+      </ul>
+      <p><a class="text-link" href="/na-midia">Ver as quatro entrevistas</a></p>
+      </div>
     </div>
   </section>
 
   <!-- ─── 7. CTA FINAL ────────────────────────────────────── -->
-  <section class="wrap">
+  <section class="cta-band">
+    <div class="wrap">
     <div class="cta-block">
       <h2>Uma conversa direta sobre a sua estrutura.</h2>
       <p>Trinta minutos, par a par, sem custo. Você traz o ativo que concentra o seu patrimônio e o evento que vem pela frente; eu trago o que mudaria primeiro.</p>
       <a class="btn" href="/contato?origem=home">Iniciar conversa</a>
+    </div>
     </div>
   </section>
 </main>

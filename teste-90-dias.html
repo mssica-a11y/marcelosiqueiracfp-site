@@ -29,7 +29,7 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#0A1E3D">
+<meta name="theme-color" content="#F6F3EC">
 
 <!-- ════════════════════════════════════════════════════════════
      JSON-LD — página de ferramenta. Referencia a entidade nomeada
@@ -190,9 +190,9 @@
   --vectis-font-display: var(--fd);
   --vectis-font-body: var(--fs);
   --vectis-font-mono: var(--fm);
-  --vectis-radius-sm: 4px;
-  --vectis-radius-md: 6px;
-  --vectis-radius-lg: 8px;
+  --vectis-radius-sm: 0;
+  --vectis-radius-md: 0;
+  --vectis-radius-lg: 0;
 }
 
 .lm-wrap {
@@ -225,7 +225,7 @@
 .options { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 .opt {
   text-align: left; font-family: var(--vectis-font-body); font-size: 16px;
-  color: var(--vectis-navy); background: var(--vectis-white);
+  color: var(--vectis-navy); background: transparent;
   border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-md);
   padding: 18px 20px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease;
 }
@@ -241,7 +241,7 @@
 }
 .lm-btn:hover { filter: brightness(0.92); text-decoration: none; }
 .lm-btn-primary { background: var(--vectis-navy); color: var(--vectis-white); }
-.lm-btn-accent { background: var(--vectis-brass); color: var(--vectis-white); }
+.lm-btn-accent { background: var(--vectis-navy); color: var(--vectis-white); }
 .start-row { margin-top: 8px; }
 .back {
   background: none; border: none; color: var(--vectis-cool-gray);
@@ -251,7 +251,7 @@
 .back:hover { color: var(--vectis-graphite); }
 
 /* Result */
-.result-band { border-left: 2px solid var(--vectis-brass); padding-left: 24px; margin-bottom: 36px; }
+.result-band { border-left: 1px solid var(--vectis-navy); padding-left: 24px; margin-bottom: 36px; }
 .exposure-label { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--vectis-cool-gray); margin-bottom: 8px; }
 .exposure-score { font-family: var(--vectis-font-mono); font-size: 52px; line-height: 1; color: var(--vectis-navy); margin-bottom: 4px; }
 .exposure-score .max { font-size: 22px; color: var(--vectis-cool-gray); }
@@ -261,8 +261,8 @@
 .painline .q { font-family: var(--vectis-font-display); font-size: 24px; line-height: 1.3; margin-bottom: 18px; }
 .painline .nums { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 20px; }
 .painline .num-block .v { font-family: var(--vectis-font-mono); font-size: 28px; color: var(--vectis-white); }
-.painline .num-block .v.bad { color: var(--vectis-brass); }
-.painline .num-block .l { font-size: 12px; color: var(--vectis-cool-gray); letter-spacing: 0.04em; margin-top: 4px; }
+.painline .num-block .v.bad { color: var(--vectis-stone); }
+.painline .num-block .l { font-size: 12px; color: var(--vectis-stone); letter-spacing: 0.04em; margin-top: 4px; }
 
 .readout { margin-bottom: 32px; }
 .readout .row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 0; border-bottom: 1px solid var(--vectis-stone); }
@@ -275,7 +275,7 @@
 .interp { font-size: 17px; color: var(--vectis-graphite); margin-bottom: 36px; max-width: 620px; }
 .interp strong { font-weight: 500; color: var(--vectis-navy); }
 
-.cta-box { background: var(--vectis-white); border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-lg); padding: 32px; margin-bottom: 24px; }
+.cta-box { background: transparent; border: 1px solid var(--vectis-stone); border-radius: var(--vectis-radius-lg); padding: 32px; margin-bottom: 24px; }
 .cta-box h2 { font-family: var(--vectis-font-display); font-weight: 400; font-size: 26px; color: var(--vectis-navy); margin-bottom: 16px; }
 .cta-box p { font-size: 16px; margin-bottom: 24px; max-width: 560px; }
 
@@ -298,13 +298,12 @@
 <!-- ─── NAV ──────────────────────────────────────────────── -->
 <nav class="site-nav">
   <a href="/" class="wordmark" aria-label="Marcelo Siqueira CFP® — início">
-    <svg class="chev" viewBox="0 0 24 40" fill="none" aria-hidden="true">
-      <path d="M6 10 L12 30 L18 10" stroke="#C4A44A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
     <span>Marcelo Siqueira</span><span class="cred">CFP®</span>
   </a>
   <div class="links">
     <a href="/insights">Blog</a>
+    <a href="/teste-90-dias" aria-current="page">Teste dos 90 Dias</a>
+    <a href="/newsletter">Newsletter</a>
   </div>
   <a href="/contato" class="cta">Iniciar conversa</a>
 </nav>
@@ -568,7 +567,7 @@ function answer(key, val, el){
   state[key] = val;
   if(key === 'perfil') applyProfile();
   // micro feedback
-  if(el){ el.style.borderColor = 'var(--vectis-brass)'; }
+  if(el){ el.style.borderColor = 'var(--vectis-navy)'; }
   setTimeout(function(){
     if(current === LAST_Q){ computeResult(); show(screens.length - 1); }
     else next();
@@ -645,7 +644,7 @@ function renderResult(score){
     naosei: 'você não sabe dizer'
   }[state.liquidez] || '';
 
-  painQ = 'Você tem cerca de ' + fmtMM(piso) + ' em patrimônio. Se precisasse de ' + fmtMM(need90) + ' em 90 dias, hoje a resposta é: <span style="color:var(--vectis-brass)">' + liqLabel + '</span>.';
+  painQ = 'Você tem cerca de ' + fmtMM(piso) + ' em patrimônio. Se precisasse de ' + fmtMM(need90) + ' em 90 dias, hoje a resposta é: <span style="font-style:italic;color:var(--vectis-stone)">' + liqLabel + '</span>.';
 
   nums += '<div class="num-block"><div class="v">'+fmtMM(piso)+'</div><div class="l">Patrimônio (piso da faixa)</div></div>';
   nums += '<div class="num-block"><div class="v '+(conc>=0.5?'bad':'')+'">'+fmtMM(concVal)+'</div><div class="l">Preso no ativo principal</div></div>';
