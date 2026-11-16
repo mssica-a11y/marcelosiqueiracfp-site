@@ -9,6 +9,7 @@ executivo.html            Porta do executivo com equity (/executivo)
 founder.html              Porta do founder e da família empresária (/founder)
 na-midia.html             Entrevistas Times Brasil | CNBC + VideoObject (/na-midia)
 insights.html             Hub /insights (servido por rewrite 200 no netlify.toml; filtro de trilhas sem JS)
+newsletter.html           Inscrição na Investment Insights (/newsletter); botão leva à Beehiiv, sem embed
 teste-90-dias.html        Lead magnet; ?perfil=executivo|founder pula a pergunta de bifurcação
 patrimonio-apos-vender-empresa.html · quanto-custa-planejamento-financeiro-fee-only.html
 family-office-10-milhoes.html · sucessao-filhos-bens-exterior.html

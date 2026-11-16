@@ -288,6 +288,8 @@ main:has(#t-internacional:checked) .article-grid .card:not([data-trilha~="intern
 
 /* ─── FORM (contato) ──────────────────────────────────── */
 .form-card { background: #fff; border: 1px solid var(--vectis-stone); border-radius: 10px; padding: 40px; margin: 8px 0 40px; }
+.form-card .cta { display: inline-block; background: var(--vectis-navy); color: #fff; font-size: 15px; font-weight: 500; padding: 13px 30px; border-radius: 6px; }
+.form-card .cta:hover { background: #0d2650; text-decoration: none; }
 .form-card .hs-form fieldset { max-width: 100%; }
 .form-card input, .form-card textarea, .form-card select { font-family: var(--fs); font-size: 16px; }
 

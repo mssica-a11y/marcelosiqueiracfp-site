@@ -17,6 +17,7 @@
 <meta property="og:url" content="https://marcelosiqueiracfp.com.br/teste-90-dias">
 <meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -473,7 +474,9 @@ var CONFIG = {
   // CTA do lead qualificado (>R$10MM): WhatsApp com mensagem pronta (Calendly saiu, deu 404).
   calendarUrl: "https://wa.me/5511991529545?text=" + encodeURIComponent("Olá, Marcelo. Fiz o teste de 90 dias no seu site e quero uma conversa de 30 minutos. (origem: teste-90-dias)"),
   // Abaixo do corte de R$10MM: encaminha para a biblioteca de Insights do site.
-  contentUrl: "/insights"
+  contentUrl: "/insights",
+  // CTA principal abaixo do corte: página de inscrição da newsletter.
+  newsletterUrl: "/newsletter?origem=teste-90-dias"
 };
 /* ========================================================================= */
 
@@ -710,8 +713,9 @@ function renderCTA(){
     area.innerHTML =
       '<div class="cta-box">' +
         '<h2>Onde você está, o melhor próximo passo é estudar.</h2>' +
-        '<p>O trabalho de arquitetura patrimonial que eu faço foi desenhado para patrimônios com a complexidade que normalmente aparece acima de R$ 10 milhões — múltiplas estruturas, concentração relevante, eventos de liquidez. No seu momento, o maior retorno vem de entender os mecanismos antes de precisar deles. É exatamente isso que eu publico.</p>' +
-        '<a class="lm-btn lm-btn-primary" href="'+CONFIG.contentUrl+'">Acompanhar o conteúdo</a>' +
+        '<p>O trabalho de arquitetura patrimonial que eu faço foi desenhado para patrimônios com a complexidade que normalmente aparece acima de R$ 10 milhões — múltiplas estruturas, concentração relevante, eventos de liquidez. No seu momento, o maior retorno vem de entender os mecanismos antes de precisar deles. É exatamente isso que eu publico, a cada quinze dias, na Investment Insights.</p>' +
+        '<a class="lm-btn lm-btn-primary" href="'+CONFIG.newsletterUrl+'">Assinar a Investment Insights</a>' +
+        '<p style="margin-top:16px;"><a href="'+CONFIG.contentUrl+'">Ou leia os artigos do Blog</a></p>' +
       '</div>';
   }
 }
