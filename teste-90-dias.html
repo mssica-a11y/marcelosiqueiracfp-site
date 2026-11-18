@@ -4,16 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>O Teste dos 90 Dias — diagnóstico de liquidez sob evento</title>
-<meta name="description" content="Em 7 perguntas, veja onde o seu patrimônio trava se o evento de liquidez chegar antes da estrutura. Sem cadastro.">
+<title>Onde seu patrimônio trava antes do evento | Teste 90 Dias</title>
+<meta name="description" content="Descubra em 7 perguntas onde seu patrimônio trava antes do evento de liquidez. Índice de exposição de 0 a 100, na hora e sem cadastro.">
 
 <link rel="canonical" href="https://marcelosiqueiracfp.com.br/teste-90-dias">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Marcelo Siqueira CFP®">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="O Teste dos 90 Dias — diagnóstico de liquidez sob evento">
-<meta property="og:description" content="Patrimônio no papel não paga conta. Liquidez paga. Em 7 perguntas, veja onde você está exposto — para o executivo com equity e para o founder.">
+<meta property="og:title" content="Onde seu patrimônio trava antes do evento | Teste 90 Dias">
+<meta property="og:description" content="Descubra em 7 perguntas onde seu patrimônio trava antes do evento de liquidez. Índice de exposição de 0 a 100, na hora e sem cadastro.">
 <meta property="og:url" content="https://marcelosiqueiracfp.com.br/teste-90-dias">
 <meta property="og:image" content="https://marcelosiqueiracfp.com.br/insights/og/teste-90-dias.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -243,6 +243,15 @@
 .lm-btn-primary { background: var(--vectis-navy); color: var(--vectis-white); }
 .lm-btn-accent { background: var(--vectis-navy); color: var(--vectis-white); }
 .start-row { margin-top: 8px; }
+/* Hero: único dourado do site (pedido explícito); #9E7E2A passa AA texto grande sobre marfim */
+.lm-wrap h1 em { font-style: italic; color: #9E7E2A; }
+.lm-bullets { list-style: none; padding: 0; margin: -12px 0 32px; max-width: 620px; }
+.lm-bullets li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: 16px; color: var(--vectis-graphite); }
+.lm-bullets li::before { content: ''; position: absolute; left: 2px; top: 0.75em; width: 10px; height: 1px; background: var(--vectis-navy); }
+.lm-proof { border-left: 1px solid var(--vectis-stone); padding-left: 20px; margin: 0 0 32px; max-width: 620px; }
+.lm-proof blockquote { font-family: var(--vectis-font-display); font-size: 20px; line-height: 1.35; color: var(--vectis-navy); margin: 0 0 8px; }
+.lm-proof figcaption { font-size: 13px; color: var(--vectis-cool-gray); }
+.lm-skeptic { font-size: 14px; line-height: 1.6; color: var(--vectis-cool-gray); max-width: 620px; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--vectis-stone); }
 .back {
   background: none; border: none; color: var(--vectis-cool-gray);
   font-family: var(--vectis-font-body); font-size: 14px; cursor: pointer;
@@ -316,12 +325,23 @@
   <!-- INTRO -->
   <section class="screen active" id="screen-intro">
     <div class="kicker">Diagnóstico de liquidez sob evento</div>
-    <h1>Patrimônio no papel não paga conta.<br>Liquidez paga.</h1>
-    <p class="lede">A maioria dos patrimônios acima de R$10 milhões tem o mesmo ponto cego: tudo parece organizado até o dia em que precisa virar caixa. Em <span id="nq">7</span> perguntas, você vê onde está exposto — e o que aconteceria se um evento chegasse antes da estrutura ficar pronta.</p>
+    <h1>Descubra em <span id="nq">7</span> perguntas onde seu patrimônio <em>trava</em> antes do evento chegar.</h1>
+    <p class="lede">Se você precisasse de 20% do seu patrimônio em caixa em 90 dias, sem vender a empresa nem o equity, conseguiria? O teste mostra a resposta e o seu índice de exposição, na hora.</p>
+    <ul class="lm-bullets">
+      <li>Seu índice de exposição de 0 a 100, na hora, sem cadastro.</li>
+      <li>Quanto do seu patrimônio depende de um único ativo, e o que acontece se o vesting, a venda ou a sucessão chegarem primeiro.</li>
+      <li>Se sua estrutura foi desenhada no conjunto ou montada em peças, cada uma por um banco, contador ou advogado diferente.</li>
+    </ul>
+    <!-- PLACEHOLDER PROVA SOCIAL (oculto até ter conteúdo real): trocar o texto do blockquote pelo depoimento real anonimizado (sem nome nem combinação setor+cidade+valor+data) ou dado real de uso, e então descomentar o figure abaixo.
+    <figure class="lm-proof">
+      <blockquote>[DEPOIMENTO REAL ANONIMIZADO OU DADO REAL DE USO AQUI]</blockquote>
+      <figcaption>Marcelo Siqueira, CFP® · Fee-only, sem prateleira de produto</figcaption>
+    </figure>
+    -->
     <div class="start-row">
-      <button class="lm-btn lm-btn-primary" onclick="next()">Começar — leva 2 minutos</button>
+      <button class="lm-btn lm-btn-primary" onclick="next()">Ver meu índice de exposição</button>
     </div>
-    <div class="footer-mark">Sem cadastro. O resultado aparece na tela.</div>
+    <p class="lm-skeptic">Não pede nome, e-mail nem telefone, e o resultado aparece na hora. Não é cálculo tributário: usa o piso da faixa que você informar, então o número sai conservador. Se o índice vier baixo, você ganhou uma confirmação. Se vier alto, descobriu antes do evento, e não depois.</p>
   </section>
 
   <!-- Q0 — bifurcação de perfil (pulada quando a URL já traz ?perfil=executivo|founder) -->
